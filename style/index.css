@@ -540,6 +540,11 @@ input[type="file"] {
     height: 1px;
 }
 
+.brain p 
+{
+left: 10px;
+}
+
 /*----------------About.php---------------------*/
 #altBorder{
     border: solid #FFC0CB;

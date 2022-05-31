@@ -20,8 +20,8 @@ html();
         </label>
         <label class="switch spacing">
             <input type="checkbox">
-            <p>go pub</p>
-            <span class="slider round"></span>
+            
+            <span class="slider round brain"><p>is public</p></span>
         </label>
         <div class="closeButtonContainer spacing">
             <button class="closeUploadScreen pointer">Close</button>
