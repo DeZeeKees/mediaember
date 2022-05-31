@@ -226,4 +226,27 @@ function html()
             $checkboxIndex++;
         }
     }
+
+    function printPrivateItems()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        
+        $checkboxIndex = 0;
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt = $dbh->query("SELECT * FROM fileindex WHERE username = ". $_SESSION['']);
+        while ($row = $stmt->fetch()) {
+        ?>
+            <div class="publicItem">
+                <input class="publicCheckbox" type="checkbox" name="checkboxInput<?php echo $checkboxIndex ?>" id="checkboxInput<?php echo $checkboxIndex ?>">
+                <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
+                <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+            </div>
+    <?php
+            $checkboxIndex++;
+        }
+    }
     ?>
