@@ -125,7 +125,7 @@ function html()
                         if ($row['num'] > 0) {
                             echo "<script>alert('Email is already registerd');</script>";
                         } else {
-                            $stmt = $dbh->prepare("insert into users values(' ',?,?,?)");
+                            $stmt = $dbh->prepare("insert into users (email, username, password) values(?,?,?)");
                             $stmt->bindParam(1, $email);
                             $stmt->bindParam(2, $username);
                             $stmt->bindParam(3, $password);
