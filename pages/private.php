@@ -19,7 +19,7 @@ html();
             <span class="material-symbols-outlined">file_upload</span> Upload File
         </label>
         <label class="switch">
-            <input type="checkbox" value="is public">
+            <input type="checkbox">is public</input>
             <span class="slider round"></span>
         </label>
         <div class="closeButtonContainer">
