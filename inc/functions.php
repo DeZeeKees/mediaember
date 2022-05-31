@@ -133,8 +133,8 @@ function html()
                             $result = $stmt->setFetchMode(PDO::FETCH_NUM);
                             if ($result) {
                                 try {
-                                    $stmt = $dbh->query("SELECT * FROM credits");
-                                    $stmt = $dbh->prepare("insert into credits values('',?,?)");
+                                    $stmt = $dbh->query("SELECT * FROM credtis");
+                                    $stmt = $dbh->prepare("insert into credits (username, credtis) values(?,?)");
                                     $stmt->bindParam(1, $username);
                                     $stmt->bindParam(2, $baseCredits);
                                     $stmt->execute();
