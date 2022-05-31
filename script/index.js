@@ -37,6 +37,8 @@ addGlobalEventListener('keypress', '', e => {
 //display div on upload click
 $(".uploadButton").click(function () {
     $(".uploadDiv").show(1000)
+    $(".download").hide()
+    $(".filterBtn").hide()
 });
 //
 $(".filterBtn").click(function () {
@@ -47,7 +49,11 @@ $(".closeFilter").click(function () {
 });
 $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
+    $(".download").show()
+    $(".filterBtn").show()
 });
+
+
 
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");

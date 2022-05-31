@@ -21,7 +21,7 @@ html();
         <label class="switch spacing">
             <input type="checkbox">
             
-            <span class="slider round brain"><p>is public</p></span>
+            <span class="slider round brain"><p>is p-pubwic meow</p></span>
         </label>
         <div class="closeButtonContainer spacing">
             <button class="closeUploadScreen pointer">Close</button>
@@ -94,11 +94,11 @@ html();
             <ul class="buttons">
                 <li class="tooltip">
                     <span class="tooltiptext">Upload File</span>
-                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined uploadButton">upload</span></button>
+                    <button class="filterButton filter1 pointer upload"><span class="material-symbols-outlined uploadButton">upload</span></button>
                 </li>
                 <li class="tooltip">
                     <span class="tooltiptext">Download File</span>
-                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">download</span></button>
+                    <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
                 </li>
                 <li class="tooltip">
                     <span class="tooltiptext">Filter Items</span>
