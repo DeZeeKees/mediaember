@@ -43,9 +43,13 @@ $(".uploadButton").click(function () {
 //
 $(".filterBtn").click(function () {
     $(".filterScreen").show(1000)
+    $(".upload").hide()
+    $(".download").hide()
 });
 $(".closeFilter").click(function () {
     $(".filterScreen").hide(1000)
+    $(".upload").show()
+    $(".download").show()
 });
 $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
