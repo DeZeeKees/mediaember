@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Readex+Pro:200,300,regular,500,600,700);
+
+:root{
+    --Orange: #FF8F00;
+    --OrangeHover: #cf7602;
+    --Red: #C32B10;
+    --RedHover: #ae260e;
+    --Black: #26282A;  
+    --BlackFront: #2f3133;
+    --Radius: 15px;
+}
+
+/*#region General*/
+    .returnHome
+    {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        left: 10px;
+        top: 10px;
+        border-radius: 10px;
+        background-color: var(--Orange);
+        color: white;
+        border: none;
+    }
+
+    .returnHome:hover
+    {
+        background-color: var(--OrangeHover);
+    }
+
+    .returnHome:active
+    {
+        background-color: var(--Red);
+    }
+
+    .googlefont
+    {
+        font-family: Readex Pro;
+    }
+
+    body, html
+    {
+        height: 90%;
+        display: grid;
+        background-color: var(--Black);
+    }
+
+    .p 
+    {
+        font-family: Readex Pro;
+        text-align: center;
+    }
+/*#endregion */
+
+/*#region Login and Register*/
+    .logRegTitle
+    {
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: center;
+        color: white;
+    }
+
+    .logRegInputs
+    {
+        width: 350px;
+        margin-bottom: 10px;
+        margin-left: 12.5%;
+        height: 30px;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: solid 1.5px lightgray;
+        background-color: var(--BlackFront);
+        color: white;
+    }
+
+    .logRegButton
+    {
+        width: 360px;
+        margin-bottom: 10px;
+        margin-left: 12.5%;
+        height: 30px;
+        border-radius: 10px;
+        background-color: var(--Orange);
+        border: transparent;
+        color: white;
+    }
+
+    .LinkColor
+    {
+        color: var(--Red);
+    }
+
+    .logRegButton:hover
+    {
+        background-color: var(--OrangeHover);
+    }
+
+    .logRegButton:active
+    {
+        background-color: var(--Red);
+    }
+    
+    .LinkColor:hover 
+    {
+        color: var(--RedHover);
+    }
+    .LinkColor:active
+    {
+        color: var(--Orange);
+    }
+/*#endregion */
+
+/*#region Login*/
+    .loginContainer
+    {
+        border-radius: 50px;
+        margin: auto;
+        width: 475px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: var(--BlackFront);
+        box-shadow: 0px 0px 70px 1px lightgray;
+    }
+
+    .login-form
+    {
+        display: flex;
+        flex-direction: column;
+    }
+/*#endregion */
+
+/*#region Register*/
+    .registerContainer
+    {
+        border-radius: 50px;
+        margin: auto;
+        width: 475px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: var(--BlackFront);
+        box-shadow: 0px 0px 70px 1px lightgray;
+    }
+
+    .register-form
+    {
+        display: flex;
+        flex-direction: column;
+    }
+/*#endregion */
