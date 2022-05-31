@@ -543,7 +543,8 @@ input[type="file"] {
 .brain p 
 {
 position: relative;
-left: 10px;
+left: 65px;
+bottom: 15px;
 }
 
 /*----------------About.php---------------------*/

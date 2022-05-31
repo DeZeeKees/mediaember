@@ -102,7 +102,7 @@ html();
                 </li>
                 <li class="tooltip">
                     <span class="tooltiptext">Filter Items</span>
-                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined filterBtn">filter_alt</span></button>
+                    <button class="filterButton filter1 pointer filter"><span class="material-symbols-outlined filterBtn">filter_alt</span></button>
                 </li>
                 <li class="tooltip">
                     <span class="tooltiptext">Delete Selected</span>

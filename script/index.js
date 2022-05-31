@@ -38,7 +38,7 @@ addGlobalEventListener('keypress', '', e => {
 $(".uploadButton").click(function () {
     $(".uploadDiv").show(1000)
     $(".download").hide()
-    $(".filterBtn").hide()
+    $(".filter").hide()
 });
 //
 $(".filterBtn").click(function () {
@@ -54,7 +54,7 @@ $(".closeFilter").click(function () {
 $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
     $(".download").show()
-    $(".filterBtn").show()
+    $(".filter").show()
 });
 
 
