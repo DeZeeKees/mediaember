@@ -125,11 +125,10 @@ function html()
                         if ($row['num'] > 0) {
                             echo "<script>alert('Email is already registerd');</script>";
                         } else {
-                            $stmt = $dbh->prepare("insert into users values(?,?,?,?)");
-                            $stmt->bindParam(1, null);
-                            $stmt->bindParam(2, $email);
-                            $stmt->bindParam(3, $username);
-                            $stmt->bindParam(4, $password);
+                            $stmt = $dbh->prepare("insert into users values(,?,?,?)");
+                            $stmt->bindParam(1, $email);
+                            $stmt->bindParam(2, $username);
+                            $stmt->bindParam(3, $password);
                             $stmt->execute();
                             $result = $stmt->setFetchMode(PDO::FETCH_NUM);
                             if ($result) {
