@@ -21,7 +21,7 @@ html();
         <label class="switch spacing">
             <input type="checkbox">
             
-            <span class="slider round brain"><p>is p-pubwic meow</p></span>
+            <span class="slider round brain"><p>is pubic</p></span>
         </label>
         <div class="closeButtonContainer spacing">
             <button class="closeUploadScreen pointer">Close</button>
