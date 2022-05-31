@@ -13,22 +13,13 @@ html();
     <div class="uploadDiv">
         <h1>Upload A File</h1>
         <p>Credits</p>
-        <input type="file" name="uploadInput" id="uploadInput" class="pointer spacing">
-        <label class="custom-file-upload pointer">
+        <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
+        <label class="custom-file-upload pointer spacing">
             <input type="file" name="uploadInput" id="uploadInput" />
             <span class="material-symbols-outlined">file_upload</span> Upload File
         </label>
         <label class="switch spacing">
             <input type="checkbox">
-            <p class="absolute"></p>
-            <style>
-                .absolute {
-                    position: absolute;
-                    left: 300px;
-                    top: 300px;
-                    font-size: 30px;
-                    font-weight: 700;
-                }
             </style>
             <span class="slider round"></span>
         </label>
@@ -128,7 +119,7 @@ html();
                 <div class="moveleft"></div>
             </div>
             <div class="actualItemsContainer">
-                <?php printPublicItems() ?>
+                <?php printPrivateItems() ?>
             </div>
         </div>
     </div>
