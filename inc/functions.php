@@ -133,24 +133,24 @@ function html()
                             $stmt->execute();
                             $result = $stmt->setFetchMode(PDO::FETCH_NUM);
                             if ($result) {
-                                // try {
-                                //     $stmt = $dbh->query("SELECT * FROM credits");
-                                //     $stmt = $dbh->prepare("insert into credits values('',?,?)");
-                                //     $stmt->bindParam(1, $username);
-                                //     $stmt->bindParam(2, $baseCredits);
-                                //     $stmt->execute();
-                                //     $result = $stmt->setFetchMode(PDO::FETCH_NUM);
-                                //     if ($result) {
-                                //         echo "<script>alert('Register Succesful');</script>";
-                                //         $username = "";
-                                //         $email = "";
-                                //         echo '<script>window.location.href = "login.php";</script>';
-                                //     } else {
-                                //         echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
-                                //     }
-                                // } catch (exception $e) {
-                                //     echo $e;
-                                // }
+                                try {
+                                    $stmt = $dbh->query("SELECT * FROM credits");
+                                    $stmt = $dbh->prepare("insert into credits values('',?,?)");
+                                    $stmt->bindParam(1, $username);
+                                    $stmt->bindParam(2, $baseCredits);
+                                    $stmt->execute();
+                                    $result = $stmt->setFetchMode(PDO::FETCH_NUM);
+                                    if ($result) {
+                                        echo "<script>alert('Register Succesful');</script>";
+                                        $username = "";
+                                        $email = "";
+                                        echo '<script>window.location.href = "login.php";</script>';
+                                    } else {
+                                        echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
+                                    }
+                                } catch (exception $e) {
+                                    echo $e;
+                                }
                             } else {
                                 echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
                             }
