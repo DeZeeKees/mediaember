@@ -134,7 +134,7 @@ function html()
                             if ($result) {
                                 try {
                                     $stmt = $dbh->query("SELECT * FROM credtis");
-                                    $stmt = $dbh->prepare("insert into credits (username, credtis) values(?,?)");
+                                    $stmt = $dbh->prepare("insert into credtis (username, credtis) values(?,?)");
                                     $stmt->bindParam(1, $username);
                                     $stmt->bindParam(2, $baseCredits);
                                     $stmt->execute();

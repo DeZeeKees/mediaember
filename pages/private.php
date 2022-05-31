@@ -19,8 +19,8 @@ html();
             <span class="material-symbols-outlined">file_upload</span> Upload File
         </label>
         <label class="switch">
-            <input type="checkbox">
-            <span class="slider round">meme</span>
+            <input type="checkbox" value="is public">
+            <span class="slider round"></span>
         </label>
         <div class="closeButtonContainer">
             <button class="closeUploadScreen pointer">Close</button>
