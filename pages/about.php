@@ -16,7 +16,7 @@ html();
             <div class="aboutInfoDiv Toasternewt"><img src="../media/img/toastersLogo.png" alt="Toasters Logo">
                 <div class="nameContainer">
                     <h1>Toasters inc</h1>
-                    <p>We Toasters inc value our employees and customers from all places so we can all get along. we where a small company in the zeekees empire where we slowly grew. we currently have our main hq in the zeekees kingdom. we have also recently expanded into the twilight forest where we are still searching for new employees we are also important enough to ask for a audience with most rulers</p>
+                    <p>We Toasters inc value our employees and customers from all places so we can all get along. we we're a small company in the zeekees kingdom where we slowly grew. we currently have our main hq in the zeekees kingdom. we have also recently expanded into the twilight forest where we are still searching for new employees we are also important enough to ask for a audience with most rulers</p>
                 </div>
             </div>
             <!-- Tom -->
