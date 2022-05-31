@@ -235,7 +235,7 @@ function html()
         
         $checkboxIndex = 0;
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-        $stmt = $dbh->query("SELECT * FROM fileindex WHERE username =' ". $_SESSION['username'] . "'");
+        $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
         ?>
             <div class="publicItem">
