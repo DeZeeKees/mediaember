@@ -542,9 +542,10 @@ input[type="file"] {
 
 .brain p 
 {
+  font-size: 10;
 position: relative;
 left: 65px;
-bottom: 15px;
+bottom: 12.5px;
 }
 
 /*----------------About.php---------------------*/
