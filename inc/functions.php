@@ -203,12 +203,11 @@ function registerForm()
                     $_SESSION['email'] = $row2['email'];
                     header("Location: private.php");
                 } else {
-                    //echo "<script>alert('Email or Password incorrect');</script>";
+                    echo "<script>alert('Email or Password incorrect');</script>";
                 }
             }
         } catch (exception $e) {
-            echo $e;
-            //echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made \\n " . $e . "');</script>";
+            echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made \\n " . $e . "');</script>";
         }
     }
 
