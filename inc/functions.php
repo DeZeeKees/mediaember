@@ -102,7 +102,7 @@ function html()
 
 // Register Functions -----------------------------------------------------------
 
-function registerFormmkdir()
+function registerForm()
 {
     $servername = "localhost";
     $username = "test_user";
