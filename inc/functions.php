@@ -252,7 +252,6 @@ function html()
         while ($row = $stmt->fetch()) {
         ?>
             <div class="publicItem">
-                <input class="publicCheckbox" type="checkbox" name="checkboxInput<?php echo $checkboxIndex ?>" id="checkboxInput<?php echo $checkboxIndex ?>">
                 <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
                 <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
