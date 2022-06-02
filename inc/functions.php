@@ -252,8 +252,7 @@ function registerForm()
         $servername = "localhost";
         $username = "test_user";
         $password = "1234";
-        
-        $checkboxIndex = 0;
+
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
         $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
@@ -268,8 +267,19 @@ function registerForm()
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
-    <?php
-            $checkboxIndex++;
+        <?php
+        }
+    }
+
+    function getCreditAmount()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt = $dbh->query("SELECT * FROM credtis WHERE username ='". $_SESSION['username'] . "'");
+        while ($row = $stmt->fetch()) {
+            echo $row['credtis'];
         }
     }
     ?>

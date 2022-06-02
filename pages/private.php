@@ -14,20 +14,15 @@ html();
          <form role="form">
             <center>
                 <h1>Upload A File</h1>
-                <p>Credits:</p> <!--insert credits here -->
-                <!-- <div class="form-group">
-                    <label class="custom-file-upload pointer spacing">
-                        <input type="file" name="uploadInput" id="uploadInput" />
-                    </label>
-                </div> -->
+                <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->
                 <div id="inputDiv">
-                <label for="uploadInput" id="inputLabel">
-                    Select File <br/>
-                    <i class="fa fa-2x fa-camera"></i>
-                    <input id="uploadInput" name="uploadInput" type="file"/>
-                    <br/>
-                    <span id="inputFileName"></span>
-                </label>
+                    <label for="uploadInput" id="inputLabel">
+                        Select File <br/>
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input id="uploadInput" name="uploadInput" type="file"/>
+                        <br/>
+                        <span id="inputFileName"></span>
+                    </label>
                 </div>
                 <script>
                     let input = document.getElementById("uploadInput");

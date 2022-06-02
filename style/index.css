@@ -1091,6 +1091,10 @@ margin-right: 2%;
   }
 } */
 /* -------------------------- test -------------------------- */
+.checkbox2
+{
+margin-top: 1px;
+}
 .checkbox {
   --border-default: #bbbbc1;
   --border-hover: #9898a3;
