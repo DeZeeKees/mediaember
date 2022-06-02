@@ -64,6 +64,9 @@ echo "Sorry, your file was not uploaded.";
     <?php
     } else {
         echo "Sorry, there was an error uploading your file.";
+        ?>
+            <button onclick="goBack()">Continue</button>
+        <?php
     }
 }
 // h    
