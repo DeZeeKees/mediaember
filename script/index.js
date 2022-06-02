@@ -1,9 +1,9 @@
 // toms playground :D
 //general:
 
-{(() => {
-    console.log(pwStr, pwStr2)
-})()}
+// {(() => {
+//     console.log(pwStr, pwStr2)
+// })()}
 
 var isFilterOpen = false;
 var isUploadOpen = false;
