@@ -1,3 +1,9 @@
+<script>
+    function goBack()
+    {
+        window.location.href = './private.php';
+    }
+</script>
 <?php
 session_start();
 $servername = "localhost";
