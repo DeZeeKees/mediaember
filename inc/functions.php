@@ -217,34 +217,21 @@ function registerForm()
         $servername = "localhost";
         $username = "test_user";
         $password = "1234";
-        
-        $checkboxIndex = 0;
+
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
         $stmt = $dbh->query("SELECT * FROM fileindex WHERE isPublic = 1");
         while ($row = $stmt->fetch()) {
         ?>
             <div class="publicItem">
-                <input class="publicCheckbox" type="checkbox" name="checkboxInput<?php echo $checkboxIndex ?>" id="checkboxInput<?php echo $checkboxIndex ?>">
                 <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
                 <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
-                <ul>
-                    <li class="tooltip">
-                        <span class="tooltiptext">Download File</span>
-                        <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
-                    </li>
-                    <li class="tooltip">
-                        <span class="tooltiptext">Delete Selected</span>
-                        <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
-                    </li>
-                    <li class="tooltip">
-                        <span class="tooltiptext">Share</span>
-                        <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
-                    </li>
-                </ul>
+                <div>
+                    <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
+                    <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                </div>
             </div>
-    <?php
-            $checkboxIndex++;
+        <?php
         }
     }
 
@@ -281,6 +268,43 @@ function registerForm()
         $stmt = $dbh->query("SELECT * FROM credtis WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
             echo $row['credtis'];
+        }
+    }
+
+    function uploadScript()
+    {
+        $target_dir = "../storage/" . $_SESSION['username'] . "/";
+        $target_file = $target_dir . basename($_FILES["uploadInput"]["name"]);
+        $uploadOk = 1;
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
+        $uploadOk = 0;
+        }
+
+        // Check file size
+        if ($_FILES["uploadInput"]["size"] > 50000000000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+        ?>
+            <button onclick="goBack()">Continue</button>
+        <?php
+        // if everything is ok, try to upload file
+        } else {
+        if (move_uploaded_file($_FILES["uploadInput"]["tmp_name"], $target_file)) {
+            echo "The file ". htmlspecialchars( basename( $_FILES["uploadInput"]["name"])). " has been uploaded.";
+        ?>
+            <button onclick="goBack()">Continue</button>
+        <?php
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
         }
     }
     ?>
