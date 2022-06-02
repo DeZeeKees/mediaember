@@ -429,15 +429,21 @@ body
     height: auto;
     border:solid blue;
 }
-.closeUploadScreen
-{
-    float: right;
-    width: 100px;
-    height:50px;
+
+.uploadSubmit {
+  position: relative;
+  width: 150;
+  height: 75;
+  background-color: var(--Black);
+  border: solid var(--Orange);
+  border-radius: var(--Radius);
+  color: white;
 }
+
 input[type="file"] {
     display: none;
 }
+
 .custom-file-upload {
     display: inline-block;
     padding: 6px 12px;
@@ -561,6 +567,7 @@ width: 70px;
 }
 .size
 {
+  float: right;
   size: 30px;
 }
 
