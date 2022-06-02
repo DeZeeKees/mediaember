@@ -86,7 +86,7 @@ body
   /*------------------Tooltips------------------*/
 
   /* The switch - the box around the slider */
-.switch {
+/*.switch {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -146,7 +146,7 @@ body
   
   .slider.round:before {
     border-radius: 50%;
-  }
+  }*/
 
 /* nav */
 
