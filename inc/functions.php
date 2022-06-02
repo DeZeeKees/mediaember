@@ -99,31 +99,36 @@ function html()
         <?php
     }
 
-    // Register Functions -----------------------------------------------------------
+// Register Functions -----------------------------------------------------------
 
-    function registerForm()
-    {
-        $servername = "localhost";
-        $username = "test_user";
-        $password = "1234";
-        try {
-            $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+function registerForm()
+{
+    $servername = "localhost";
+    $username = "test_user";
+    $password = "1234";
+    try {
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
 
-            error_reporting(0);
+        error_reporting(0);
 
-            if (isset($_POST['submit'])) {
+        if (isset($_POST['submit'])) {
 
-                $username = $_POST['usernameRegister'];
-                $email = $_POST['emailRegister'];
-                $password = md5($_POST['passwordRegister']);
-                $cPassword = md5($_POST['cPasswordRegister']);
-                $baseCredits = 10;
-                try {
-                    if ($password == $cPassword) {
-                        $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$email'");
+            $username = $_POST['usernameRegister'];
+            $email = $_POST['emailRegister'];
+            $password = md5($_POST['passwordRegister']);
+            $cPassword = md5($_POST['cPasswordRegister']);
+            $baseCredits = 10;
+            try {
+                if ($password == $cPassword) {
+                    $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$email'");
+                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                    if ($row['num'] > 0) {
+                        echo "<script>alert('Email is already registerd');</script>";
+                    } else {
+                        $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$username'");
                         $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         if ($row['num'] > 0) {
-                            echo "<script>alert('Email is already registerd');</script>";
+                            echo "<script>alert('Username is already in use');</script>";
                         } else {
                             $stmt = $dbh->prepare("insert into users (email, username, password) values(?,?,?)");
                             $stmt->bindParam(1, $email);
@@ -154,18 +159,19 @@ function html()
                                 echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
                             }
                         }
-                    } else {
-                        echo "<script>alert('Password Must Match');</script>";
                     }
-                } catch (PDOException $exception) {
-                    echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
-                    echo $exception;
+                } else {
+                    echo "<script>alert('Password Must Match');</script>";
                 }
+            } catch (PDOException $exception) {
+                echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
+                echo $exception;
             }
-        } catch (exception $e) {
-            echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made');</script>";
         }
+    } catch (exception $e) {
+        echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made');</script>";
     }
+}
 
     // Login Functions -----------------------------------------------------------
 

@@ -12,6 +12,7 @@ html();
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="uploadDiv">
          <form role="form">
+             <center>
          <h1>Upload A File</h1>
          <p>Credits:</p> <!--insert credits here -->
           <div class="form-group">
@@ -28,7 +29,8 @@ html();
           </div>
           <button type="submit" class="pointer uploadSubmit">Submit</button>
                 <span class="pointer material-symbols-outlined closeUploadScreen size">close</span>
-        </form>
+                </center>
+            </form>
         <!-- <form action="private.php">
             <h1>Upload A File</h1>
             <p>Credits</p>

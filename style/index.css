@@ -89,8 +89,8 @@ body
 .switch {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 28.8px;
+    width: 60px;
+    height: 34px;
   }
   
   /* Hide default HTML checkbox */
@@ -433,7 +433,7 @@ body
 .uploadSubmit {
   position: relative;
   width: 150px;
-  height: 75px;
+  height: 35px;
   background-color: black;
   border: solid var(#be0032);
   border-radius: var(--Radius);
@@ -568,9 +568,11 @@ width: 70px;
 }
 .size
 {
-  float: right;
+  position: relative;
   width: 60px;
   height: 60px;
+  top: 72.5%;
+  left: 67.5%;
 }
 
 /*----------------About.php---------------------*/
