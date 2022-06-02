@@ -10,7 +10,7 @@ session_start();
 $servername = "localhost";
 $username = "test_user";
 $password = "1234";
-$dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+try {$dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password); } catch(Exception $e) { echo $e; }
 $checkboxChecked;
 if(isset($_POST['submit']))
 {
@@ -41,6 +41,6 @@ if(isset($_POST['submit']))
         }
     } catch(Exception $e)
     {
-        echo "<script><alert>". $e ."</alert></script>";
+        echo $e;
     }
 }
