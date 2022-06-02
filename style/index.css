@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Readex+Pro:200,300,regular,500,600,700);
 /*------------------General--------------------*/
-:root{
+:root{ 
     --Orange: #FF8F00;
     --Red: #C32B10;
     --Black: #26282A; 
@@ -439,7 +439,6 @@ input[type="file"] {
     display: none;
 }
 .custom-file-upload {
-    border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
@@ -559,6 +558,10 @@ width: 70px;
 {
   width: 100px;
   height:50px;
+}
+.size
+{
+  size: 30px;
 }
 
 /*----------------About.php---------------------*/

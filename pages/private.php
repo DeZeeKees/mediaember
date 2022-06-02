@@ -11,7 +11,22 @@ html();
 
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="uploadDiv">
-        <form action="private.php">
+         <form role="form">
+         <h1>Upload A File</h1>
+        <p>Credits</p>
+          <div class="form-group">
+          <label class="custom-file-upload pointer spacing">
+                <input type="file" name="uploadInput" id="uploadInput" />
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox">is public</label>
+          </div>
+          <button type="submit" class=" pointer">Submit</button>
+          <li class="toopltip">
+                <span class="pointer material-symbols-outlined closeFilter size">close</span>
+            </li>
+        </form>
+        <!-- <form action="private.php">
             <h1>Upload A File</h1>
             <p>Credits</p>
             <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
@@ -26,7 +41,7 @@ html();
             <button class="submitUploadScreen pointer" type="submit">submit</button>
             <div class="closeButtonContainer spacing">
             <button class="closeUploadScreen pointer">Close</button>
-        </form>
+        </form> -->
         </div>
     </div>
 
