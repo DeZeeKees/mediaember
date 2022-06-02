@@ -1099,15 +1099,13 @@ display: flex;
 .checkbox {
   --border-default: #bbbbc1;
   --border-hover: #9898a3;
-  --active: #6e7bf2;
+  --active: var(--Orange);
   --active-tick: #fff;
   display: block;
-  /* width: 18px;
-  height: 18px; */
   cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: transparent;
-  left: 40%;
+  left: 37.5%;
   top: 15px;
 }
 .checkbox svg {
@@ -1184,5 +1182,5 @@ display: flex;
 .bonggus
 {
   position: relative;
-  left: 45%;
+  left: 42.5%;
 }

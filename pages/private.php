@@ -11,7 +11,7 @@ html();
 
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="uploadDiv">
-         <form role="form">
+         <form action="./upload.php" method="POST" enctype="multipart/form-data">
             <center>
                 <h1>Upload A File</h1>
                 <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->
@@ -62,22 +62,6 @@ html();
                 <span class="pointer material-symbols-outlined closeUploadScreen size">close</span>
             </center>
         </form>
-        <!-- <form action="private.php">
-            <h1>Upload A File</h1>
-            <p>Credits</p>
-            <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
-            <label class="custom-file-upload pointer spacing">
-                <input type="file" name="uploadInput" id="uploadInput" />
-                <span class="material-symbols-outlined">file_upload</span> Upload File
-            </label>
-            <label class="switch spacing">
-                <input type="checkbox">
-                <span class="slider round brain"><p>is pubic</p></span>
-            </label>
-            <button class="submitUploadScreen pointer" type="submit">submit</button>
-            <div class="closeButtonContainer spacing">
-            <button class="closeUploadScreen pointer">Close</button>
-        </form> -->
         </div>
     </div>
 
