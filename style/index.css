@@ -1094,6 +1094,7 @@ margin-right: 2%;
 .checkbox2
 {
 margin-top: 1px;
+display: flex;
 }
 .checkbox {
   --border-default: #bbbbc1;
