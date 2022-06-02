@@ -146,7 +146,7 @@ function registerForm()
                                     $stmt->execute();
                                     $result = $stmt->setFetchMode(PDO::FETCH_NUM);
                                     if ($result) {
-                                        echo "<script>alert('Register Succesful');</script>";
+                                        echo "<script>Swal.fire({ icon: 'sucess', title: 'Register', text: 'You sucessfully Resgistered', confirmButtonText: 'Login' });</script>";
                                         $username = "";
                                         $email = "";
                                         echo '<script>window.location.href = "login.php";</script>';

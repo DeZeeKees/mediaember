@@ -18,7 +18,7 @@ html();
                 <div class="form-group">
                     <!-- <label class="custom-file-upload pointer spacing"> -->
                         <input type="file" name="uploadInput" id="uploadInput" />
-                        <span class="material-symbols-outlined">file_upload</span>
+                        <!-- <span class="material-symbols-outlined">file_upload</span> -->
                     <!-- </label> -->
                 </div>
                 <div class="checkbox">
