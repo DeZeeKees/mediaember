@@ -552,6 +552,7 @@ input[type="file"] {
 position: relative;
 left: 67.5px;
 bottom: 12px;
+width: 50px;
 }
 
 /*----------------About.php---------------------*/
