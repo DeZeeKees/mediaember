@@ -10,27 +10,26 @@ html();
 </head>
 
 <body id="indexBody" onload=privateAndPublicOnload()>
-    <form action="private.php">
     <div class="uploadDiv">
-        <h1>Upload A File</h1>
-        <p>Credits</p>
-        
-        <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
-        <label class="custom-file-upload pointer spacing">
-            <input type="file" name="uploadInput" id="uploadInput" />
-            <span class="material-symbols-outlined">file_upload</span> Upload File
-        </label>
-        <label class="switch spacing">
-            <input type="checkbox">
-            
-            <span class="slider round brain"><p>is pubic</p></span>
-        </label>
-        <div class="closeButtonContainer spacing">
-        <button class="closeUploadScreen pointer" type="submit">submit</button>
-        <button class="closeUploadScreen pointer">Close</button>
+        <form action="private.php">
+            <h1>Upload A File</h1>
+            <p>Credits</p>
+            <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
+            <label class="custom-file-upload pointer spacing">
+                <input type="file" name="uploadInput" id="uploadInput" />
+                <span class="material-symbols-outlined">file_upload</span> Upload File
+            </label>
+            <label class="switch spacing">
+                <input type="checkbox">
+                <span class="slider round brain"><p>is pubic</p></span>
+            </label>
+            <button class="closeUploadScreen pointer" type="submit">submit</button>
+            <div class="closeButtonContainer spacing">
+            <button class="closeUploadScreen pointer">Close</button>
+        </form>
         </div>
     </div>
-</form>
+
     <div class="filterScreen">
         <p class="filterHead">Filter by file extention</p>
         <ul class="none">
