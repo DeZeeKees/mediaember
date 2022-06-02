@@ -124,13 +124,6 @@ html();
             </ul>
         </div>
         <div class="itemsContainer">
-            <div class="filterBar">
-                <div></div>
-                <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">sort</span></button>
-                <button class="filterButton filter2 pointer"><span class="material-symbols-outlined">sort</span></button>
-                <button class="filterButton filter3 pointer"><span class="material-symbols-outlined">sort</span></button>
-                <div class="moveleft"></div>
-            </div>
             <div class="actualItemsContainer">
                 <?php printPrivateItems() ?>
             </div>
