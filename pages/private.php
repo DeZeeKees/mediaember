@@ -23,10 +23,10 @@ html();
           <div class="checkbox">
           <label class="switch spacing">
                 <input type="checkbox">
-                <span class="slider round brain"><p>is pubic</p></span>
+                <span class="slider round brain"><p>is public</p></span>
             </label>
           </div>
-          <button type="submit" class="pointer uploadsubmit">Submit</button>
+          <button type="submit" class="pointer uploadSubmit">Submit</button>
                 <span class="pointer material-symbols-outlined closeUploadScreen size">close</span>
         </form>
         <!-- <form action="private.php">
@@ -118,16 +118,8 @@ html();
                     <button class="filterButton filter1 pointer upload"><span class="material-symbols-outlined uploadButton">upload</span></button>
                 </li>
                 <li class="tooltip">
-                    <span class="tooltiptext">Download File</span>
-                    <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
-                </li>
-                <li class="tooltip">
                     <span class="tooltiptext">Filter Items</span>
                     <button class="filterButton filter1 pointer filter"><span class="material-symbols-outlined filterBtn">filter_alt</span></button>
-                </li>
-                <li class="tooltip">
-                    <span class="tooltiptext">Delete Selected</span>
-                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
                 </li>
             </ul>
         </div>

@@ -220,7 +220,20 @@ function html()
                 <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
                 <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
-                <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                <ul>
+                <li class="tooltip">
+                    <span class="tooltiptext">Download File</span>
+                    <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
+                </li>
+                <li class="tooltip">
+                    <span class="tooltiptext">Delete Selected</span>
+                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
+                </li>
+                <li class="tooltip">
+                    <span class="tooltiptext">Share</span>
+                    <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                </li>
+                </ul>
             </div>
     <?php
             $checkboxIndex++;
