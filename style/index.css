@@ -89,8 +89,8 @@ body
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 28.8px;
   }
   
   /* Hide default HTML checkbox */
@@ -477,6 +477,7 @@ input[type="file"] {
 }
 
 .material-symbols-outlined {
+  border-bottom: rgb(82, 82, 82),solid;
     color: white;
     font-variation-settings:
     'FILL' 0,
@@ -568,7 +569,10 @@ width: 70px;
 .size
 {
   float: right;
-  size: 30px;
+  float: bottom;
+  width: 60px;
+  height: 60px;
+  margin: 0,0,5%,5%;
 }
 
 /*----------------About.php---------------------*/
