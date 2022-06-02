@@ -32,10 +32,6 @@ addGlobalEventListener('click', '.Toasternewt', e => {
     audio.play();
 
 })
-
-addGlobalEventListener('keypress', '', e => {
-    console.log(summon)
-})
 // #endregion
 
 // #region private/public files
