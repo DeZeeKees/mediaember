@@ -249,7 +249,7 @@ function registerForm()
                 <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
-                    <button onclick="window.open($row['filePath'])" class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
+                    <button onclick="window.open(<?php $row['filePath'] ?>)" class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
                     <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
