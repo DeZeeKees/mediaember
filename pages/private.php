@@ -21,13 +21,13 @@ html();
                     </label>
                 </div> -->
                 <div id="inputDiv">
-                    <label for="uploadInput" id="inputLabel">
-                        Select File <br/>
-                        <i class="fa fa-2x fa-camera"></i>
-                        <input id="uploadInput" name="uploadInput" type="file"/>
-                        <br/>
-                        <span id="inputFileName"></span>
-                    </label>
+                <label for="uploadInput" id="inputLabel">
+                    Select File <br/>
+                    <i class="fa fa-2x fa-camera"></i>
+                    <input id="uploadInput" name="uploadInput" type="file"/>
+                    <br/>
+                    <span id="inputFileName"></span>
+                </label>
                 </div>
                 <div class="checkbox">
                 <label class="checkbox">
