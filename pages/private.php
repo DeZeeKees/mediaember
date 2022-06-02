@@ -29,15 +29,6 @@ html();
                     <span id="inputFileName"></span>
                 </label>
                 </div>
-                <script>
-                    let input = document.getElementById("UploadInput");
-                    let fileName = document.getElementById("inputFileName")
-                    input.addEventListener("change", ()=>{
-                        let inputFile = document.querySelector("input[type=file]").files[0];
-
-                        fileName.innerText = inputFile.name;
-                    })
-                </script>
                 <div class="checkbox">
                 <label class="checkbox">
                     <input type="checkbox" />
@@ -58,6 +49,7 @@ html();
                         <path d="M5.5274 8.78838L9.45391 9.55161" />
                         <path d="M3.49371 4.22065L5.55387 0.79198" />
                     </svg>
+                    <p>is public</p>
                 </label>
                 </div>
                 <button type="submit" class="pointer uploadSubmit">Submit</button>
@@ -164,6 +156,15 @@ html();
             </div>
         </div>
     </div>
+<script>
+    let input = document.getElementById("UploadInput");
+    let fileName = document.getElementById("inputFileName");
+    input.addEventListener("change", ()=>{
+        let inputFile = document.querySelector("input[type=file]").files[0];
+
+        fileName.innerText = inputFile.name;
+    });
+</script>
 </body>
 
 </html>
