@@ -3,6 +3,8 @@
 
 var isFilterOpen = false;
 var isUploadOpen = false;
+let input = document.getElementById("UploadInput");
+let fileName = document.getElementById("inputFileName")
 
 function onLoad() {
     $(".hyperimg").hide();
@@ -61,6 +63,12 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
+
+input.addEventListener("change", ()=>{
+    let inputFile = document.querySelector("input[type=file]").files[0];
+
+    fileName.innerText = inputFile.name;
+})
 
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");

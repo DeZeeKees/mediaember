@@ -15,10 +15,18 @@ html();
             <center>
                 <h1>Upload A File</h1>
                 <p>Credits:</p> <!--insert credits here -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="custom-file-upload pointer spacing">
                         <input type="file" name="uploadInput" id="uploadInput" />
-                        <span class="material-symbols-outlined">file_upload</span>
+                    </label>
+                </div> -->
+                <div id="inputDiv">
+                    <label for="inputTag" id="inputLabel">
+                        Select File <br/>
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input id="uploadInput" name="uploadInput" type="file"/>
+                        <br/>
+                        <span id="inputFileName"></span>
                     </label>
                 </div>
                 <div class="checkbox">
