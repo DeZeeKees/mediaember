@@ -12,6 +12,10 @@ button:hover {
   cursor: pointer;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 a
 {
     color: var(--Red);
