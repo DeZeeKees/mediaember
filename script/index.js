@@ -1,6 +1,10 @@
 // toms playground :D
 //general:
 
+{(() => {
+    console.log(pwStr, pwStr2)
+})()}
+
 var isFilterOpen = false;
 var isUploadOpen = false;
 
@@ -58,7 +62,6 @@ $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
 });
 
-
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
 
@@ -81,6 +84,27 @@ fileInput.addEventListener("change", function () {
 });
 // upload cancel close thing
 // #endregion
+
+$(".btnRegister").click(function(){
+    pwStr = $('.passwordRequired1').val();
+    pwStr2 = $(".passwordRequired2").val();
+    if (pwString === '') {
+        Swal.fire({
+            title: 'No password detected',
+            text: 'Please fill in a password',
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff url(/images/trees.png)',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("/images/nyan-cat.gif")
+              left top
+              no-repeat
+            `
+          })
+    }
+});
 
 
 //function for adding event handlers 
