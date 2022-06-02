@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "test_user";
 $password = "1234";
-$dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+$dbh = new PDO("mysql:host=localhost;dbname=mediaember", $username, $password);
 
 $stmt = $dbh->prepare("insert into fileindex (username, isPublic, fileName, filePath, fileSize, fileType) values(?,?,?,?,?,?)");
         $stmt->bindParam(1, "test");
