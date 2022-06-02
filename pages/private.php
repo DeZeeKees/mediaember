@@ -26,7 +26,8 @@ html();
             <span class="slider round brain"><p>is pubic</p></span>
         </label>
         <div class="closeButtonContainer spacing">
-            <button class="closeUploadScreen pointer">Close</button>
+        <button class="closeUploadScreen pointer" type="submit">submit</button>
+        <button class="closeUploadScreen pointer">Close</button>
         </div>
     </div>
 </form>

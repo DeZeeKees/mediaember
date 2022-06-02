@@ -2,6 +2,7 @@
 //general:
 
 var isFilterOpen = false;
+var isUploadOpen = false;
 
 function onLoad() {
     $(".hyperimg").hide();
@@ -39,17 +40,25 @@ addGlobalEventListener('keypress', '', e => {
 //display div on upload click
 if (isFilterOpen === false) {
     $(".uploadButton").click(function () {
+        isFilterOpen = true;
         $(".uploadDiv").show(1000)
     });
 }
-//
-$(".filterBtn").click(function () {
-    $(".filterScreen").show(1000)
-});
+
+if (isUploadOpen === false) {
+    $(".filterBtn").click(function () {
+        isUploadOpen = true
+        $(".filterScreen").show(1000)
+    });
+}
+
 $(".closeFilter").click(function () {
-    $(".filterScreen").hide(1000)
+    isFilterOpen = false;
+    $(".filterScreen").hide(1000) 
 });
+
 $(".closeUploadScreen").click(function () {
+    isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
 

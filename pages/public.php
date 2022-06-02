@@ -9,16 +9,7 @@ html();
 </head>
 
 <body id="indexBody" onload=privateAndPublicOnload()>
-    <div class="filterScreen"></div>
-    <?php navbar("../media/img/legitlogo.png", "login.php", "../index.php", "./private.php", "./logout.php", './public.php'); ?>
-    <div class="public-Container">
-        <div>
-            <ul class="buttons">
-                <li class="tooltip">
-                    <span class="tooltiptext">Download File</span>
-                    <button class="filterButton filter1"><span class="material-symbols-outlined">download</span></button>
-                </li>
-                <div class="filterScreen">
+    <div class="filterScreen">
         <p class="filterHead">Filter by file extention</p>
         <ul class="none">
             <li>
@@ -78,10 +69,18 @@ html();
             </li>
         </ul>
     </div>
-                <!-- <li class="tooltip">
+    <?php navbar("../media/img/legitlogo.png", "login.php", "../index.php", "./private.php", "./logout.php", './public.php'); ?>
+    <div class="public-Container">
+        <div>
+            <ul class="buttons">
+                <li class="tooltip">
+                    <span class="tooltiptext">Download File</span>
+                    <button class="filterButton filter1"><span class="material-symbols-outlined">download</span></button>
+                </li>
+                <li class="tooltip">
                     <span class="tooltiptext">Filter Items</span>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">filter_alt</span></button>
-                </li> -->
+                </li>
             </ul>
         </div>
         <div class="itemsContainer">

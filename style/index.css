@@ -459,6 +459,7 @@ input[type="file"] {
     width: 80%;
     height: 75vh;
     border: solid var(--Orange);
+    border-radius: 10px;
 }
 
 .filterBar
@@ -547,7 +548,7 @@ input[type="file"] {
 
 .brain p 
 {
-  font-size: 9px;
+  font-size: 20px;
 position: relative;
 left: 67.5px;
 bottom: 12px;
