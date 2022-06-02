@@ -10,9 +10,11 @@ html();
 </head>
 
 <body id="indexBody" onload=privateAndPublicOnload()>
+    <form action="private.php">
     <div class="uploadDiv">
         <h1>Upload A File</h1>
         <p>Credits</p>
+        
         <input type="file" name="uploadInput" id="uploadInput" class="pointer ">
         <label class="custom-file-upload pointer spacing">
             <input type="file" name="uploadInput" id="uploadInput" />
@@ -27,6 +29,7 @@ html();
             <button class="closeUploadScreen pointer">Close</button>
         </div>
     </div>
+</form>
     <div class="filterScreen">
         <p class="filterHead">Filter by file extention</p>
         <ul class="none">

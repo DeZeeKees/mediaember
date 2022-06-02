@@ -1,6 +1,8 @@
 // toms playground :D
 //general:
 
+var isFilterOpen = false;
+
 function onLoad() {
     $(".hyperimg").hide();
 }
@@ -35,26 +37,20 @@ addGlobalEventListener('keypress', '', e => {
 
 // #region private/public files
 //display div on upload click
-$(".uploadButton").click(function () {
-    $(".uploadDiv").show(1000)
-    $(".download").hide()
-    $(".filter").hide()
-});
+if (isFilterOpen === false) {
+    $(".uploadButton").click(function () {
+        $(".uploadDiv").show(1000)
+    });
+}
 //
 $(".filterBtn").click(function () {
     $(".filterScreen").show(1000)
-    $(".upload").hide()
-    $(".download").hide()
 });
 $(".closeFilter").click(function () {
     $(".filterScreen").hide(1000)
-    $(".upload").show()
-    $(".download").show()
 });
 $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
-    $(".download").show()
-    $(".filter").show()
 });
 
 
