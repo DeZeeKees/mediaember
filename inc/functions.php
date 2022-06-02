@@ -125,9 +125,9 @@ function registerForm()
                     if ($row['num'] > 0) {
                         echo "<script>alert('Email is already registerd');</script>";
                     } else {
-                        $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$username'");
-                        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                        if ($row['num'] > 0) {
+                        $stmt2 = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$username'");
+                        $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+                        if ($row2['num'] > 0) {
                             echo "<script>alert('Username is already in use');</script>";
                         } else {
                             $stmt = $dbh->prepare("insert into users (email, username, password) values(?,?,?)");
