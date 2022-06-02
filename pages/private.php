@@ -12,25 +12,25 @@ html();
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="uploadDiv">
          <form role="form">
-             <center>
-         <h1>Upload A File</h1>
-         <p>Credits:</p> <!--insert credits here -->
-          <div class="form-group">
-          <label class="custom-file-upload pointer spacing">
-                <input type="file" name="uploadInput" id="uploadInput" />
-                <span class="material-symbols-outlined">file_upload</span> Upload File
-                </label>
-          </div>
-          <div class="checkbox">
-          <label class="switch spacing">
-                <input type="checkbox">
-                <span class="slider round brain"><p>is public</p></span>
-            </label>
-          </div>
-          <button type="submit" class="pointer uploadSubmit">Submit</button>
+            <center>
+                <h1>Upload A File</h1>
+                <p>Credits:</p> <!--insert credits here -->
+                <div class="form-group">
+                    <!-- <label class="custom-file-upload pointer spacing"> -->
+                        <input type="file" name="uploadInput" id="uploadInput" />
+                        <span class="material-symbols-outlined">file_upload</span>
+                    <!-- </label> -->
+                </div>
+                <div class="checkbox">
+                    <label class="switch spacing">
+                        <input type="checkbox">
+                        <span class="slider round brain"><p>is public</p></span>
+                    </label>
+                </div>
+                <button type="submit" class="pointer uploadSubmit">Submit</button>
                 <span class="pointer material-symbols-outlined closeUploadScreen size">close</span>
-                </center>
-            </form>
+            </center>
+        </form>
         <!-- <form action="private.php">
             <h1>Upload A File</h1>
             <p>Credits</p>
