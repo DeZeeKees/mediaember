@@ -102,7 +102,7 @@ function html()
 
 // Register Functions -----------------------------------------------------------
 
-function registerForm()
+function registerFormmkdir()
 {
     $servername = "localhost";
     $username = "test_user";
@@ -126,11 +126,12 @@ function registerForm()
                     if ($row['num'] > 0) {
                         echo "<script>alert('Email is already registerd');</script>";
                     } else {
-                        $stmt2 = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE username='$username'");
-                        $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
-                        if ($row2['num'] > 0) {
+                        $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$username'");
+                        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                        if ($row['num'] > 0) {
                             echo "<script>alert('Username is already in use');</script>";
                         } else {
+                            mkdir("./storage/" . $username, 0777);
                             $stmt = $dbh->prepare("insert into users (email, username, password) values(?,?,?)");
                             $stmt->bindParam(1, $email);
                             $stmt->bindParam(2, $username);

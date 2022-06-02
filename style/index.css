@@ -1102,8 +1102,8 @@ display: flex;
   --active: #6e7bf2;
   --active-tick: #fff;
   display: block;
-  width: 18px;
-  height: 18px;
+  /* width: 18px;
+  height: 18px; */
   cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: transparent;

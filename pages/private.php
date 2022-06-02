@@ -54,8 +54,9 @@ html();
                         <path d="M5.5274 8.78838L9.45391 9.55161" />
                         <path d="M3.49371 4.22065L5.55387 0.79198" />
                     </svg>
-                    <p>is public</p>
+                    
                 </label>
+                <p class="bonggus">is public</p>
                 </div>
                 <button type="submit" class="pointer uploadSubmit">Submit</button>
                 <span class="pointer material-symbols-outlined closeUploadScreen size">close</span>
