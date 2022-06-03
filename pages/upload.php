@@ -21,7 +21,7 @@ $checkboxChecked = 1;
 $sessionUsername = $_SESSION['username'];
 $fileName = $_FILES["uploadInput"]["name"];
 $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
-$fileSize = ceil($_FILES["uploadInput"]["size"] / 1*KB);
+$fileSize = ceil($_FILES["uploadInput"]["size"] / 1024);
 $fileType = $_FILES["uploadInput"]["type"];
 $uploadDate = date("Y-m-d");
 
