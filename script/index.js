@@ -70,22 +70,26 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-$(document).on('submit', 'form', function(e){
-    e.preventDefault();
-    if (file.files.length == 0) {
-        $('.privateForm').submit(function (evt) {
-            evt.preventDefault();
-            window.history.back();
-        });
 
-        Swal.fire({
-            icon: 'error',
-            title: 'No file selected',
-            text: 'To upload a file please select one first'
-        });
+if (file.files.length == 0) {
+    $(document).on('submit', 'form', function(e){
+        e.preventDefault();
+    
+    $('.privateForm').submit(function (evt) {
+        evt.preventDefault();
+        window.history.back();
+    });
+    
+    Swal.fire({
+        icon: 'error',
+        title: 'No file selected',
+        text: 'To upload a file please select one first'
+    });
     }
-    return;
-});
+
+    
+};
+
 
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
