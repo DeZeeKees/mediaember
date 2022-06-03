@@ -70,7 +70,8 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-$(".uploadSubmit").click(function(){
+$(document).on('submit', 'form', function(e){
+    e.preventDefault();
     if (file.files.length == 0) {
         $('.privateForm').submit(function (evt) {
             evt.preventDefault();
@@ -89,6 +90,7 @@ $(".uploadSubmit").click(function(){
             title: 'File Sucessfully uploaded.'
         });
     }
+    return;
 });
 
 //excluding file extentions so they cany be uploaded

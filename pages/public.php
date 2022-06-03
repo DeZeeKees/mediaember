@@ -80,7 +80,7 @@ html();
             </ul>
         </div>
         <div class="itemsContainer">
-            <div class="actualItemsContainer rounding">
+            <div class="actualItemsContainer">
             <?php printPublicItems() ?>
             </div>
         </div>

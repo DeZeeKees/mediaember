@@ -142,18 +142,12 @@ html();
             </ul>
         </div>
         <div class="itemsContainer">
-            <div class="actualItemsContainer rounding">
+            <div class="actualItemsContainer">
                 <?php printPrivateItems() ?>
             </div>
         </div>
     </div>
 </body>
-<script>
-    function deleteItem(){
-    var result ="<?php deleteItem($row['id']); ?>"
-    document.write(result);
-    }
-</script>
 
 </html>
 <!--   navigator.clipboard.writeText(copyText.value); -->

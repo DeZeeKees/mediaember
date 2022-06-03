@@ -243,6 +243,7 @@ function registerForm()
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
         $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
+            deleteItem($row['ID']);
         ?>
             <div class="publicItem">
                 <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
@@ -250,7 +251,7 @@ function registerForm()
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
                     <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                    <button onclick="deleteItem()" class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
+                    <button type="submit" name="deleteButton" class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
@@ -272,10 +273,13 @@ function registerForm()
 
     function deleteItem($id)
     {
-        $servername = "localhost";
-        $username = "test_user";
-        $password = "1234";
-        $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-        $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
+        if(isset($_POST['deleteButton']))
+        {
+            $servername = "localhost";
+            $username = "test_user";
+            $password = "1234";
+            $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+            $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
+        }
     }
     ?>
