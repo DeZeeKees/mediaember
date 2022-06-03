@@ -250,7 +250,7 @@ function registerForm()
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
                     <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                    <button type="submit" name="deleteButton" class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
+                    <button type="submit" name="deleteButton" class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span> <?php deleteItem() ?></button>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
