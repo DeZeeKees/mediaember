@@ -10,11 +10,6 @@ $servername = "localhost";
 $username = "test_user";
 $password = "1234";
 
-define('KB', 1024);
-define('MB', 1048576);
-define('GB', 1073741824);
-define('TB', 1099511627776);
-
 $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
 
 if(isset($_POST['uploadIsPublicCheckbox']))
@@ -59,7 +54,7 @@ if($result)
     }
     
     // Check file size
-    if ($_FILES["uploadInput"]["size"] > 0.2*GB) {
+    if ($_FILES["uploadInput"]["size"] > 100000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
     }
