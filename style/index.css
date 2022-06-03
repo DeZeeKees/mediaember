@@ -343,8 +343,6 @@ body
     height: 37.5%;
     border: solid var(--Red);
     border-radius: var(--aboutRadius);
-    display: flex;
-    flex-direction: column;
 }
 .filterScreen{
     position: absolute;
