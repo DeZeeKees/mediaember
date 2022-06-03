@@ -250,7 +250,7 @@ function registerForm()
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
                     <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                    <span class="material-symbols-outlined">delete</span> <?php deleteItem() ?>
+                    <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
@@ -272,8 +272,7 @@ function registerForm()
 
     function deleteItem()
     {
-        echo "test1";
-        if(isset($_REQUEST['deleteButton']))
+        if(isset($_GET['delete']))
         {
             // $servername = "localhost";
             // $username = "test_user";
