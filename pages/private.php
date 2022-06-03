@@ -5,13 +5,14 @@ html();
 ?>
 <script src="../script/index.js" defer></script>
 <script src="../inc/jquery-3.6.0.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link rel="stylesheet" href="../style/index.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="uploadDiv">
-         <form action="./upload.php" method="POST" enctype="multipart/form-data">
+         <form id="privateForm" action="./upload.php" method="POST" enctype="multipart/form-data">
             <center>
                 <h1>Upload A File</h1>
                 <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->
@@ -149,7 +150,7 @@ html();
 </body>
 <script>
     function deleteItem(){
-    var result ="<?php deleteItem($id); ?>"
+    var result ="<?php deleteItem($row['id']); ?>"
     document.write(result);
     }
 </script>

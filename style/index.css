@@ -515,6 +515,10 @@ width: 70px;
   top: 90%;
   left: 90%;
 }
+.rounding 
+{
+  border-top-right-radius: ;
+}
 
 /*----------------About.php---------------------*/
 #altBorder{
