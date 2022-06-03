@@ -142,7 +142,7 @@ html();
             </ul>
         </div>
         <div class="itemsContainer">
-            <div class="actualItemsContainer">
+            <div class="actualItemsContainer rounding">
                 <?php printPrivateItems() ?>
             </div>
         </div>

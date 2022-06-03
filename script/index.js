@@ -5,7 +5,7 @@ var file = document.getElementById("uploadInput");
 var isFilterOpen = false;
 var isUploadOpen = false;
 
-const SignedIn = Swal.mixin({
+const fileSubmit = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
@@ -72,16 +72,19 @@ $(".closeUploadScreen").click(function () {
 });
 $(".uploadSubmit").click(function(){
     if (file.files.length == 0) {
+        $('.privateForm').submit(function (evt) {
+            evt.preventDefault();
+            window.history.back();
+        });
+
         Swal.fire({
             icon: 'error',
             title: 'No file selected',
             text: 'To upload a file please select one first'
         });
-        alert('No');
-        location.reload();
     }
     else {
-        SignedIn.fire({
+        fileSubmit.fire({
             icon: 'success',
             title: 'File Sucessfully uploaded.'
         });

@@ -517,7 +517,7 @@ width: 70px;
 }
 .rounding 
 {
-  border-top-right-radius: ;
+  border-top-right-radius: 50000px;
 }
 
 /*----------------About.php---------------------*/
