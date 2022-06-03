@@ -243,7 +243,6 @@ function registerForm()
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
         $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
-            deleteItem($row['ID']);
         ?>
             <div class="publicItem">
                 <p class="publicFileTitle"><?php echo $row["fileName"] ?></p>
@@ -271,15 +270,16 @@ function registerForm()
         }
     }
 
-    function deleteItem($id)
+    function deleteItem()
     {
-        if(isset($_POST['deleteButton']))
+        if(isset($_REQUEST['deleteButton']))
         {
-            $servername = "localhost";
-            $username = "test_user";
-            $password = "1234";
-            $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-            $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
+            // $servername = "localhost";
+            // $username = "test_user";
+            // $password = "1234";
+            // $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+            // $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
+            echo "test";
         }
     }
     ?>

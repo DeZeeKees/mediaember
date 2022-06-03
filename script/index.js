@@ -84,12 +84,6 @@ $(document).on('submit', 'form', function(e){
             text: 'To upload a file please select one first'
         });
     }
-    else {
-        fileSubmit.fire({
-            icon: 'success',
-            title: 'File Sucessfully uploaded.'
-        });
-    }
     return;
 });
 
