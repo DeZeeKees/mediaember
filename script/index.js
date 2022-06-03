@@ -70,15 +70,18 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-$(".uploadSubmit").click(function(){
+$(document).on('submit', 'form', function(e){
     if (file.files.length === 0) {
-        $(document).on('submit', 'form', function(e){
-            e.preventDefault();
-            return;
-        });
+        e.preventDefault();
+            Swal.fire({
+                icon: 'error',
+                title: 'No file selected',
+                text: 'Please select a file before trying to upload air'
+            });
+    } else{
+        return;
     }
 });
-
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
 
