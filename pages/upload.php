@@ -17,7 +17,16 @@ define('TB', 1099511627776);
 
 $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
 
-$checkboxChecked = 1;
+if(isset($_POST['uploadIsPublicCheckbox']))
+{
+    $checkboxChecked = 1;
+}
+else
+{
+    $checkboxChecked = 0;
+}
+
+
 $sessionUsername = $_SESSION['username'];
 $fileName = $_FILES["uploadInput"]["name"];
 $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
