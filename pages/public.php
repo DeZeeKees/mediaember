@@ -74,25 +74,14 @@ html();
         <div>
             <ul class="buttons">
                 <li class="tooltip">
-                    <span class="tooltiptext">Download File</span>
-                    <button class="filterButton filter1"><span class="material-symbols-outlined">download</span></button>
-                </li>
-                <li class="tooltip">
                     <span class="tooltiptext">Filter Items</span>
-                    <button class="filterButton filter1"><span class="material-symbols-outlined">filter_alt</span></button>
+                    <button class="filterButton filter1 pointer filter"><span class="material-symbols-outlined filterBtn">filter_alt</span></button>
                 </li>
             </ul>
         </div>
         <div class="itemsContainer">
-            <div class="filterBar">
-                <div></div>
-                <button class="filterButton filter1"><span class="material-symbols-outlined">sort</span></button>
-                <button class="filterButton filter2"><span class="material-symbols-outlined">sort</span></button>
-                <button class="filterButton filter3"><span class="material-symbols-outlined">sort</span></button>
-                <div class="moveleft"></div>
-            </div>
             <div class="actualItemsContainer">
-                <?php printPublicItems() ?>
+            <?php printPublicItems() ?>
             </div>
         </div>
     </div>

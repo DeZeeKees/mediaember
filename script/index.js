@@ -1,12 +1,21 @@
 // toms playground :D
 //general:
 
-// {(() => {
-//     console.log(pwStr, pwStr2)
-// })()}
-
+var file = document.getElementById("uploadInput");
 var isFilterOpen = false;
 var isUploadOpen = false;
+
+const SignedIn = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
 
 function onLoad() {
     $(".hyperimg").hide();
@@ -60,6 +69,23 @@ $(".closeFilter").click(function () {
 $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
+});
+$(".uploadSubmit").click(function(){
+    if (file.files.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'No file selected',
+            text: 'To upload a file please select one first'
+        });
+        alert('No');
+        location.reload();
+    }
+    else {
+        SignedIn.fire({
+            icon: 'success',
+            title: 'File Sucessfully uploaded.'
+        });
+    }
 });
 
 //excluding file extentions so they cany be uploaded

@@ -147,6 +147,12 @@ html();
         </div>
     </div>
 </body>
+<script>
+    function deleteItem(){
+    var result ="<?php deleteItem($id); ?>"
+    document.write(result);
+    }
+</script>
 
 </html>
 <!--   navigator.clipboard.writeText(copyText.value); -->

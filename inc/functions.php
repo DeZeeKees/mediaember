@@ -250,7 +250,7 @@ function registerForm()
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
                     <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                    <button class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
+                    <button onclick="deleteItem()" class="filterButton filter1 pointer"><span class="material-symbols-outlined">delete</span></button>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
@@ -268,5 +268,14 @@ function registerForm()
         while ($row = $stmt->fetch()) {
             echo $row['credtis'];
         }
+    }
+
+    function deleteItem($id)
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
     }
     ?>
