@@ -119,8 +119,8 @@ function registerForm()
 
             $username = $_POST['usernameRegister'];
             $email = $_POST['emailRegister'];
-            $password = md5($_POST['passwordRegister']);
-            $cPassword = md5($_POST['cPasswordRegister']);
+            $password = $_POST['passwordRegister']; //md5($_POST['passwordRegister']);
+            $cPassword = $_POST['passwordRegister']; //md5($_POST['cPasswordRegister']);
             $baseCredits = 10;
             try {
                 if ($password == $cPassword) {
