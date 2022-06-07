@@ -213,6 +213,7 @@ function registerForm()
             echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made \\n " . $e . "');</script>";
         }
     }
+        // private/public file download Functions -----------------------------------------------------------
 
     function printPublicItems()
     {
