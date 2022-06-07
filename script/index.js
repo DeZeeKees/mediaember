@@ -70,7 +70,7 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-$document.getElementById("#myFormId").addEventListener("submit", function(e){
+document.getElementById("#myFormId").addEventListener("submit", function(e){
     if(!isValid){
         //stop form from submitting
         e.preventDefault();    
