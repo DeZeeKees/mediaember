@@ -593,7 +593,8 @@ margin-right: 2%;
 .mbox
 {
   width: 415px;
-  height: 76px;
+  height: 75px;
+  resize: none;
 }
 
 .card .row {
