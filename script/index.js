@@ -70,6 +70,21 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
+
+$('.uploadSubmit').clic(function(){
+    if(file.length === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'No file detected',
+            text: 'Please select a file before submitting',
+            confirmButtonText: 'Upload File'
+        })
+    }
+    else {
+        return;
+    }
+});
+
 document.getElementById("#myFormId").addEventListener("submit", function(e){
     if(!isValid){
         //stop form from submitting
