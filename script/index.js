@@ -71,7 +71,7 @@ $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
 });
 
-$('.uploadSubmit').clic(function(){
+$('.uploadSubmit').click(function(){
     if(file.length === 0) {
         Swal.fire({
             icon: 'error',
