@@ -292,8 +292,8 @@ function registerForm()
                 $stmt->bindParam(':id', $id);
                 $stmt->execute();
 
-                $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
-                while ($row = $stmt->fetch()) 
+                $stmt2 = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
+                while ($row = $stmt2->fetch()) 
                 {
                     unlink($row['filePath']);
                 }

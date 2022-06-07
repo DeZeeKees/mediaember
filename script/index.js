@@ -70,17 +70,17 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-$(document).on('submit', 'form', function(e){
-    if (file.files.length === 0) {
-        e.preventDefault();
-            Swal.fire({
-                icon: 'error',
-                title: 'No file selected',
-                text: 'Please select a file before trying to upload air'
-            });
-    } else{
-        return;
+$document.getElementById("#myFormId").addEventListener("submit", function(e){
+    if(!isValid){
+        //stop form from submitting
+        e.preventDefault();    
     }
+      Swal.fire({
+          icon: 'sucess',
+          title: 'File Uploaded',
+          text: 'You have sucessfully uploaded a file',
+          confirmButtonText: 'Continue with life'
+      })
 });
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
