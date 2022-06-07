@@ -17,14 +17,14 @@ const fileSubmit = Swal.mixin({
     }
 })
 
-// (() => {
-//         if (window.location.href === 'https://10.147.20.133:8090/preview/testing.nl/pages/private.php?uploadedFile=true') {
-//             fileSubmit.fire({
-//                 icon: 'success',
-//                 title: 'File successfully uploaded',
-//             })
-//         }
-// })();
+function fileUploaded() {
+    if (window.location.href.indexOf("fileUploaded") > -1) {
+        fileSubmit.fire({
+            icon: 'success',
+            title: 'File Successfully uploaded'
+        })
+    } 
+}
 
 function onLoad() {
     $(".hyperimg").hide();
