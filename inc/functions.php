@@ -284,6 +284,7 @@ function registerForm()
             // $password = "1234";
             // $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
             // $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
+            header("Location: ./private.php");
         }
     }
     ?>
