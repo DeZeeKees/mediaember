@@ -292,13 +292,22 @@ function registerForm()
                 $stmt->bindParam(':id', $id);
                 $stmt->execute();
 
-                $stmt2 = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
-                while ($row = $stmt2->fetch()) 
-                {
-                    unlink($row['filePath']);
-                }
+                actualDeleteFunction();
                 echo "<script>window.location.href = 'private.php'</script>";
             }  
+        }
+    }
+
+    function actualDeleteFunction()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
+        while ($row = $stmt2->fetch()) 
+        {
+            unlink($row['filePath']);
         }
     }
     ?>
