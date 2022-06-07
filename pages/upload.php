@@ -54,7 +54,7 @@ if($result)
     }
     
     // Check file size
-    if ($_FILES["uploadInput"]["size"] > 100000000) {
+    if ($_FILES["uploadInput"]["size"] > 2000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
     }
