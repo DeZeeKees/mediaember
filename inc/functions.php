@@ -298,7 +298,7 @@ function registerForm()
                     $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
                     while ($row = $stmt->fetch()) 
                     {
-                        echo $row['filePath'];
+                        unlink($row['filePath']);
                     }
                     //echo "<script>window.location.href = 'private.php'</script>";
                 // }
