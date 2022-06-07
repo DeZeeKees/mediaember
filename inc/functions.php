@@ -287,25 +287,25 @@ function registerForm()
                  $password = "1234";
                  $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
                 
-                // $id = $_GET['id'];
-                // $stmt = $pdo->prepare( "DELETE FROM fileindex WHERE ID =:id" );
-                // $stmt->bindParam(':id', $id);
-                // $stmt->execute();
-                // $result = $stmt->setFetchMode(PDO::FETCH_NUM);
+                $id = $_GET['id'];
+                $stmt = $pdo->prepare( "DELETE FROM fileindex WHERE ID =:id" );
+                $stmt->bindParam(':id', $id);
+                $stmt->execute();
+                $result = $stmt->setFetchMode(PDO::FETCH_NUM);
 
-                // if($result)
-                // {
+                if($result)
+                {
                     $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
                     while ($row = $stmt->fetch()) 
                     {
                         unlink($row['filePath']);
                     }
-                    //echo "<script>window.location.href = 'private.php'</script>";
-                // }
-                // else
-                // {
-                //     echo "<script>console.log('Delete Error Database')</script>";
-                // }
+                    echo "<script>window.location.href = 'private.php'</script>";
+                }
+                else
+                {
+                    echo "<script>console.log('Delete Error Database')</script>";
+                }
             }  
         }
     }
