@@ -295,11 +295,19 @@ function registerForm()
 
                 if($result)
                 {
-                    echo "<script>window.location.href = 'private.php'</script>";
+                    $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
+                    while ($row = $stmt->fetch()) 
+                    {
+                        if (unlink($row['filePath'])) {
+                            echo "<script>window.location.href = 'private.php'</script>";
+                        } else {
+                            echo 'There was a error deleting the file ' . $row['filePath'];
+                        }
+                    }
                 }
                 else
                 {
-                    echo "<script>console.log('Delete Error')</script>";
+                    echo "<script>console.log('Delete Error Database')</script>";
                 }
             }  
         }

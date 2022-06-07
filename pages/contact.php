@@ -45,7 +45,7 @@ html();
                             </div>
 
                             <div class="col">
-                                <div class="form-group">
+                                <div class="form-group mbox">
                                     <label>Message</label>
                                     <textarea></textarea required>
       </div>
