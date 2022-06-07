@@ -274,12 +274,15 @@ function registerForm()
     {
         if(isset($_GET['delete']))
         {
+            if($_GET['delete'] == true)
+            {
+                echo "<script> console.log('test'); </script>";
+            }
             // $servername = "localhost";
             // $username = "test_user";
             // $password = "1234";
             // $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
             // $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
-            echo "test2";
         }
     }
     ?>
