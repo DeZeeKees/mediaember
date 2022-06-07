@@ -1,6 +1,9 @@
 <?php
 
 // General Functions -----------------------------------------------------------
+
+use LDAP\Result;
+
 function navbar($path, $path2, $path3, $path4, $path5, $path6)
 {
     session_start();
@@ -278,13 +281,27 @@ function registerForm()
             if($_GET['delete'] == true)
             {
                 echo "<script> console.log('test" . $_GET['id'] ."'); </script>";
-            }
-            // $servername = "localhost";
-            // $username = "test_user";
-            // $password = "1234";
-            // $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-            // $pdo->prepare("DELETE FROM fileIndex WHERE id=?")->execute([$id]);
-            echo "<script>window.location.href = 'private.php'</script>";
+                
+                $servername = "localhost";
+                $username = "test_user";
+                $password = "1234";
+                $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+                
+                $id = $_GET['id'];
+                $stmt = $pdo->prepare( "DELETE FROM fileIndex WHERE ID =:id" );
+                $stmt->bindParam(':id', $id);
+                $stmt->execute();
+                $result = $stmt->setFetchMode(PDO::FETCH_NUM);
+
+                if($result)
+                {
+                    echo "<script>window.location.href = 'private.php'</script>";
+                }
+                else
+                {
+                    echo "<script>console.log('Delete Error')</script>";
+                }
+            }  
         }
     }
     ?>
