@@ -277,7 +277,7 @@ function registerForm()
         {
             if($_GET['delete'] == true)
             {
-                echo "<script> console.log('test'); </script>";
+                echo "<script> console.log('test" . $_GET['id'] ."'); </script>";
             }
             // $servername = "localhost";
             // $username = "test_user";
