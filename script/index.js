@@ -18,11 +18,10 @@ const fileSubmit = Swal.mixin({
 })
 
 function fileUploaded() {
-    if (window.location.href === 'https://10.147.20.133:8090/preview/testing.nl/pages/private.php?fileUploaded') {
+    if (window.location.href === './private.php?uploadedFile=true') {
         fileSubmit.fire({
-            icon: 'sucess',
-            title: 'File uplaoded successfully',
-
+            icon: 'success',
+            title: 'File successfully uploaded',
         })
     }
 }
@@ -92,7 +91,6 @@ $(document).on('submit', 'form', function(e){
     }
     else {
         return;
-        window.location.href = 'https://10.147.20.133:8090/preview/testing.nl/pages/private.php';
     }
 })
 

@@ -12,7 +12,7 @@ html();
 
 <body id="indexBody" onload=privateAndPublicOnload(); onload=fileUploaded();>
     <div class="uploadDiv">
-         <form id="privateForm" action="./private.php?fileUploaded" method="POST" enctype="multipart/form-data">
+         <form id="privateForm" action="./upload.php" method="POST" enctype="multipart/form-data">
             <center>
                 <h1>Upload A File</h1>
                 <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->

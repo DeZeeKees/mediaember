@@ -1,7 +1,7 @@
 <script>
     function goBack()
     {
-        window.location.href = './private.php';
+        window.location.href = './private.php?uploadedFile=true';
     }
 </script>
 <?php
