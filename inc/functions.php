@@ -281,14 +281,14 @@ function registerForm()
             if($_GET['delete'] == true)
             {
                 echo "<script> console.log('test" . $_GET['id'] ."'); </script>";
-                
+
                 $servername = "localhost";
                 $username = "test_user";
                 $password = "1234";
                 $pdo = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
                 
                 $id = $_GET['id'];
-                $stmt = $pdo->prepare( "DELETE FROM fileIndex WHERE ID =:id" );
+                $stmt = $pdo->prepare( "DELETE FROM fileindex WHERE ID =:id" );
                 $stmt->bindParam(':id', $id);
                 $stmt->execute();
                 $result = $stmt->setFetchMode(PDO::FETCH_NUM);
