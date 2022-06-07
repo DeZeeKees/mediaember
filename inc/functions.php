@@ -291,21 +291,13 @@ function registerForm()
                 $stmt = $pdo->prepare( "DELETE FROM fileindex WHERE ID =:id" );
                 $stmt->bindParam(':id', $id);
                 $stmt->execute();
-                $result = $stmt->setFetchMode(PDO::FETCH_NUM);
 
-                if($result)
+                $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
+                while ($row = $stmt->fetch()) 
                 {
-                    $stmt = $pdo->query("SELECT * FROM fileindex WHERE ID =" . $_GET['id'] . "");
-                    while ($row = $stmt->fetch()) 
-                    {
-                        unlink($row['filePath']);
-                    }
-                    echo "<script>window.location.href = 'private.php'</script>";
+                    unlink($row['filePath']);
                 }
-                else
-                {
-                    echo "<script>console.log('Delete Error Database')</script>";
-                }
+                echo "<script>window.location.href = 'private.php'</script>";
             }  
         }
     }
