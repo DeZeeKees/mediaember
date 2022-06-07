@@ -236,6 +236,7 @@ function registerForm()
 
     function printPrivateItems()
     {
+        deleteItem();
         $servername = "localhost";
         $username = "test_user";
         $password = "1234";
