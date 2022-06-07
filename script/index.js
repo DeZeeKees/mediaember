@@ -18,7 +18,7 @@ const fileSubmit = Swal.mixin({
 })
 
 function fileUploaded() {
-    if (window.location.href === 'https://10.147.20.133:8090/preview/testing.nl/pages/private.php') {
+    if (window.location.href === 'https://10.147.20.133:8090/preview/testing.nl/pages/private.php?fileUploaded') {
         fileSubmit.fire({
             icon: 'sucess',
             title: 'File uplaoded successfully',
