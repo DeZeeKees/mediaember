@@ -463,12 +463,12 @@ input[type="file"] {
 .publicFileTitle, .publicFileDate, .publicFileSize
 {
     color: white;
-    width: 150px;
+    width: 80px;
 }
 
 .large
 {
-  width:400px;
+  width:75%;
 }
 .shareButton
 {
