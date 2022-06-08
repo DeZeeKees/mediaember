@@ -32,7 +32,7 @@ html();
             <div class="aboutInfoDiv"><img src="../media/img/SolidReaimu.png" alt="Fin">
                 <div class="nameContainer">
                     <h1>Fin</h1>
-                    <p>Just a regular dude on the planet earth just vibing not suffering</p>
+                    <p>Just a regular dude</p>
                 </div>
             </div>
             <!-- TIJN -->

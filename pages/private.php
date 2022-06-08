@@ -97,7 +97,7 @@ html();
     </div>
 
     <div class="filterScreen">
-        <form>
+        <form name="filterForm">
             <p class="filterHead">Filter by file extention</p>
             <ul class="none">
                 <li>
@@ -153,7 +153,7 @@ html();
                     <label for="html">txt</label>
                 </li>
                 <li class="toopltip">
-                    <button type="submit"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
+                    <button type="submit" for="filterForm"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
                 </li>
             </ul>
         </form>
