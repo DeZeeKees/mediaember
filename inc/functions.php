@@ -230,7 +230,7 @@ function registerForm()
                 <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                 <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
                 <div>
-                    <button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button>
+                    <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                     <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
                 </div>
             </div>
