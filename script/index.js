@@ -6,9 +6,8 @@ var isFilterOpen = false;
 var isUploadOpen = false;
 
 const fileSubmit = Swal.mixin({
-    toast: false,
     showConfirmButton: true,
-    isConfirmed: window.location.href = './private.php',
+    // isConfirmed: window.location.href = './private.php',
     customClass: 'fileAlert'
 })
 

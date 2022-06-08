@@ -38,16 +38,20 @@ html();
                     $(document).ready(function(){
                         if (location.href.indexOf('uploadedFile') > -1) {
                             console.log('hi')
-                            fileSubmit.fire({
+                            Swal.fire({
                                 icon: 'success',
                                 title: 'File uploaded',
+                                text: 'Successfully uploaded file',
+                                confirmButtonText: 'View Files'
                             })
                         }
                         else if (location.href.indexOf('uploadFailed') > -1) {
                             console.log('hi')
-                            fileSubmit.fire({
+                            Swal.fire({
                                 icon: 'error',
                                 title: 'Upload Failed',
+                                text: 'Failed to upload file',
+                                confirmButtonText: 'Retry'
                             })
                         }
                     })
