@@ -117,7 +117,6 @@ fileInput.addEventListener("change", function () {
         file.name.indexOf('<') > -1 ||
         file.name.indexOf('>') > -1 ||
         file.name.indexOf('`') > -1 ||
-        file.name.indexOf('.') > -1 ||
         file.name.indexOf('~') > -1) {
             hasInvalidCharacters = true
         }
