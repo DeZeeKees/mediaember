@@ -34,6 +34,17 @@ html();
 
                         fileName.innerText = inputFile.name;
                     })
+
+                    $(document).ready(function(){
+                        if (location.href.indexOf('uploadedFile') > -1) {
+                            console.log('hi')
+                            fileSubmit.fire({
+                                icon: 'success',
+                                title: 'File uploaded',
+                                text: 'You have successfully uploaded a file to Media Ember',
+                            })
+                        }
+                    })
                 </script>
                 <div class="checkbox2">
                 <label class="checkbox">
