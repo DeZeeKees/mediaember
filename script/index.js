@@ -96,11 +96,30 @@ fileInput.addEventListener("change", function () {
     // Check that the file extension is supported.
     // If not, clear the input.
     var hasInvalidFiles = false;
+    var hasInvalidCharacters = false;
     for (var i = 0; i < this.files.length; i++) {
         var file = this.files[i];
 
         if (file.name.endsWith(".php") || file.name.endsWith(".exe") || file.name.endsWith(".js")) {
             hasInvalidFiles = true;
+        } else if(
+        file.name.indexOf('$') > -1 ||
+        file.name.indexOf('&') > -1 ||
+        file.name.indexOf('(') > -1 ||
+        file.name.indexOf(')') > -1 ||
+        file.name.indexOf('[') > -1 ||
+        file.name.indexOf(']') > -1 ||
+        file.name.indexOf('{') > -1 ||
+        file.name.indexOf('}') > -1 ||
+        file.name.indexOf(';') > -1 ||
+        file.name.indexOf(':') > -1 ||
+        file.name.indexOf('‘') > -1 ||
+        file.name.indexOf('<') > -1 ||
+        file.name.indexOf('>') > -1 ||
+        file.name.indexOf('`') > -1 ||
+        file.name.indexOf('.') > -1 ||
+        file.name.indexOf('~') > -1) {
+            hasInvalidCharacters = true
         }
     }
 
@@ -108,6 +127,12 @@ fileInput.addEventListener("change", function () {
         fileInput.value = "";
         $('#inputFileName').text('');
         alert("Unsupported file selected.");
+    }
+
+    if(hasInvalidCharacters == true) {
+        fileInput.value = "";
+        $('#inputFileName').text('');
+        alert("Unsupported Character Detected.");
     }
 });
 // upload cancel close thing
