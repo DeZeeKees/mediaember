@@ -17,6 +17,17 @@ const fileSubmit = Swal.mixin({
     }
 })
 
+$(document).ready(function(){
+    if (location.href.indexOf('uploadedFile') > -1) {
+        console.log('hi')
+        fileSubmit.fire({
+            icon: 'success',
+            title: 'File uploaded',
+            text: 'You have successfully uploaded a file to Media Ember',
+        })
+    }
+})
+
 function fileUploaded() {
     if (window.location.href.indexOf("uploadedFile") > -1) {
         console.log('hi');
@@ -94,18 +105,7 @@ $(document).on('submit', 'form', function(e){
         return;
     }
 })
-addGlobalEventListener('submit', '#privateForm', e => {
-    if(!isValid){
-        //stop form from submitting
-        e.preventDefault();    
-    }
-      Swal.fire({
-          icon: 'sucess',
-          title: 'File Uploaded',
-          text: 'You have sucessfully uploaded a file',
-          confirmButtonText: 'Continue with life'
-      })
-})
+
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
 
