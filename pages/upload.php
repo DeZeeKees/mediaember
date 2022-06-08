@@ -3,6 +3,10 @@
     {
         window.location.href = './private.php?uploadedFile';
     }
+    function Error()
+    {
+        window.location.href = './private.php?uploadFailed';
+    }
 </script>
 <?php
 session_start();
@@ -63,19 +67,19 @@ if($result)
     if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
     ?>
-        <button onclick="goBack()">Continue</button>
+        <script>Error()</script>
     <?php
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["uploadInput"]["tmp_name"], $target_file)) {
             echo "The file ". htmlspecialchars( basename( $_FILES["uploadInput"]["name"])). " has been uploaded.";
         ?>
-            <button onclick="goBack()">Continue</button>
+            <script>goBack()</script>
         <?php
         } else {
             echo "Sorry, there was an error uploading your file.";
             ?>
-                <button onclick="goBack()">Continue</button>
+                <script>Error()</script>
             <?php
         }
     }
