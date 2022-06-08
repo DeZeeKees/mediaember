@@ -13,55 +13,55 @@ html();
         <p class="filterHead">Filter by file extention</p>
         <ul class="none">
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem" checked="checked">
+                <input type="radio" class="form-check-input pointer" value="none" name="filterItem" checked="checked">
                 <label for="html">none</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="png" name="filterItem">
                 <label for="html">png</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="jpg" name="filterItem">
                 <label for="html">jpg</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="zip" name="filterItem">
                 <label for="html">zip</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="rar" name="filterItem">
                 <label for="html">rar</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="mp4" name="filterItem">
                 <label for="html">mp4</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="mp3" name="filterItem">
                 <label for="html">mp3</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="mp2" name="filterItem">
                 <label for="html">mp2</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="webm" name="filterItem">
                 <label for="html">webm</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="mpeg" name="filterItem">
                 <label for="html">mpeg</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="gif" name="filterItem">
                 <label for="html">gif</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="ico" name="filterItem">
                 <label for="html">ico</label>
             </li>
             <li>
-                <input type="radio" class="form-check-input pointer" value="checkedValue" name="filterItem">
+                <input type="radio" class="form-check-input pointer" value="txt" name="filterItem">
                 <label for="html">txt</label>
             </li>
             <li class="toopltip">

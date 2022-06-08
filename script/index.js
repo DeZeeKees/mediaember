@@ -5,10 +5,16 @@ var file = document.getElementById("uploadInput");
 var isFilterOpen = false;
 var isUploadOpen = false;
 
-const fileSubmit = Swal.mixin({
-    showConfirmButton: true,
-    // isConfirmed: window.location.href = './private.php',
-    customClass: 'fileAlert'
+const unsupportedFile = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
 })
 
 function fileUploaded() {
@@ -125,13 +131,19 @@ fileInput.addEventListener("change", function () {
     if (hasInvalidFiles) {
         fileInput.value = "";
         $('#inputFileName').text('');
-        alert("Unsupported file selected.");
+        unsupportedFile.fire({
+            icon: 'error',
+            title: 'File type not supported'
+        });
     }
 
     if(hasInvalidCharacters == true) {
         fileInput.value = "";
         $('#inputFileName').text('');
-        alert("Unsupported Character Detected.");
+        unsupportedFile.fire({
+            icon: 'error',
+            title: 'File contains illegal characters'
+        });
     }
 });
 // upload cancel close thing
