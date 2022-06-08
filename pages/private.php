@@ -57,10 +57,14 @@ html();
                                 title: 'Upload Failed',
                                 text: 'Failed to upload file',
                                 confirmButtonText: 'Retry'
+                            }).then((result) => {
+                                if (result.isConfirmed || result.isDismissed === true) {
+                                    window.location.href = './private.php'
+                                }
                             })
-                        }
+                        }        
                     })
-                </script>
+            </script>
                 <div class="checkbox2">
                 <label class="checkbox">
                     <input type="checkbox" name="uploadIsPublicCheckbox" />
