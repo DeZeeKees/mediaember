@@ -152,7 +152,7 @@ fileInput.addEventListener("change", function () {
 $(".btnRegister").click(function(){
     pwStr = $('.passwordRequired1').val();
     pwStr2 = $(".passwordRequired2").val();
-    if (pwString === '') {
+    if (pwStr === '' || pwStr2 === '') {
         Swal.fire({
             title: 'No password detected',
             text: 'Please fill in a password',

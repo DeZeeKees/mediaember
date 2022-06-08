@@ -332,6 +332,19 @@ body
 }
 
 /*------------------Public.php || Private.php------------------*/
+.uploadDate {
+  position: absolute;
+  z-index: 2;
+  left: 400px;
+  top: 100px;
+}
+
+.fileSize {
+  position: absolute;
+  z-index: 2;
+  left: 450px;
+  top: 100px;
+}
 .uploadDiv{
     position: absolute;
     background-color: var(--Black);

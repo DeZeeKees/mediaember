@@ -11,6 +11,10 @@ html();
 </head>
 
 <body id="indexBody" onload=privateAndPublicOnload(); onload=fileUploaded();>
+
+    <div class="uploadDate">Date Uploaded</div>
+    <div class="fileSize">File Size</div>
+
     <div class="uploadDiv">
          <form id="privateForm" action="./upload.php" method="POST" enctype="multipart/form-data">
             <center>
