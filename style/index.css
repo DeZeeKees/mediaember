@@ -469,6 +469,7 @@ input[type="file"] {
 .large
 {
   width:75%;
+  margin-left: 10px;
 }
 .shareButton
 {

@@ -94,8 +94,7 @@ $(document).on('submit', 'form', function(e){
         return;
     }
 })
-
-document.getElementById("#privateForm").addEventListener("submit", function(e){
+addGlobalEventListener('submit', '#privateForm', e => {
     if(!isValid){
         //stop form from submitting
         e.preventDefault();    
@@ -106,7 +105,7 @@ document.getElementById("#privateForm").addEventListener("submit", function(e){
           text: 'You have sucessfully uploaded a file',
           confirmButtonText: 'Continue with life'
       })
-});
+})
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
 
