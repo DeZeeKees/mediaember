@@ -81,7 +81,7 @@ $(".closeUploadScreen").click(function () {
     $(".uploadDiv").hide(1000)
 });
 
-$(document).on('submit', 'form', function(e){
+$(document).on('submit', '#privateForm', function(e){
     if (file.files.length === 0) {
         e.preventDefault();
         Swal.fire({
