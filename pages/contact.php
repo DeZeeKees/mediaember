@@ -10,7 +10,7 @@ html();
     <?php
     navbar("../media/img/legitlogo.png", "login.php", "../index.php", "./private.php", "./logout.php", './public.php');
     ?>
-    <div class="bingus">
+    <div class="MasterDivCon">
         <div>
             <form action="./contact.php" method="post">
                 <div class="card">

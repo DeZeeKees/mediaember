@@ -501,15 +501,6 @@ input[type="file"] {
     height: 1px;
 }
 
-.brain p 
-{
-  font-size: 20px;
-position: relative;
-left: 67.5px;
-bottom: 12px;
-width: 70px;
-}
-
 .submitUploadScreen
 {
   width: 100px;
@@ -696,7 +687,7 @@ margin-right: 2%;
     width: 100%;
   }
 }
-.bingus
+.MasterDivCon
 {
     display: flex;
     justify-content: space-around
