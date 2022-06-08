@@ -18,7 +18,8 @@ const fileSubmit = Swal.mixin({
 })
 
 function fileUploaded() {
-    if (window.location.href.indexOf("fileUploaded") > -1) {
+    if (window.location.href.indexOf("uploadedFile") > -1) {
+        console.log('hi');
         fileSubmit.fire({
             icon: 'success',
             title: 'File Successfully uploaded'
