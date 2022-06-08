@@ -71,10 +71,10 @@ if (isUploadOpen === false) {
     });
 }
 
-$(".closeFilter").click(function () {
-    isFilterOpen = false;
-    $(".filterScreen").hide(1000) 
-});
+// $(".closeFilter").click(function () {
+//     isFilterOpen = false;
+//     $(".filterScreen").hide(1000) 
+// });
 
 $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
