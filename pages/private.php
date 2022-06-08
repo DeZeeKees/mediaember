@@ -43,9 +43,10 @@ html();
                                 title: 'File uploaded',
                                 text: 'Successfully uploaded file',
                                 confirmButtonText: 'View Files',
-                                // isConfirmed: = console.log('hi')
                             }).then((result) => {
-                                console.log(result)
+                                if (result.isConfirmed) {
+                                    window.location.href = './private.php'
+                                }
                             })
                         }
                         else if (location.href.indexOf('uploadFailed') > -1) {
