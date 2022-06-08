@@ -220,21 +220,64 @@ function registerForm()
         $servername = "localhost";
         $username = "test_user";
         $password = "1234";
-
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-        $stmt = $dbh->query("SELECT * FROM fileindex WHERE isPublic = 1");
-        while ($row = $stmt->fetch()) {
-        ?>
-            <div class="publicItem">
-                <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
-                <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
-                <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
-                <div>
-                    <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                    <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+
+        if(isset($_POST['filterItem']))
+        {
+            if($_POST['filterItem'] == '')
+            {
+                $stmt = $dbh->query("SELECT * FROM fileindex WHERE isPublic = 1");
+                while ($row = $stmt->fetch()) {
+                ?>
+                    <div class="publicItem">
+                        <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
+                        <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                        <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                        <div>
+                            <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
+                            <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
+                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        </div>
+                    </div>
+                <?php
+                }
+            }
+            else
+            {
+                $stmt = $dbh->query("SELECT * FROM fileindex WHERE isPublic = 1 AND fileType ='" . $_POST['filterItem'] . "'");
+                while ($row = $stmt->fetch()) {
+                ?>
+                    <div class="publicItem">
+                        <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
+                        <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                        <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                        <div>
+                            <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
+                            <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
+                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        </div>
+                    </div>
+                <?php
+                }
+            }
+        }
+        else
+        {
+            $stmt = $dbh->query("SELECT * FROM fileindex WHERE isPublic = 1");
+            while ($row = $stmt->fetch()) {
+            ?>
+                <div class="publicItem">
+                    <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
+                    <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                    <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                    <div>
+                        <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
+                        <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
+                        <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                    </div>
                 </div>
-            </div>
-        <?php
+            <?php
+            }
         }
     }
 
