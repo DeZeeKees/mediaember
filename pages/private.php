@@ -41,7 +41,13 @@ html();
                             fileSubmit.fire({
                                 icon: 'success',
                                 title: 'File uploaded',
-                                text: 'You have successfully uploaded a file to Media Ember',
+                            })
+                        }
+                        else if (location.href.indexOf('uploadFailed') > -1) {
+                            console.log('hi')
+                            fileSubmit.fire({
+                                icon: 'error',
+                                title: 'Upload Failed',
                             })
                         }
                     })

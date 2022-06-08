@@ -6,15 +6,10 @@ var isFilterOpen = false;
 var isUploadOpen = false;
 
 const fileSubmit = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
+    toast: false,
+    showConfirmButton: true,
+    isConfirmed: window.location.href = './private.php',
+    customClass: 'fileAlert'
 })
 
 function fileUploaded() {
