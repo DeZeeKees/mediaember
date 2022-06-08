@@ -106,7 +106,7 @@ fileInput.addEventListener("change", function () {
 
     if (hasInvalidFiles) {
         fileInput.value = "";
-        $('#inputFileName').text = "";
+        $('#inputFileName').text('');
         alert("Unsupported file selected.");
     }
 });
