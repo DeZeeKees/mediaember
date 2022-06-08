@@ -248,21 +248,41 @@ function registerForm()
 
         if(isset($_POST['filterItem']))
         {
-            // SELECT * FROM fileindex WHERE username = 'test' AND fileType = 'image/png' 
-            $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "' AND fileType ='" . $_POST['filterItem'] . "'");
-            while ($row = $stmt->fetch()) {
-            ?>
-                <div class="publicItem">
-                    <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
-                    <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
-                    <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
-                    <div>
-                        <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
-                        <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                        <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+            if($_POST['filterItem'] == '')
+            {
+                $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
+                while ($row = $stmt->fetch()) {
+                ?>
+                    <div class="publicItem">
+                        <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
+                        <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                        <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                        <div>
+                            <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
+                            <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
+                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        </div>
                     </div>
-                </div>
-            <?php
+                <?php
+                }
+            }
+            else
+            {
+                $stmt = $dbh->query("SELECT * FROM fileindex WHERE username ='". $_SESSION['username'] . "' AND fileType ='" . $_POST['filterItem'] . "'");
+                while ($row = $stmt->fetch()) {
+                ?>
+                    <div class="publicItem">
+                        <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
+                        <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
+                        <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
+                        <div>
+                            <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
+                            <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
+                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        </div>
+                    </div>
+                <?php
+                }
             }
         }
         else
