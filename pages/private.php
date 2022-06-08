@@ -97,7 +97,7 @@ html();
     </div>
 
     <div class="filterScreen">
-        <form>
+        <form method="POST">
             <p class="filterHead">Filter by file extention</p>
             <ul class="none">
                 <li>
