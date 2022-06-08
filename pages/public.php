@@ -10,7 +10,7 @@ html();
 
 <body id="indexBody" onload=privateAndPublicOnload()>
     <div class="filterScreen">
-        <form>
+        <form method="POST">
             <p class="filterHead">Filter by file extention</p>
             <ul class="none">
                 <li>
