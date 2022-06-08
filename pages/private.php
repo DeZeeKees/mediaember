@@ -42,7 +42,8 @@ html();
                                 icon: 'success',
                                 title: 'File uploaded',
                                 text: 'Successfully uploaded file',
-                                confirmButtonText: 'View Files'
+                                confirmButtonText: 'View Files',
+                                isConfirmed: window.location.href = './private.php'
                             })
                         }
                         else if (location.href.indexOf('uploadFailed') > -1) {
