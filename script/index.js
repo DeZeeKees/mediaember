@@ -95,7 +95,7 @@ $(document).on('submit', 'form', function(e){
     }
 })
 
-document.getElementById("#myFormId").addEventListener("submit", function(e){
+document.getElementById("#privateForm").addEventListener("submit", function(e){
     if(!isValid){
         //stop form from submitting
         e.preventDefault();    
