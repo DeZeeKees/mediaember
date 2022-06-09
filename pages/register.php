@@ -8,8 +8,8 @@ registerForm();
 <script>
     if(window.location.href.indexOf('emailInUse')) {
         registerFail.fire({
-            text: ''
-        }).then
+            text: 'Email already exist, please choose a different email'
+        });
     }
 </script>
 </head>
