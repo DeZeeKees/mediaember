@@ -22,7 +22,7 @@ $(document).ready(function(){
     if(window.location.href.indexOf('loginSucces') > -1) {
         Swal.fire({
             icon: 'success',
-            title: 'Registered Successfully',     
+            title: 'Logged In Successfully',     
         }).then((result) => {
             if (result.isConfirmed || result.isDismissed === true) {
                 window.location.href = 'private.php'
