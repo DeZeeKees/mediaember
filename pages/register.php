@@ -5,6 +5,13 @@ registerForm();
 ?>
 <script src="../script/index.js" defer></script>
 <link rel="stylesheet" href="../style/logreg.css">
+<script>
+    if(window.location.href.indexOf('emailInUse')) {
+        registerFail.fire({
+            text: ''
+        }).then
+    }
+</script>
 </head>
 
 <body>

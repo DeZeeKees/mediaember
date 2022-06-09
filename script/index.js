@@ -17,6 +17,21 @@ const unsupportedFile = Swal.mixin({
     }
 })
 
+const registerFail = Swal.mixin({
+    icon: 'error',
+    title: 'An issue has occured',
+    backdrop: `
+    rgba(0,0,123,0.4)
+    url("../media/img/nyanCat.gif")
+    left top
+    no-repeat
+  ` 
+}).then((result) => {
+    if (result.isConfirmed || result.isDismissed === true) {
+        window.location.href = 'register.php'
+    }
+})
+
 function fileUploaded() {
     if (window.location.href.indexOf("uploadedFile") > -1) {
         console.log('hi');
