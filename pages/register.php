@@ -4,17 +4,20 @@ html();
 registerForm();
 ?>
 <script src="../script/index.js" defer></script>
+<script src="../inc/jquery-3.6.0.js"></script>
 <link rel="stylesheet" href="../style/logreg.css">
 <script>
-    if(window.location.href.indexOf('emailInUse')) {
+$(document).ready(function(){
+    if(location.href.indexOf('emailInUse')) {
         registerFail.fire({
             text: 'Email already exist, please choose a different email'
         }).then((result) => {
             if (result.isConfirmed || result.isDismissed === true) {
                 window.location.href = 'register.php'
             }
-    })
-}
+        })
+    }
+})
 </script>
 </head>
 
