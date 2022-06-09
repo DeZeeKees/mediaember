@@ -29,17 +29,20 @@ function fileUploaded() {
 
 function emailFailed() {
     if (window.location.href = 'https://10.147.20.133:8090/preview/testing.nl/pages/register.php?emailFailed') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Email already exists',
-                text: 'Please fill in a different email',
-                background: '#fff url(/images/trees.png)',
-                backdrop: `
-                  rgba(0,0,123,0.4)
-                  url("./me/img/nyanCat.gif")
-                  left top
-                  no-repeat
-                `
+        Swal.fire({
+            icon: 'error',
+            title: 'Email already exists',
+            text: 'Please fill in a different email',
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("../media/img/nyanCat.gif")
+                left top
+                no-repeat
+            `
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = './private.php'
+            }
         })
     }
 }
