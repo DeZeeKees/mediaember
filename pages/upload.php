@@ -48,7 +48,8 @@ $result = $stmt->setFetchMode(PDO::FETCH_NUM);
 
 if($result)
 {
-    
+    $stmt = $dbh->prepare("INSERT INTO credtis WHERE username =" . $_SESSION['username'] . "  (credtis) values(?)");
+    $stmt->bindParam(1, $sessionUsername);
 }
 
 // $target_dir = "../storage/" . $_SESSION['username'] . "/";
