@@ -8,7 +8,7 @@ registerForm();
 <link rel="stylesheet" href="../style/logreg.css">
 <script>
 $(document).ready(function(){
-    if(location.href.indexOf('emailInUse')) {
+    if(window.location.href.indexOf('emailInUse')) {
         registerFail.fire({
             text: 'Email already exist, please choose a different email'
         }).then((result) => {
@@ -17,6 +17,7 @@ $(document).ready(function(){
             }
         })
     }
+    //next alert
 })
 </script>
 </head>
