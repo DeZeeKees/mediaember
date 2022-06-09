@@ -850,6 +850,7 @@ margin-right: 2%;
 
 .wingContainer {
   width: 200px;
+  position: absolute;
 }
 
 .feather {
