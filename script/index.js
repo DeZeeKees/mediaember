@@ -26,10 +26,6 @@ const registerFail = Swal.mixin({
     left top
     no-repeat
   ` 
-}).then((result) => {
-    if (result.isConfirmed || result.isDismissed === true) {
-        window.location.href = 'register.php'
-    }
 })
 
 function fileUploaded() {
