@@ -13,8 +13,8 @@ registerForm();
             if (result.isConfirmed || result.isDismissed === true) {
                 window.location.href = 'register.php'
             }
-})
-    }
+    })
+}
 </script>
 </head>
 
