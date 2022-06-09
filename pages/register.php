@@ -3,6 +3,7 @@ require '../inc/functions.php';
 html("../media/img/favicon.ico");
 registerForm();
 ?>
+<title>Media Ember - Register</title>
 <script src="../script/index.js" defer></script>
 <script src="../inc/jquery-3.6.0.js"></script>
 <link rel="stylesheet" href="../style/logreg.css">

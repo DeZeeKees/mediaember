@@ -2,6 +2,7 @@
 require '../inc/functions.php';
 html("../media/img/favicon.ico");
 ?>
+<title>Media Ember - Contact</title>
 <script src="../script/index.js" defer></script>
 <link rel="stylesheet" href="../style/index.css">
 </head>

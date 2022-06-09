@@ -3,6 +3,7 @@ session_start();
 require '../inc/functions.php';
 html("../media/img/favicon.ico");
 ?>
+<title>Media Ember - Private Files</title>
 <script src="../script/index.js" defer></script>
 <script src="../inc/jquery-3.6.0.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
