@@ -345,9 +345,9 @@ body
 
 .fileSize {
   position: absolute;
-  z-index: 2;
-  left: 450px;
-  top: 100px;
+  left: 78%;
+  top: 18%;
+  color: white;
 }
 .uploadDiv{
     position: absolute;
