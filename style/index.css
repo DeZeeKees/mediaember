@@ -339,8 +339,8 @@ body
   font-size: 20px;
   position: absolute;
   z-index: 2;
-  left: 400px;
-  top: 100px;
+  left: 70%;
+  top: 10%;
 }
 
 .fileSize {
@@ -737,6 +737,7 @@ margin-right: 2%;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
   color: #ffffff;
   border-radius: 50px;
+  resize: none;
 }
 
 .card .row .form-group label {

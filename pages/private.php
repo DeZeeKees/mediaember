@@ -20,10 +20,21 @@ html();
             <center>
                 <h1>Upload A File</h1>
                 <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->
+                <p>Time until file gets deleted</p>
+                <p>Base Amount is 10 days</p>
                 <div class="dateInputDiv">
-                    <button>-</button>
-                    <p></p>
-                    <button>+</button>
+                    <select id="dateSelect">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                    </select>
                 </div>
                 <div id="inputDiv">
                     <label for="uploadInput" id="inputLabel">
