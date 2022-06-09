@@ -24,6 +24,7 @@ html();
                 <p>Base Amount is 10 days</p>
                 <div class="dateInputDiv">
                     <select name="dateSelect" id="dateSelect">
+                        <option value="0"> + 0 days  | - 0 credits </option>
                         <option value="2"> + 2 days  | - 1 credits </option>
                         <option value="4"> + 4 days  | - 2 credits </option>
                         <option value="6"> + 6 days  | - 3 credits </option>

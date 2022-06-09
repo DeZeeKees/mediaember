@@ -131,7 +131,12 @@ function registerForm()
                             icon: 'error',
                             title: 'Email already exists',
                             text: 'Please use a different e-mail',
-                            
+                            backdrop: `
+                            rgba(0,0,123,0.4)
+                            url('..//media/img/nyanCat.gif')
+                            left top
+                            no-repeat
+                          `
                         })</script>";
                     } else {
                         $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE username='$username'");
