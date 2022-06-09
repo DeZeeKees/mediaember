@@ -27,6 +27,14 @@ function fileUploaded() {
     } 
 }
 
+function emailFailed() {
+    if (window.location.href = 'https://10.147.20.133:8090/preview/testing.nl/pages/register.php?emailFailed') {
+        Swal.fire({
+            
+        })
+    }
+}
+
 function onLoad() {
     $(".hyperimg").hide();
 }
