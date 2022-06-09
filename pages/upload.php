@@ -33,7 +33,8 @@ $fileSize = ceil($_FILES["uploadInput"]["size"] / 1024);
 $fileType = $_FILES["uploadInput"]["type"];
 $deleteDate = date("Y-m-d", strtotime(date("Y-m-d"). " + " . $date . " days"));
 $uploadDate = date("Y-m-d");
-$credtis = $_SESSION['credtis'];
+$minusCredtis = $_POST['dateSelect'] / 2;
+$credtis = $_SESSION['credtis'] - $minusCredtis;
 
 $stmt = $dbh->prepare("insert into fileindex (username, isPublic, fileName, filePath, fileSize, fileType, uploadDate, deletionDate) values(?,?,?,?,?,?,?,?)");
 $stmt->bindParam(1, $sessionUsername);
