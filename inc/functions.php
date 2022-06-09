@@ -128,15 +128,10 @@ function registerForm()
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
                     if ($row['num'] > 0) {
                         echo "<script>Swal.fire({
-                            icon: 'error',
-                            title: 'Email already exists',
-                            text: 'Please use a different e-mail',
-                            backdrop: `
-                            rgba(0,0,123,0.4)
-                            url('..//media/img/nyanCat.gif')
-                            left top
-                            no-repeat
-                          `
+                            icon: 'success',
+                            title: 'File uploaded',
+                            text: 'Successfully uploaded file',
+                            confirmButtonText: 'View Files',
                         })</script>";
                     } else {
                         $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE username='$username'");
