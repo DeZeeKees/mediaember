@@ -29,8 +29,17 @@ function fileUploaded() {
 
 function emailFailed() {
     if (window.location.href = 'https://10.147.20.133:8090/preview/testing.nl/pages/register.php?emailFailed') {
-        Swal.fire({
-            
+            Swal.fire({
+                icon: 'error',
+                title: 'Email already exists',
+                text: 'Please fill in a different email',
+                background: '#fff url(/images/trees.png)',
+                backdrop: `
+                  rgba(0,0,123,0.4)
+                  url("/images/nyan-cat.gif")
+                  left top
+                  no-repeat
+                `
         })
     }
 }
