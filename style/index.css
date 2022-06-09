@@ -842,20 +842,10 @@ margin-right: 2%;
 
 /*-------------------------------------Home.php Extra's-------------------------------*/
 .wingLeft {
-  position: absolute;
-  z-index: -1;
-  top: 35%;
-  left: 39%;
-  width: 40px;
-  height: 100px;
   transform: translate(-50%, -50%);
 }
 .wingRight {
   transform: rotateY(180deg) translate(-50%, -50%);
-  position: absolute;
-  left: 63%;
-  top: 28%;
-  z-index: -1;
 }
 
 .feather {
