@@ -1,6 +1,6 @@
 <?php
 require '../inc/functions.php';
-html("../media/img/legitlogo.ico");
+html("../media/img/favicon.ico");
 registerForm();
 ?>
 <script src="../script/index.js" defer></script>
@@ -42,13 +42,7 @@ $(document).ready(function(){
     if(window.location.href.indexOf('regSuccess') > -1) {
         Swal.fire({
             icon: 'success',
-            title: 'Registered Successfully',
-            backdrop: `
-                rgba(0,0,123,0.4)
-                url("../media/img/nyanCat.gif")
-                left top
-                no-repeat
-            `          
+            title: 'Registered Successfully',     
         }).then((result) => {
             if (result.isConfirmed || result.isDismissed === true) {
                 window.location.href = 'login.php'
@@ -65,6 +59,7 @@ $(document).ready(function(){
             }
         })
     }
+
     if(window.location.href.indexOf('passMatch') > -1) {
         registerFail.fire({
             title: 'Passwords do not match'
