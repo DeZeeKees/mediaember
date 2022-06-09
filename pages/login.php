@@ -4,6 +4,7 @@ html("../media/img/favicon.ico");
 loginForm();
 ?>
 <script src="../script/index.js" defer></script>
+<script src="../inc/jquery-3.6.0.js"></script>
 <link rel="stylesheet" href="../style/logreg.css">
 </head>
 <script>
