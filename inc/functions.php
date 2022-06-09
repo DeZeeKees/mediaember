@@ -88,7 +88,7 @@ function footer($path, $path2, $path3)
 <?php
 }
 
-function html()
+function html($path)
 {
 ?>
     <!doctype html>
@@ -98,7 +98,7 @@ function html()
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel = "icon" href = "" type = "image/x-icon">
+        <link rel = "icon" href = '<?php echo $path; ?>' type = "image/x-icon">
         <title>Media Ember</title>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <?php
@@ -133,7 +133,7 @@ function registerForm()
                         $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE username='$username'");
                         $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         if ($row['num'] > 0) {
-                            echo "<script>alert('Username is already in use');</script>";
+                            echo "<script>window.location.href = 'register.php?usernameInUse'</script>";
                         } else {
                             $stmt = $dbh->prepare("insert into users (email, username, password) values(?,?,?)");
                             $stmt->bindParam(1, $email);
