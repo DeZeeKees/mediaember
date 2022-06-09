@@ -41,7 +41,7 @@ function emailFailed() {
             `
         }).then((result) => {
             if (result.isConfirmed || result.isDismissed === true) {
-                window.location.href = './private.php'
+                window.location.href = './register.php'
             }
         })
     }
