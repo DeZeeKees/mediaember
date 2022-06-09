@@ -153,7 +153,7 @@ function registerForm()
                                         mkdir("../storage/" . $username, 0777);
                                         $username = "";
                                         $email = "";
-                                        echo '<script>window.location.href = "register.php?regSucces";</script>';
+                                        echo '<script>window.location.href = "register.php?regSuccess";</script>';
                                     } else {
                                         echo "<script>window.location.href = 'register.php?regFail'</script>";
                                     }
