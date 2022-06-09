@@ -626,6 +626,12 @@ display: flex;
 .dateInputDiv {
   display: inline-flex;
   justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#dateSelect {
+  background-color: var(--Black);
+  lighting-color: 120%;
 }
 
 /*----------------About.php---------------------*/
