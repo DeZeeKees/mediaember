@@ -7,7 +7,7 @@ registerForm();
 <link rel="stylesheet" href="../style/logreg.css">
 </head>
 
-<body onload=emailFailed()>
+<body>
     <button class="returnHome" onclick="window.location.href = '../index.php'">Back</button>
     <div class="registerContainer">
         <form action="" method="post" class="register-form">
