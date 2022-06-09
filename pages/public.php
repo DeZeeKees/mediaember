@@ -66,7 +66,7 @@ html();
                     <label for="html">txt</label>
                 </li>
                 <li class="toopltip">
-                    <button type="submit"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
+                    <button type="submit" class="filterButton"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
                 </li>
             </ul>
         </form>
