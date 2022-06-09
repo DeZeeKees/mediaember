@@ -59,7 +59,6 @@ $result = $stmt->setFetchMode(PDO::FETCH_NUM);
 if($result)
 {
     $stmt = $dbh->prepare("UPDATE credtis SET credtis = $credtis WHERE username = ". $_SESSION['username'] ."");
-    $stmt->bindParam(1, $credtis);
     $stmt->execute();
     $result2 = $stmt->setFetchMode(PDO::FETCH_NUM);
     if($result2)
