@@ -98,8 +98,8 @@ function html($path)
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel = "icon" href = '<?php echo $path; ?>' type = "image/x-icon">
         <title>Media Ember</title>
+        <link rel = "icon" href = '<?php echo $path; ?>' type = "image/x-icon">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <?php
     }
@@ -151,31 +151,30 @@ function registerForm()
                                     $result = $stmt->setFetchMode(PDO::FETCH_NUM);
                                     if ($result) {
                                         mkdir("../storage/" . $username, 0777);
-                                        echo "<script>alert('Register Succesful');</script>";
                                         $username = "";
                                         $email = "";
-                                        echo '<script>window.location.href = "login.php";</script>';
+                                        echo '<script>window.location.href = "register.php?regSucces";</script>';
                                     } else {
-                                        echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
+                                        echo "<script>window.location.href = 'register.php?regFail'</script>";
                                     }
                                 } catch (exception $e) {
                                     echo $e;
                                 }
                             } else {
-                                echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
+                                echo "<script>window.location.href = 'register.php?regFail'</script>";
                             }
                         }
                     }
                 } else {
-                    echo "<script>alert('Password Must Match');</script>";
+                    echo "<script>window.location.href = 'register.php?passMatch</script>";
                 }
             } catch (PDOException $exception) {
-                echo "<script>alert('OWO Somethwing gwhent wong :(');</script>";
+                echo "<script>window.location.href = 'register.php?regFail'</script>";
                 echo $exception;
             }
         }
     } catch (exception $e) {
-        echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made');</script>";
+        echo "<script>window.location.href = 'register.php?connFail'</script>";
     }
 }
 

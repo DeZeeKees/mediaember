@@ -7,6 +7,7 @@ registerForm();
 <script src="../inc/jquery-3.6.0.js"></script>
 <link rel="stylesheet" href="../style/logreg.css">
 <script>
+    // #region Errors
 $(document).ready(function(){
     if(window.location.href.indexOf('emailInUse') > -1) {
         registerFail.fire({
@@ -27,7 +28,54 @@ $(document).ready(function(){
             }
         })
     }
+
+    if(window.location.href.indexOf('regFail') > -1) {
+        registerFail.fire({
+            text: 'OWO Somethwing gwhent wong'
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'register.php'
+            }
+        })
+    }
+
+    if(window.location.href.indexOf('regSuccess') > -1) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Registered Successfully',
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("../media/img/nyanCat.gif")
+                left top
+                no-repeat
+            `          
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'login.php'
+            }
+        })
+    }
+
+    if(window.location.href.indexOf('connFail') > -1) {
+        registerFail.fire({
+            html: "<div>OWO Somethwing gwhent wong :( <br> A connection to the server could not be made</div>"
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'register.php'
+            }
+        })
+    }
+    if(window.location.href.indexOf('passMatch') > -1) {
+        registerFail.fire({
+            title: 'Passwords do not match'
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'register.php'
+            }
+        })
+    }
 })
+// #endregion
 </script>
 </head>
 

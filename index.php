@@ -5,7 +5,7 @@
 -->
 <?php
 require './inc/functions.php';
-html("../media/img/legitlogo.ico");
+html("media/img/legitlogo.ico");
 ?>
 <script src="./inc/jquery-3.6.0.js"></script>
 <script src="./script/index.js" defer></script>
