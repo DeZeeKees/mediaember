@@ -9,7 +9,11 @@ registerForm();
     if(window.location.href.indexOf('emailInUse')) {
         registerFail.fire({
             text: 'Email already exist, please choose a different email'
-        });
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'register.php'
+            }
+})
     }
 </script>
 </head>
