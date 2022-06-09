@@ -25,12 +25,13 @@ else
     $checkboxChecked = 0;
 }
 
-
+$date = $_POST['dateSelect'] + 10;
 $sessionUsername = $_SESSION['username'];
 $fileName = $_FILES["uploadInput"]["name"];
 $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
 $fileSize = ceil($_FILES["uploadInput"]["size"] / 1024);
 $fileType = $_FILES["uploadInput"]["type"];
+$deleteDate = date("Y-m-d", strtotime(date("Y-m-d") + $date));
 $uploadDate = date("Y-m-d");
 
 $stmt = $dbh->prepare("insert into fileindex (username, isPublic, fileName, filePath, fileSize, fileType, uploadDate, deletionDate) values(?,?,?,?,?,?,?,?)");
@@ -41,7 +42,7 @@ $stmt->bindParam(4, $filePath);
 $stmt->bindParam(5, $fileSize);
 $stmt->bindParam(6, $fileType);
 $stmt->bindParam(7, $uploadDate);
-$stmt->bindParam(8, $uploadDate);
+$stmt->bindParam(8, $deleteDate);
 $stmt->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_NUM);
 
