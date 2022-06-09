@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../inc/functions.php';
-html("../media/img/legitlogo.ico");
+html("../media/img/favicon.ico");
 ?>
 <script src="../script/index.js" defer></script>
 <script src="../inc/jquery-3.6.0.js"></script>

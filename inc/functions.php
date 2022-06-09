@@ -99,7 +99,7 @@ function html($path)
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Media Ember</title>
-        <link rel = "icon" href = '<?php echo $path; ?>' type = "image/x-icon">
+        <link rel = "shortcut icon" href = '<?php echo $path; ?>' type = "image/x-icon">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <?php
     }
@@ -204,13 +204,13 @@ function registerForm()
                     $row2 = $stmt2->fetch(PDO::FETCH_ASSOC);
                     $_SESSION['username'] = $row2['username'];
                     $_SESSION['email'] = $row2['email'];
-                    header("Location: private.php");
+                    echo "<script>window.location.href = 'login.php?loginSuccess'</script>";
                 } else {
-                    echo "<script>alert('Email or Password incorrect');</script>";
+                    echo "<script>window.location.href = 'login.php?loginFail'</script>";
                 }
             }
         } catch (exception $e) {
-            echo "<script>alert('OWO Somethwing gwhent wong :( \\n A connection to the server could not be made \\n " . $e . "');</script>";
+            echo "<script>window.location.href = 'login.php?connFail'</script>";
         }
     }
         // private/public file download Functions -----------------------------------------------------------
