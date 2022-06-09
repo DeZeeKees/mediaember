@@ -24,16 +24,16 @@ html();
                 <p>Base Amount is 10 days</p>
                 <div class="dateInputDiv">
                     <select name="dateSelect" id="dateSelect">
-                        <option value="1"> + 2 days | - 1 credit </option>
-                        <option value="2"> + 4 days | - 2 credits </option>
-                        <option value="3"> + 6 days | - 3 credits </option>
-                        <option value="4"> + 8 days | - 4 credits </option>
+                        <option value="1"> + 2 days  | - 1 credits </option>
+                        <option value="2"> + 4 days  | - 2 credits </option>
+                        <option value="3"> + 6 days  | - 3 credits </option>
+                        <option value="4"> + 8 days  | - 4 credits </option>
                         <option value="5"> + 10 days | - 5 credits</option>
-                        <option value="6"> + 12 days | - 6 credit </option>
-                        <option value="7"> + 14 days | - 7 credit </option>
-                        <option value="8"> + 16 days | - 8 credit s</option>
-                        <option value="9"> + 18 days | - 9 credit </option>
-                        <option value="10"> + 20 days | - 10 credit </option>
+                        <option value="6"> + 12 days | - 6 credits </option>
+                        <option value="7"> + 14 days | - 7 credits </option>
+                        <option value="8"> + 16 days | - 8 credits</option>
+                        <option value="9"> + 18 days | - 9 credits </option>
+                        <option value="10"> + 20 days | - 10 credits </option>
                     </select>
                 </div>
                 <div id="inputDiv">
