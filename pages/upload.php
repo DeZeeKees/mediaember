@@ -31,7 +31,7 @@ $fileName = $_FILES["uploadInput"]["name"];
 $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
 $fileSize = ceil($_FILES["uploadInput"]["size"] / 1024);
 $fileType = $_FILES["uploadInput"]["type"];
-$deleteDate = date("Y-m-d", strtotime(date("Y-m-d") + $date));
+$deleteDate = date("Y-m-d", strtotime(date("Y-m-d"). " + " . $date . " days"));
 $uploadDate = date("Y-m-d");
 
 $stmt = $dbh->prepare("insert into fileindex (username, isPublic, fileName, filePath, fileSize, fileType, uploadDate, deletionDate) values(?,?,?,?,?,?,?,?)");
