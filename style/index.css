@@ -632,6 +632,8 @@ display: flex;
 #dateSelect {
   background-color: var(--Black);
   lighting-color: 120%;
+  color: white;
+  border: solid 1px var(--border-default);
 }
 
 /*----------------About.php---------------------*/
