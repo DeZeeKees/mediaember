@@ -1,6 +1,6 @@
 <?php
 require '../inc/functions.php';
-html();
+html("../media/img/legitlogo.ico");
 loginForm();
 ?>
 <script src="../script/index.js" defer></script>

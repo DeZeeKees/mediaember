@@ -1,6 +1,6 @@
 <?php
 require '../inc/functions.php';
-html();
+html("../media/img/legitlogo.ico");
 ?>
 <script src="../script/index.js" defer></script>
 <link rel="stylesheet" href="../style/index.css">

@@ -1,6 +1,6 @@
 <?php
 require '../inc/functions.php';
-html();
+html("../media/img/legitlogo.ico");
 registerForm();
 ?>
 <script src="../script/index.js" defer></script>
@@ -17,7 +17,16 @@ $(document).ready(function(){
             }
         })
     }
-    //next alert
+    
+    if(window.location.href.indexOf('usernameInUse') > -1) {
+        registerFail.fire({
+            text: 'Username already exist, please choose a different username'
+        }).then((result) => {
+            if (result.isConfirmed || result.isDismissed === true) {
+                window.location.href = 'register.php'
+            }
+        })
+    }
 })
 </script>
 </head>
