@@ -127,12 +127,7 @@ function registerForm()
                     $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE email='$email'");
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
                     if ($row['num'] > 0) {
-                        echo "<script>Swal.fire({
-                            icon: 'success',
-                            title: 'File uploaded',
-                            text: 'Successfully uploaded file',
-                            confirmButtonText: 'View Files',
-                        })</script>";
+                        echo "<script>window.locaion.href = './register?emailFailed'</script>";
                     } else {
                         $stmt = $dbh->query("SELECT COUNT(*) AS num FROM users WHERE username='$username'");
                         $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -362,6 +357,7 @@ function registerForm()
         $stmt = $dbh->query("SELECT * FROM credtis WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt->fetch()) {
             echo $row['credtis'];
+            $_SESSION['credtis'] = $row['credtis'];
         }
     }
 
