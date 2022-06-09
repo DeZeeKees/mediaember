@@ -336,11 +336,11 @@ body
 
 /*------------------Public.php || Private.php------------------*/
 .uploadDate {
-  font-size: 20px;
+  color: white;
   position: absolute;
   z-index: 2;
   left: 70%;
-  top: 10%;
+  top: 18%;
 }
 
 .fileSize {
