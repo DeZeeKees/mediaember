@@ -34,7 +34,15 @@ $fileType = $_FILES["uploadInput"]["type"];
 $deleteDate = date("Y-m-d", strtotime(date("Y-m-d"). " + " . $date . " days"));
 $uploadDate = date("Y-m-d");
 $minusCredtis = $_POST['dateSelect'] / 2;
-$credtis = $_SESSION['credtis'] - $minusCredtis;
+if($_POST['dateSelect'] = 0)
+{
+    $credtis = $_SESSION['credtis'];
+}
+else
+{
+    $credtis = $_SESSION['credtis'] - $minusCredtis;
+}
+
 
 $stmt = $dbh->prepare("insert into fileindex (username, isPublic, fileName, filePath, fileSize, fileType, uploadDate, deletionDate) values(?,?,?,?,?,?,?,?)");
 $stmt->bindParam(1, $sessionUsername);
