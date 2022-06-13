@@ -1285,6 +1285,11 @@ margin-right: 2%;
   text-overflow: ellipsis;
 }
 
+object
+{
+  color: white;
+}
+
 .sharePageHref
 {
   padding-left: 1em;

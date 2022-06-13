@@ -507,8 +507,8 @@ function registerForm()
 
             if(str_contains($row['fileType'], 'text'))
             {
-                //lol
                 ?>
+                <h1 class="infoText">Preview</h1>
                 <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
                     Not supported
                 </object>
