@@ -18,7 +18,8 @@ html("../media/img/favicon.ico");
                     <input type="radio" class="form-check-input pointer" value="" name="filterItem" checked="checked">
                     <label for="html">none</label>
                 </li>
-                <li>
+                <?php DynamicFilter() ?>
+                <!-- <li>
                     <input type="radio" class="form-check-input pointer" value="image/png" name="filterItem">
                     <label for="html">png</label>
                 </li>
@@ -65,7 +66,7 @@ html("../media/img/favicon.ico");
                 <li>
                     <input type="radio" class="form-check-input pointer" value="text/plain" name="filterItem">
                     <label for="html">txt</label>
-                </li>
+                </li> -->
                 <li class="toopltip">
                     <button type="submit" class="filterButton"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
                 </li>

@@ -398,4 +398,22 @@ function registerForm()
         }
         return true;
     }
+
+    function DynamicFilter()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt2 = $dbh->query("SELECT DISTINCT fileType FROM fileindex");
+        while ($row = $stmt2->fetch()) 
+        {
+            ?>
+            <li>
+                <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem" checked="checked">
+                <label for="html"><?php echo $row['fileType'] ?></label>
+            </li>
+            <?php
+        }
+    }
     ?>
