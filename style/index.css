@@ -1224,7 +1224,6 @@ margin-right: 2%;
 
 .sharePageContainer
 {
-  display: flex;
   width: fit-content;
   height:80vh;
 }
@@ -1236,7 +1235,7 @@ margin-right: 2%;
   float: left;
   background-color: #202124;
   color: white;
-height: 80px;
+
   font-family: Readex Pro;
   -webkit-transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
