@@ -507,6 +507,7 @@ function registerForm()
 
             if(str_contains($row['fileType'], 'text'))
             {
+                //lol
                 ?>
                 <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
                     Not supported
