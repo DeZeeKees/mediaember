@@ -7,16 +7,15 @@ html("../media/img/favicon.ico");
 <script src="../inc/jquery-3.6.0.js"></script>
 <link rel="stylesheet" href="../style/index.css">
 </head>
-    <body id="indexBody" onload=shareOnload()>
+    <body onload=shareOnload()>
         <div class="sharePageContainer">
-            <a class="sharePageLogo" href="../index.php"><img id="logo" src="../media/img/legitlogo.png"></a>
-            <div class="DarkContainer">
+        <div class="N"></div>
+        <div class="M"></div>
+        </div>  
                 <?php sharePage(); ?>
                 <button download="" class="sharePageBtn">Download</button>
-            </div>
-        </div>
-        <?php
 
+        <?php
             footer("../media/img/toastersLogo.png", "contact.php", "about.php");
         ?>
     </body>

@@ -1224,9 +1224,29 @@ margin-right: 2%;
 
 .sharePageContainer
 {
-  width: fit-content;
-  height:80vh;
+
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "N N N N"
+    ". M M  ."
+    ". . . ."; 
 }
+
+.N 
+{
+  grid-area: N;
+  border: solid red;
+}
+
+.M 
+{
+  grid-area: M;
+  border: solid blue;
+}
+
 .sharePageLogo
 {
   padding-left: 1em;
