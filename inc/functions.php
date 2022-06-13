@@ -235,7 +235,7 @@ function registerForm()
                         <div>
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                            <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                         </div>
                     </div>
                 <?php
@@ -253,7 +253,7 @@ function registerForm()
                         <div>
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                            <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                         </div>
                     </div>
                 <?php
@@ -272,7 +272,7 @@ function registerForm()
                     <div>
                         <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                         <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                        <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                     </div>
                 </div>
             <?php
@@ -302,7 +302,7 @@ function registerForm()
                         <div>
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                            <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                         </div>
                     </div>
                 <?php
@@ -320,7 +320,7 @@ function registerForm()
                         <div>
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                            <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                            <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                         </div>
                     </div>
                 <?php
@@ -339,7 +339,7 @@ function registerForm()
                     <div>
                         <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                         <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                        <button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button>
+                        <a href="#<?php echo $row['ID'] ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                     </div>
                 </div>
             <?php
