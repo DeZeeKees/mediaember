@@ -321,7 +321,6 @@ function registerForm()
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
                             <a href="<?php echo './SharePage.php?file='. encode64($row['ID']); ?>" target="_blank"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
-                            <button class="filterButton" onclick=copyLink(<?php echo './SharePage.php?file='. encode64($row['ID']); ?>)><span class="material-symbols-outlined">share</span></button>
                         </div>
                     </div>
                 <?php
