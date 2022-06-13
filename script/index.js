@@ -25,12 +25,12 @@ const registerFail = Swal.mixin({
     url("../media/img/nyanCat.gif")
     left top
     no-repeat
-  ` 
+  `
 })
 
 function shareOnload() {
     var fileShareLink = window.location.href;
-    
+
     Swal.fire({
         icon: 'success',
         title: 'Link successfully coppied'
@@ -41,7 +41,6 @@ function shareOnload() {
             })
         }
     })
-
 }
 
 function fileUploaded() {
