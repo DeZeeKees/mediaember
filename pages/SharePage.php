@@ -9,7 +9,7 @@ html("../media/img/favicon.ico");
 </head>
     <body class="sharePageBody" onload=shareOnload()>
         <div class="sharePageContainer">
-            <div class="N"><a href="../index.php"><img src="../media/img/legitlogo.png" alt=""></a></div>
+            <div class="N"><a href="../index.php"><img class="sharePageLogo" src="../media/img/legitlogo.png" alt=""></a></div>
             <div class="M"><?php sharePage(); ?></div>
         </div>  
         <?php
