@@ -126,54 +126,7 @@ html("../media/img/favicon.ico");
                     <input type="radio" class="form-check-input pointer" value="" name="filterItem" checked="checked">
                     <label for="html">none</label>
                 </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="image/png" name="filterItem">
-                    <label for="html">png</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="image/jpg" name="filterItem">
-                    <label for="html">jpg</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="application/zip" name="filterItem">
-                    <label for="html">zip</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="application/x-rar-compressed" name="filterItem">
-                    <label for="html">rar</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="video/mp4" name="filterItem">
-                    <label for="html">mp4</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="audio/mpeg" name="filterItem">
-                    <label for="html">mp3</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="audio/mpeg" name="filterItem">
-                    <label for="html">mp2</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="video/webm" name="filterItem">
-                    <label for="html">webm</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="video/mpeg" name="filterItem">
-                    <label for="html">mpeg</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="image/gif" name="filterItem">
-                    <label for="html">gif</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="image/vnd.microsoft.icon" name="filterItem">
-                    <label for="html">ico</label>
-                </li>
-                <li>
-                    <input type="radio" class="form-check-input pointer" value="text/plain" name="filterItem">
-                    <label for="html">txt</label>
-                </li>
+                <?php DynamicFilter() ?>
                 <li class="toopltip">
                     <button type="submit" class="filterButton"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
                 </li>

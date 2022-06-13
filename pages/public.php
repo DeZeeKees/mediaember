@@ -19,7 +19,7 @@ session_start();
                     <input type="radio" class="form-check-input pointer" value="" name="filterItem" checked="checked">
                     <label for="html">none</label>
                 </li>
-                <?php DynamicFilter() ?>
+                <?php PublicDynamicFilter() ?>
                 <li class="toopltip">
                     <button type="submit" class="filterButton"><span class="pointer material-symbols-outlined closeFilter">close</span></button>
                 </li>
