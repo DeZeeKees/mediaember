@@ -10,7 +10,7 @@ function navbar($path, $path2, $path3, $path4, $path5, $path6)
 ?>
     <div class="navBarContainer">
         <ul class="navBarUl">
-            <li class="navBarList"><a class="navBarA" href="<?php echo $path3; ?>"><img id="logo" src="<?php echo $path; ?>"></a></li>
+            <li class="navBarList"><a class="navBarA" href="<?php echo $path3; ?>"><img class="logo" src="<?php echo $path; ?>"></a></li>
             <?php
             if (isset($_SESSION['username']) && !empty(isset($_SESSION['username']))) {
             ?>
