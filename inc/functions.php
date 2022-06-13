@@ -458,6 +458,7 @@ function registerForm()
         {
             ?>
             <p><?php echo $row['fileName'] ?></p>
+            <button download="" class="sharePageBtn">Download</button>
             <?php
         }
     }

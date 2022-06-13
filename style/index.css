@@ -1249,6 +1249,11 @@ margin-right: 2%;
   height:500px
 }
 
+.sharePageBody
+{
+  background: var(--Black);
+}
+
 .sharePageLogo
 {
   padding-left: 1em;
@@ -1274,8 +1279,4 @@ margin-right: 2%;
   height: 40px;
   margin-left: 100px;
   cursor: pointer;
-}
-.DarkContainer
-{
-  background-color: #202124;
 }
