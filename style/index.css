@@ -1251,14 +1251,14 @@ margin-right: 2%;
 .fileInfo
 {
   height: 100%;
-  width: 1fr;
+  width: 250px;
   border: solid blue;
 }
 
 .filePreview 
 {
   height: 100%;
-  width: 1fr;
+  width: 250px;
   border: solid red;
 }
 
