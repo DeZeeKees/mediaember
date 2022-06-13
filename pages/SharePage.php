@@ -11,6 +11,7 @@ html("../media/img/favicon.ico");
             <button download="" class="indexPublicFileBtn">Public Files</button>
         </div>
         <?php
+            sharePage();
             footer("../media/img/toastersLogo.png", "contact.php", "about.php");
         ?>
     </body>
