@@ -181,6 +181,14 @@ $(".btnRegister").click(function(){
     }
 });
 
+//general garbage
+function copyLink(input) {
+ navigator.clipboard.writeText(input) 
+}
+
+
+
+
 //function for adding event handlers 
 function addGlobalEventListener(type, selector, callback) {
     document.addEventListener(type, e => {

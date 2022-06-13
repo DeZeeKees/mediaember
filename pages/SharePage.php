@@ -8,7 +8,11 @@ html("../media/img/favicon.ico");
 </head>
     <body id="indexBody">
         <div class="indexContainer" id="smaller">
-            <button download="" class="indexPublicFileBtn">Public Files</button>
+            <a class="navBarA" href="../index.php"><img id="logo" src="../media/img/legitlogo.png"></a>
+            <div class="">
+                <p></p>
+                <button download="" class="sharePageBtn">Download</button>
+            </div>
         </div>
         <?php
             sharePage();
