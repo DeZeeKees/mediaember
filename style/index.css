@@ -1250,22 +1250,21 @@ margin-right: 2%;
 
 .fileInfo
 {
-  height: 100%;
-  width: 50%;
+  height: 500px;
+  width: 600px;
   border: solid blue;
 }
 
 .filePreview 
 {
   height: 500px;
-  width: 600px;
   border: solid red;
 }
 
 .previewImage
 {
   width: 400px;
-  
+  float: right;
 }
 
 .sharePageBody
