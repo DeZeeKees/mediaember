@@ -30,7 +30,8 @@ const registerFail = Swal.mixin({
 
 function shareOnload() {
     var fileShareLink = window.location.href;
-    navigator.clipboard.writeText(fileSHareLink) 
+    navigator.clipboard.writeText(fileShareLink) 
+    window.locatiob.href = './private.php';
 }
 
 function fileUploaded() {
