@@ -479,6 +479,7 @@ input[type="file"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--Black);
 }
 
 .publicItem:hover
