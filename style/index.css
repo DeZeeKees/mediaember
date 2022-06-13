@@ -1239,12 +1239,14 @@ margin-right: 2%;
 {
   grid-area: N;
   border: solid red;
+  height: 80px;
 }
 
 .M 
 {
   grid-area: M;
   border: solid blue;
+  height:500px
 }
 
 .sharePageLogo
