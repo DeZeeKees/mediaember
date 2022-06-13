@@ -483,7 +483,7 @@ input[type="file"] {
 
 .publicItem:hover
 {
-  lighting-color: 120%;
+  filter: brightness(120%);
 }
 
 .publicFileTitle, .publicFileDate, .publicFileSize
