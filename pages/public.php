@@ -1,6 +1,7 @@
 <?php
 require '../inc/functions.php';
 html("../media/img/favicon.ico");
+session_start();
 ?>
 <title>Media Ember - Public Files</title>
 <script src="../script/index.js" defer></script>
