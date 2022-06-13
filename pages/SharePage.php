@@ -7,9 +7,6 @@ html("../media/img/favicon.ico");
 <link rel="stylesheet" href="../style/index.css">
 </head>
     <body id="indexBody">
-        <?php
-            navbar("../media/img/legitlogo.png", "login.php", "../index.php", "./private.php", "./logout.php", './public.php');
-        ?>
         <div class="indexContainer" id="smaller">
             <button download="" class="indexPublicFileBtn">Public Files</button>
         </div>
