@@ -478,6 +478,7 @@ function registerForm()
             if(str_contains($row['fileType'], 'image'))
             {
                 ?>
+                <h1 class="infoText">Preview</h1>
                 <img class="previewImage" src="<?php echo $row['filePath'] ?>" alt="">
                 <?php
             }
@@ -485,6 +486,7 @@ function registerForm()
             if(str_contains($row['fileType'], 'video'))
             {
                 ?>
+                <h1 class="infoText">Preview</h1>
                 <video width="400" controls>
                     <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
                     Your browser does not support the video tag.
