@@ -45,4 +45,3 @@ session_start();
 </body>
 
 </html>
-<!-- navigator.clipboard.writeText(copyText.value); -->
