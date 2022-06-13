@@ -6,11 +6,13 @@ html("../media/img/favicon.ico");
 <script src="../script/index.js" defer></script>
 <link rel="stylesheet" href="../style/index.css">
 </head>
-    <body>
+    <body id="indexBody">
         <?php
             navbar("../media/img/legitlogo.png", "login.php", "../index.php", "./private.php", "./logout.php", './public.php');
         ?>
-        <button download="" class="indexPublicFileBtn">Public Files</button>
+        <div class="indexContainer" id="smaller">
+            <button download="" class="indexPublicFileBtn">Public Files</button>
+        </div>
         <?php
             footer("../media/img/toastersLogo.png", "contact.php", "about.php");
         ?>
