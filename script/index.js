@@ -30,8 +30,9 @@ const registerFail = Swal.mixin({
 
 function shareOnload() {
     var fileShareLink = window.location.href;
-    navigator.clipboard.writeText(fileShareLink) 
-    console.log(fileShareLink)
+    navigator.clipboard.writeText(fileShareLink).then(() => {
+        console.log(fileShareLink)
+    })
 }
 
 function fileUploaded() {
