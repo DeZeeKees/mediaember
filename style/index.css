@@ -1226,8 +1226,8 @@ margin-right: 2%;
 {
 
   display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-columns: 100px 1fr 1fr 100px; 
+  grid-template-rows: 80px 1fr 100px; 
   gap: 0px 0px; 
   grid-template-areas: 
     "N N N N"
