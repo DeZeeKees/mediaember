@@ -505,7 +505,7 @@ function registerForm()
                 <?php
             }
 
-            if(str_contains($row['fileType'], 'text'))
+            if(str_contains($row['fileType'], 'text/plain'))
             {
                 ?>
                 <h1 class="infoText">Preview</h1>
