@@ -1225,6 +1225,8 @@ margin-right: 2%;
 #smaller
 {
   height: 70vh;
+  display: flex;
+  justify-content: center;
 }
 .sharePageBtn
 {
@@ -1235,4 +1237,9 @@ margin-right: 2%;
   height: 40px;
   margin-left: 100px;
   cursor: pointer;
+}
+.DarkContainer
+{
+border: #1c1c1f;
+
 }
