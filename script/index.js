@@ -30,14 +30,16 @@ const registerFail = Swal.mixin({
 
 function shareOnload() {
     var fileShareLink = window.location.href;
+    
     Swal.fire({
         icon: 'success',
-        title: 'Link successfullt coppied'
+        title: 'Link successfully coppied'
     }).then((result) => {
         if (result.isConfirmed || result.isDismissed === true) {
-        navigator.clipboard.writeText(fileShareLink).then(() => {
-            console.log(fileShareLink)
-        })}
+                navigator.clipboard.writeText(fileShareLink).then(() => {
+                console.log(fileShareLink)
+            })
+        }
     })
 
 }
