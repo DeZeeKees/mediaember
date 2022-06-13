@@ -487,9 +487,10 @@ input[type="file"] {
   filter: brightness(120%);
 }
 
-publicItem:first-child
+.publicItem:first-child
 {
   border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .publicFileTitle, .publicFileDate, .publicFileSize
