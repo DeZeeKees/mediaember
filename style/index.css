@@ -369,7 +369,7 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 357px;
+    width: 327px;
     height: 30%;
     border: solid var(--Red);
     border-radius: var(--aboutRadius);

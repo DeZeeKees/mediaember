@@ -410,7 +410,7 @@ function registerForm()
         {
             ?>
             <li>
-                <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem" checked="checked">
+                <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem">
                 <label for="html"><?php echo $row['fileType'] ?></label>
             </li>
             <?php
@@ -428,7 +428,7 @@ function registerForm()
         {
             ?>
             <li>
-                <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem" checked="checked">
+                <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem">
                 <label for="html"><?php echo $row['fileType'] ?></label>
             </li>
             <?php
