@@ -461,7 +461,7 @@ function registerForm()
             <h2 id="textOverflow" class="infoText">Name: <?php echo $row['fileName'] ?></h2>
             <p class="infoText">Size: <?php echo $row['fileSize'] ?> kb</p>
             <p class="infoText">Upload Date: <?php echo $row['uploadDate'] ?></p>
-            <button download="" class="sharePageBtn">Download</button>
+            <a href="<?php echo $row['filePath'] ?>" download><button download="" class="sharePageBtn">Download</button></a>
             <?php
         }
     }
