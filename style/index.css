@@ -1233,7 +1233,7 @@ margin-right: 2%;
   padding-right: 1em;
   text-decoration: none;
   float: left;
-  background-color: #202124;
+  background-color: var(--Black);
   color: white;
 
   font-family: Readex Pro;
@@ -1242,10 +1242,7 @@ margin-right: 2%;
   -o-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
-.sharePageLogo:hover
-{
-  background-color: #171717;
-}
+
 .sharePageBtn
 {
   color: var(--Black);
@@ -1258,5 +1255,5 @@ margin-right: 2%;
 }
 .DarkContainer
 {
-border: #1c1c1f;
+  background-color: #202124;
 }
