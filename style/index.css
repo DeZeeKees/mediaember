@@ -1238,15 +1238,25 @@ margin-right: 2%;
 .N 
 {
   grid-area: N;
-  border: solid red;
   height: 80px;
 }
 
 .M 
 {
   grid-area: M;
-  border: solid blue;
   height:500px
+}
+
+.fileInfo
+{
+  width: 1fr;
+  border: solid blue;
+}
+
+.filePreview 
+{
+  width: 1fr;
+  border: solid red;
 }
 
 .sharePageBody

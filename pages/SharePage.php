@@ -10,7 +10,14 @@ html("../media/img/favicon.ico");
     <body class="sharePageBody" onload=shareOnload()>
         <div class="sharePageContainer">
             <div class="N"><a class="sharePageHref" href="../index.php"><img class="logo" src="../media/img/legitlogo.png" alt=""></a></div>
-            <div class="M"><?php sharePage(); ?></div>
+            <div class="M">
+                <div class="fileInfo">
+                    <?php sharePage(); ?>
+                </div>
+                <div class="filePreview">
+
+                </div>
+            </div>
         </div>  
         <?php
             footer("../media/img/toastersLogo.png", "contact.php", "about.php");
