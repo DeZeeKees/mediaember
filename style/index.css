@@ -134,10 +134,10 @@ body
     display: inline;
 }   
 
-#logo{
-    height: 5em;
-    width: auto;
-    background-image: "../media/img/legitLogo.png";
+.logo{
+  height: 5em;
+  width: auto;
+  background-image: "../media/img/legitLogo.png";
 }
 #login
 {
@@ -1269,6 +1269,7 @@ margin-right: 2%;
   -o-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
+
 
 .sharePageBtn
 {
