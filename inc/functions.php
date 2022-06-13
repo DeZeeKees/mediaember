@@ -457,7 +457,7 @@ function registerForm()
         while ($row = $stmt2->fetch()) 
         {
             ?>
-            <h1><?php $row['fileName'] ?></h1>
+            <h1><?php echo $row['fileName'] ?></h1>
             <?php
         }
     }
