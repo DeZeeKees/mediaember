@@ -481,6 +481,11 @@ input[type="file"] {
     justify-content: space-between;
 }
 
+.publicItem:hover
+{
+  lighting-color: 120%;
+}
+
 .publicFileTitle, .publicFileDate, .publicFileSize
 {
     color: white;
