@@ -1275,8 +1275,8 @@ margin-right: 2%;
 
 #textOverflow
 {
-  display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sharePageHref
