@@ -504,6 +504,15 @@ function registerForm()
                 </audio> 
                 <?php
             }
+
+            if(str_contains($row['fileType'], 'text'))
+            {
+                ?>
+                <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
+                    Not supported
+                </object>
+                <?php
+            }
         }
     }
     ?>
