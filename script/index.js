@@ -34,9 +34,10 @@ function shareOnload() {
         icon: 'success',
         title: 'Link successfullt coppied'
     }).then((result) => {
+        if (result.isConfirmed || result.isDismissed === true) {
         navigator.clipboard.writeText(fileShareLink).then(() => {
             console.log(fileShareLink)
-        })
+        })}
     })
 
 }
