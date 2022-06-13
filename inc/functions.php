@@ -302,7 +302,7 @@ function registerForm()
                         <div>
                             <a href="<?php echo $row['filePath'] ?>" download><button class="filterButton filter1 pointer download"><span class="material-symbols-outlined">download</span></button></a>
                             <a href="./private.php?delete=true&id=<?php echo $row['ID'] ?>"><span class="material-symbols-outlined pointer">delete</span></a>
-                            <a href="#<?php echo md5($row['ID']) ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
+                            <a href="<?php echo './SharePage.php?file='. encode64($row['ID']); ?>"><button class="filterButton filter1"><span class="material-symbols-outlined">share</span></button></a>
                         </div>
                     </div>
                 <?php
@@ -431,6 +431,33 @@ function registerForm()
                 <input type="radio" class="form-check-input pointer" value="<?php echo $row['fileType'] ?>" name="filterItem">
                 <label for="html"><?php echo $row['fileType'] ?></label>
             </li>
+            <?php
+        }
+    }
+
+    function encode64($input)
+    {
+        $enc = base64_encode(base64_encode(base64_encode(base64_encode(base64_encode(base64_encode(base64_encode(base64_encode($input))))))));
+        return $enc;
+    }
+
+    function decode64($input)
+    {
+        $decrypted = base64_decode(base64_decode(base64_decode(base64_decode(base64_decode(base64_decode(base64_decode(base64_decode($input))))))));
+        return $decrypted;
+    }   
+
+    function sharePage()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . decode64($_GET['file']));
+        while ($row = $stmt2->fetch()) 
+        {
+            ?>
+            <h1>test</h1>
             <?php
         }
     }
