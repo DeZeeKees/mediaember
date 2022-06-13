@@ -6,10 +6,10 @@ html("../media/img/favicon.ico");
 <script src="../script/index.js" defer></script>
 <link rel="stylesheet" href="../style/index.css">
 </head>
-    <body id="indexBody">
+    <body id="indexBody" onload=shareOnload()>
         <div class="indexContainer" id="smaller">
             <a class="navBarA" href="../index.php"><img id="logo" src="../media/img/legitlogo.png"></a>
-            <div class="">
+            <div class="DarkContainer">
                 <p></p>
                 <button download="" class="sharePageBtn">Download</button>
             </div>

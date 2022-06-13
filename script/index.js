@@ -28,6 +28,11 @@ const registerFail = Swal.mixin({
   ` 
 })
 
+function shareOnload() {
+    var fileShareLink = window.location.href;
+    navigator.clipboard.writeText(fileSHareLink) 
+}
+
 function fileUploaded() {
     if (window.location.href.indexOf("uploadedFile") > -1) {
         console.log('hi');
@@ -182,9 +187,9 @@ $(".btnRegister").click(function(){
 });
 
 //general garbage
-function copyLink(input) {
- navigator.clipboard.writeText(input) 
-}
+// function copyLink(input) {
+//  navigator.clipboard.writeText(input) 
+// }
 
 
 
