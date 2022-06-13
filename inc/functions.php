@@ -457,10 +457,10 @@ function registerForm()
         while ($row = $stmt2->fetch()) 
         {
             ?>
-            <h1>File Information</h1>
-            <h2>Name: <?php echo $row['fileName'] ?></h2>
-            <p>Size: <?php echo $row['fileSize'] ?> kb</p>
-            <p>Upload Date: <?php echo $row['uploadDate'] ?></p>
+            <h1 class="infoText">File Information</h1>
+            <h2 class="infoText">Name: <?php echo $row['fileName'] ?></h2>
+            <p class="infoText">Size: <?php echo $row['fileSize'] ?> kb</p>
+            <p class="infoText">Upload Date: <?php echo $row['uploadDate'] ?></p>
             <button download="" class="sharePageBtn">Download</button>
             <?php
         }

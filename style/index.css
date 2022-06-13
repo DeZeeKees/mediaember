@@ -1267,6 +1267,12 @@ margin-right: 2%;
   background: var(--Black);
 }
 
+.infoText 
+{
+  color: white;
+  margin-left: 20px;
+}
+
 .sharePageHref
 {
   padding-left: 1em;
