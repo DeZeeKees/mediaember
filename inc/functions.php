@@ -493,6 +493,17 @@ function registerForm()
                 </video>
                 <?php
             }
+
+            if(str_contains($row['fileType'], 'audio'))
+            {
+                ?>
+                 <h1 class="infoText">Preview</h1>
+                 <audio controls>
+                    <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
+                    Your browser does not support the audio element.
+                </audio> 
+                <?php
+            }
         }
     }
     ?>
