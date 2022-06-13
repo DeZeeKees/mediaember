@@ -465,4 +465,22 @@ function registerForm()
             <?php
         }
     }
+
+    function sharePagePreview()
+    {
+        $servername = "localhost";
+        $username = "test_user";
+        $password = "1234";
+        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+        $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . decode64($_GET['file']));
+        while ($row = $stmt2->fetch()) 
+        {
+            if(str_contains($row['fileType'], 'image'))
+            {
+                ?>
+                <img src="<?php echo $row['filePath'] ?>" alt="">
+                <?php
+            }
+        }
+    }
     ?>
