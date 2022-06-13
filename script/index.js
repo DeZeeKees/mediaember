@@ -30,9 +30,15 @@ const registerFail = Swal.mixin({
 
 function shareOnload() {
     var fileShareLink = window.location.href;
-    navigator.clipboard.writeText(fileShareLink).then(() => {
-        console.log(fileShareLink)
+    Swal.fire({
+        icon: 'success',
+        title: 'Link successfullt coppied'
+    }).then((result) => {
+        navigator.clipboard.writeText(fileShareLink).then(() => {
+            console.log(fileShareLink)
+        })
     })
+
 }
 
 function fileUploaded() {
@@ -116,7 +122,7 @@ $(document).on('submit', '#privateForm', function(e){
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
 
-fileInput.addEventListener("change", function () {
+fileInput.addEventListener("change", function () {  
     // Check that the file extension is supported.
     // If not, clear the input.
     var hasInvalidFiles = false;

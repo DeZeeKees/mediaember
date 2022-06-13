@@ -1222,12 +1222,15 @@ margin-right: 2%;
 
 /*-------------------------------------SharePage.php-------------------------------*/
 
-#smaller
+.sharePageContainer
 {
-  height: 70vh;
   display: flex;
-  justify-content: center;
+  width: fit-content;
+  height:85vh;
+  flex-direction: column;
+  margin-top: 28vh;
 }
+
 .sharePageBtn
 {
   color: var(--Black);

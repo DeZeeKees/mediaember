@@ -8,7 +8,7 @@ html("../media/img/favicon.ico");
 <link rel="stylesheet" href="../style/index.css">
 </head>
     <body id="indexBody" onload=shareOnload()>
-        <div class="indexContainer" id="smaller">
+        <div class="sharePageContainer">
             <a class="navBarA" href="../index.php"><img id="logo" src="../media/img/legitlogo.png"></a>
             <div class="DarkContainer">
                 <?php sharePage(); ?>
