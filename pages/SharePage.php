@@ -15,7 +15,7 @@ html("../media/img/favicon.ico");
             </div>
         </div>
         <?php
-            sharePage();
+
             footer("../media/img/toastersLogo.png", "contact.php", "about.php");
         ?>
     </body>
