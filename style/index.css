@@ -1270,7 +1270,8 @@ margin-right: 2%;
 
 .previewImage
 {
-  width: 400px auto;
+  min-width: 300px;
+  width: auto;
   max-height: 400px;
 }
 
