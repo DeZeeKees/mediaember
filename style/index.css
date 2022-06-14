@@ -1270,7 +1270,8 @@ margin-right: 2%;
 
 .previewImage
 {
-  width: 400px;
+  width: 400px auto;
+  max-height: 400px;
 }
 
 .errorSVG
