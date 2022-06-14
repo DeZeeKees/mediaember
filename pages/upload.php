@@ -27,7 +27,14 @@ if($_SESSION['credtis'] >= 0)
         $checkboxChecked = 0;
     }
 
-    $date = $_POST['dateSelect'] + 10;
+    if($_SESSION['credtis'] <= 0)
+    {
+        $date = 0;
+    }
+    else
+    {
+        $date = $_POST['dateSelect'] + 10;
+    }
     $sessionUsername = $_SESSION['username'];
     $fileName = $_FILES["uploadInput"]["name"];
     $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
@@ -36,19 +43,13 @@ if($_SESSION['credtis'] >= 0)
     $deleteDate = date("Y-m-d", strtotime(date("Y-m-d"). " + " . $date . " days"));
     $uploadDate = date("Y-m-d");
     $minusCredtis = $_POST['dateSelect'] / 2;
-    if($_POST['dateSelect'] == 0)
+    if($_POST['dateSelect'] == 0 || $_SESSION['credtis'] <= 0)
     {
         $credtis = $_SESSION['credtis'];
     }
     else
     {
         $credtis = $_SESSION['credtis'] - $minusCredtis;
-    }
-
-    if($credtis <= 0)
-    {
-        $credits = 0;
-        $date = 10;
     }
 
 
