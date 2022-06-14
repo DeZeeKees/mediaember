@@ -1264,7 +1264,8 @@ margin-right: 2%;
   border-top: solid var(--Orange);
   border-bottom: solid var(--Orange);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .previewImage
