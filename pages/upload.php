@@ -10,7 +10,7 @@
 </script>
 <?php
 session_start();
-if($_SESSION['credtis'] >= 0)
+if($_SESSION['credtis'] > 0)
 {
     $servername = "localhost";
     $username = "test_user";
