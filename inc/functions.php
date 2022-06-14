@@ -483,7 +483,7 @@ function registerForm()
                 <?php
             }
 
-            if(str_contains($row['fileType'], 'video'))
+            else if(str_contains($row['fileType'], 'video'))
             {
                 ?>
                 <h1 class="infoText">Preview</h1>
@@ -494,7 +494,7 @@ function registerForm()
                 <?php
             }
 
-            if(str_contains($row['fileType'], 'audio'))
+            else if(str_contains($row['fileType'], 'audio'))
             {
                 ?>
                  <h1 class="infoText">Preview</h1>
@@ -505,7 +505,7 @@ function registerForm()
                 <?php
             }
 
-            if(str_contains($row['fileType'], 'text/plain'))
+            else if(str_contains($row['fileType'], 'text/plain'))
             {
                 ?>
                 <h1 class="infoText">Preview</h1>
@@ -515,13 +515,11 @@ function registerForm()
                 <?php
             }
 
-            if(str_contains($row['fileType'], 'vnd.ms-visio.drawing'))
+            else
             {
                 ?>
                 <h1 class="infoText">Preview</h1>
-                <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
-                    Not supported
-                </object>
+                <img class="previewImage" src="../media/svg/error-file.svg" alt="">
                 <?php
             }
         }
