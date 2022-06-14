@@ -25,48 +25,48 @@ html("media/img/favicon.ico");
             <button onclick="window.location.href = 'pages/public.php'" class="indexPublicFileBtn">Public Files</button>
             <div class="wingContainer">
                 <div class="wingLeft">
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
                 </div>
                 <div class="wingRight">
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
-                    <div class="feather"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
+                    <div class="feather" data-animation="stop" style="animation-play-state: paused"></div>
                 </div>
             </div>
         </div>
@@ -76,4 +76,5 @@ html("media/img/favicon.ico");
     ?>
 </body>
 <!-- text for testing -->
+
 </html>

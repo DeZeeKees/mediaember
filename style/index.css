@@ -1220,6 +1220,14 @@ margin-right: 2%;
   }
 } */
 
+.a-slide {
+  --animdur: 3s;
+  --animn: slide;
+}
+[data-animation] {
+  animation: var(--animn, none) var(--animdur, 0s) var(--animtf, linear) var(--animdel, 0s) var(--animic, infinite) var(--animdir, alternate) var(--animfm, none) var(--animps, running);
+}
+
 /*-------------------------------------SharePage.php-------------------------------*/
 
 .sharePageContainer
