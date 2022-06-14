@@ -210,3 +210,9 @@ function addGlobalEventListener(type, selector, callback) {
         if (e.target.matches(selector)) callback(e);
     });
 }
+
+function wingsOnload() {
+    setTimeout(() => {
+        //input whatever code here
+    }, 1000);
+}
