@@ -1259,10 +1259,12 @@ margin-right: 2%;
 .filePreview 
 {
   height: 500px;
-  width: 400px;
+  min-width: 400px;
   border-right: solid var(--Orange);
   border-top: solid var(--Orange);
   border-bottom: solid var(--Orange);
+  display: flex;
+  justify-content: center;
 }
 
 .previewImage
