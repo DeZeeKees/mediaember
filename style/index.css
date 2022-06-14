@@ -1267,6 +1267,12 @@ margin-right: 2%;
   float: right;
 }
 
+.errorSVG
+{
+  width: 200px;
+  float: right;
+}
+
 .sharePageBody
 {
   background: var(--Black);
