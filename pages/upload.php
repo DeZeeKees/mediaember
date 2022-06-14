@@ -43,11 +43,12 @@ if($_SESSION['credtis'] >= 0)
     else
     {
         $credtis = $_SESSION['credtis'] - $minusCredtis;
-        if($credtis <= 0)
-        {
-            $credits = 0;
-            $date = 10;
-        }
+    }
+
+    if($credtis <= 0)
+    {
+        $credits = 0;
+        $date = 10;
     }
 
 
