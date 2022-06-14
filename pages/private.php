@@ -20,7 +20,7 @@ html("../media/img/favicon.ico");
          <form id="privateForm" action="./upload.php" method="POST" enctype="multipart/form-data">
             <center>
                 <h1>Upload A File</h1>
-                <p>Credits: <?php getCreditAmount(); ?></p> <!--insert credits here -->
+                <p>Credits: <?php getCreditAmount(); ?></p>
                 <p>Time until file gets deleted</p>
                 <p>Base Amount is 10 days</p>
                 <div class="dateInputDiv">
