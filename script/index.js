@@ -217,5 +217,5 @@ function wingsOnload() {
         animations.forEach(animation => {
           const running = animation.style.animationPlayState || 'running';
           animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
-    }, 3000);})
+    }, 1000);})
 }
