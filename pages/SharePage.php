@@ -15,9 +15,7 @@ html("../media/img/favicon.ico");
                     <?php sharePage(); ?>
                 </div>
                 <div class="filePreview">
-                    <center>
-                        <?php sharePagePreview() ?>
-                    </center>
+                    <?php sharePagePreview() ?>
                 </div>
             </div>
         </div>  

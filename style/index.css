@@ -1246,6 +1246,7 @@ margin-right: 2%;
   grid-area: M;
   height:500px;
   display: flex;
+  justify-content: center;
 }
 
 .fileInfo
