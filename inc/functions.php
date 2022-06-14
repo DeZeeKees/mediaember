@@ -519,7 +519,7 @@ function registerForm()
             {
                 ?>
                 <h1 class="infoText">Preview</h1>
-                <img class="previewImage" src="../media/svg/error-file.svg" alt="">
+                <img class="errorSVG" src="../media/svg/error-file.svg" alt="">
                 <?php
             }
         }
