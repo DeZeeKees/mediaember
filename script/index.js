@@ -213,6 +213,9 @@ function addGlobalEventListener(type, selector, callback) {
 
 function wingsOnload() {
     setTimeout(() => {
-        //input whatever code here
-    }, 1000);
+        const animations = document.querySelectorAll('[data-animation');
+        animations.forEach(animation => {
+          const running = animation.style.animationPlayState || 'running';
+          animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+    }, 3000);})
 }
