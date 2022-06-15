@@ -200,7 +200,10 @@ $(".btnRegister").click(function(){
 //general garbage
 
 $('.btnRegister').click(function(){
-    if ($('.registerUsername').indexOf('<?') > 1 || $('.registerEmail').indexOf('<?') > 1 || $('.registerUsername').includes(illegalStr) || $('.registerEmail').includes(illegalStr)) {
+    var usernameInput = $(document).getElementById('registerUsername')
+    var emailInput = $(document).getElementById('registerEmail')
+    console.log(usernameInput, emailInput)
+    if ($('#registerUsername').indexOf('<?') > 1 || $('#registerEmail').indexOf('<?') > 1 || $('#registerUsername').includes(illegalStr) || $('#registerEmail').includes(illegalStr)) {
         Swal.fire({
             icon: 'error',
             title: 'illegal characters detected',
