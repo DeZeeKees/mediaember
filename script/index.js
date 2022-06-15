@@ -2,6 +2,7 @@
 //general:
 
 var file = document.getElementById("uploadInput");
+var illegalStr = '<?'
 var isFilterOpen = false;
 var isUploadOpen = false;
 
@@ -172,7 +173,7 @@ fileInput.addEventListener("change", function () {
         });
     }
 });
-// upload cancel close thing
+
 // #endregion
 
 $(".btnRegister").click(function(){
@@ -197,25 +198,28 @@ $(".btnRegister").click(function(){
 });
 
 //general garbage
-// function copyLink(input) {
-//  navigator.clipboard.writeText(input) 
-// }
 
+$('.').click(function(){
+    var illegalUsername = $('.registerUsername').val()
+    var illegalEmail = $('.registerEmail').val()
 
-
+if (illegalUsername.includes(illegalStr) || illegalEmail.includes(illegalStr)) {
+    Swal.fire({
+        icon: 'error',
+        title: 'illegal characters detected',
+        text: 'please remove any and all "<?" from your username and or email'
+    }).then((result) => {
+        if(result.isConfirmed || result.isDenied) {
+                e.preventDefault();
+                window.location.href = './register.php'
+            }
+        })
+    }
+})
 
 //function for adding event handlers 
 function addGlobalEventListener(type, selector, callback) {
     document.addEventListener(type, e => {
         if (e.target.matches(selector)) callback(e);
     });
-}
-
-function wingsOnload() {
-    setTimeout(() => {
-        const animations = document.querySelectorAll('[data-animation');
-        animations.forEach(animation => {
-          const running = animation.style.animationPlayState || 'running';
-          animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
-    }, 1000);})
 }
