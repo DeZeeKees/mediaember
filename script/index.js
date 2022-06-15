@@ -7,18 +7,6 @@ $(".hyperimg").show();
 
 const gameState = {}
 
-const config = {
-    type: Phaser.AUTO,
-    width: 1400,
-    height: 1000,
-    parent: document.querySelector('#gameContainer'),
-    scene: {
-        preload,
-        create,
-        update
-    }   
-}
-
 function preload() {
     this.load.image('Player', './media/img/hypersonic gal transparent.png')
 }
@@ -54,6 +42,18 @@ function update() {
         gameState.player.x -=6
     }
 }
+    const config = {
+        type: Phaser.AUTO,
+        width: 1400,
+        height: 1000,
+        parent: document.querySelector('#gameContainer'),
+        scene: {
+            preload,
+            create,
+            update
+        }   
+    }
+
     const game = new Phaser.Game(config)
 }
 var file = document.getElementById("uploadInput");
