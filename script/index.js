@@ -70,14 +70,6 @@ function privateAndPublicOnload() {
 
 // #region index
 // index code
-/*
-addGlobalEventListener('click', '.hypernewt', e => {
-    var audio = new Audio("./media/sound/hyperGal.mp3");
-    audio.play();
-
-    $(".hyperimg").show();
-})
-*/
 
 addGlobalEventListener('click', '.hypernewt', e => {
     window.location.href = './pages/hypersonic.php'

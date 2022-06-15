@@ -100,7 +100,6 @@ function html($path)
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href='<?php echo $path; ?>' type="image/x-icon">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
         <?php
     }
 
