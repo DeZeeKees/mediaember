@@ -1056,16 +1056,7 @@ margin-right: 2%;
   animation: wave11 2s infinite;
   transform: rotate(50deg) translateY(22px);
 }
-/* @-webkit-keyframes wave11 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave11 {
-  50% {
-    transform: rotate(50deg) translateY(22px);
-  }
-} */
+
 .feather:nth-of-type(12) {
   height: 160px;
   transform: rotate(0deg) translateY(0px);
@@ -1073,16 +1064,7 @@ margin-right: 2%;
   animation: wave12 2s infinite;
   transform: rotate(55deg) translateY(24px);
 }
-/* @-webkit-keyframes wave12 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave12 {
-  50% {
-    transform: rotate(55deg) translateY(24px);
-  }
-} */
+
 .feather:nth-of-type(13) {
   height: 165px;
   transform: rotate(0deg) translateY(0px);
@@ -1090,16 +1072,7 @@ margin-right: 2%;
   animation: wave13 2s infinite;
   transform: rotate(60deg) translateY(26px);
 }
-/* @-webkit-keyframes wave13 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave13 {
-  50% {
-    transform: rotate(60deg) translateY(26px);
-  }
-} */
+
 .feather:nth-of-type(14) {
   height: 170px;
   transform: rotate(0deg) translateY(0px);
@@ -1107,16 +1080,7 @@ margin-right: 2%;
   animation: wave14 2s infinite;
   transform: rotate(65deg) translateY(28px);
 }
-/* @-webkit-keyframes wave14 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave14 {
-  50% {
-    transform: rotate(65deg) translateY(28px);
-  }
-} */
+
 .feather:nth-of-type(15) {
   height: 175px;
   transform: rotate(0deg) translateY(0px);
@@ -1124,16 +1088,6 @@ margin-right: 2%;
   animation: wave15 2s infinite;
   transform: rotate(70deg) translateY(30px);
 }
-/* @-webkit-keyframes wave15 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave15 {
-  50% {
-    transform: rotate(70deg) translateY(30px);
-  }
-} */
 .feather:nth-of-type(16) {
   height: 180px;
   transform: rotate(0deg) translateY(0px);
@@ -1141,16 +1095,7 @@ margin-right: 2%;
   animation: wave16 2s infinite;
   transform: rotate(75deg) translateY(32px);
 }
-/* @-webkit-keyframes wave16 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave16 {
-  50% {
-    transform: rotate(75deg) translateY(32px);
-  }
-} */
+
 .feather:nth-of-type(17) {
   height: 185px;
   transform: rotate(0deg) translateY(0px);
@@ -1158,16 +1103,7 @@ margin-right: 2%;
   animation: wave17 2s infinite;
   transform: rotate(80deg) translateY(34px);
 }
-/* @-webkit-keyframes wave17 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave17 {
-  50% {
-    transform: rotate(80deg) translateY(34px);
-  }
-} */
+
 .feather:nth-of-type(18) {
   height: 190px;
   transform: rotate(0deg) translateY(0px);
@@ -1175,16 +1111,7 @@ margin-right: 2%;
   animation: wave18 2s infinite;
   transform: rotate(85deg) translateY(36px);
 }
-/* @-webkit-keyframes wave18 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave18 {
-  50% {
-    transform: rotate(85deg) translateY(36px);
-  }
-} */
+
 .feather:nth-of-type(19) {
   height: 195px;
   transform: rotate(0deg) translateY(0px);
@@ -1192,16 +1119,7 @@ margin-right: 2%;
   animation: wave19 2s infinite;
   transform: rotate(90deg) translateY(38px);
 }
-/* @-webkit-keyframes wave19 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave19 {
-  50% {
-    transform: rotate(90deg) translateY(38px);
-  }
-} */
+
 .feather:nth-of-type(20) {
   height: 200px;
   transform: rotate(0deg) translateY(0px);
@@ -1209,24 +1127,7 @@ margin-right: 2%;
   animation: wave20 2s infinite;
   transform: rotate(95deg) translateY(40px); 
 }
-/* @-webkit-keyframes wave20 {
-  50% {
-    -webkit-
-  }
-}
-@keyframes wave20 {
-  50% {
-    transform: rotate(95deg) translateY(40px);
-  }
-} */
 
-.a-slide {
-  --animdur: 3s;
-  --animn: slide;
-}
-[data-animation] {
-  animation: var(--animn, none) var(--animdur, 0s) var(--animtf, linear) var(--animdel, 0s) var(--animic, infinite) var(--animdir, alternate) var(--animfm, none) var(--animps, running);
-}
 
 /*-------------------------------------SharePage.php-------------------------------*/
 

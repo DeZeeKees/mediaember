@@ -80,8 +80,8 @@ $(document).ready(function(){
     <div class="registerContainer">
         <form action="" method="post" class="register-form">
             <h1 class="googlefont logRegTitle">Register A New Account</h1>
-            <input class="logRegInputs googlefont" type="text" name="usernameRegister" value='<?php echo $username; ?>' placeholder="Username" required>
-            <input class="logRegInputs googlefont" type="email" name="emailRegister" value='<?php echo $email; ?>' placeholder="your-email@email.com" required>
+            <input class="logRegInputs googlefont registerUsername" type="text" name="usernameRegister" value='<?php echo $username; ?>' placeholder="Username" required>
+            <input class="logRegInputs googlefont registerEmail" type="email" name="emailRegister" value='<?php echo $email; ?>' placeholder="your-email@email.com" required>
             <input class="logRegInputs googlefont passwordRequired1" type="password" name="passwordRegister" placeholder="Password" required>
             <input class="logRegInputs googlefont passwordRequired2" type="password" name="cPasswordRegister" placeholder="Confirm Password" required>
             <button class="logRegButton btnRegister googlefont" name="submit">Register</button>

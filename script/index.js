@@ -217,6 +217,8 @@ if (illegalUsername.includes(illegalStr) || illegalEmail.includes(illegalStr)) {
     }
 })
 
+//efefefef
+
 //function for adding event handlers 
 function addGlobalEventListener(type, selector, callback) {
     document.addEventListener(type, e => {
