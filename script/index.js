@@ -199,7 +199,7 @@ $(".btnRegister").click(function(){
 
 //general garbage
 
-$('.').click(function(){
+$('.btnRegister').click(function(){
     var illegalUsername = $('.registerUsername').val()
     var illegalEmail = $('.registerEmail').val()
 
