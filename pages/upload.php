@@ -10,7 +10,8 @@
 </script>
 <?php
 session_start();
-if($_SESSION['credtis'] - $_POST['dateSelect'] / 2 >= 0 )
+$checkCredits = $_SESSION['credtis'] - $_POST['dateSelect'] / 2;
+if($checkCredits >= 0 )
 {
     $servername = "localhost";
     $username = "test_user";
