@@ -84,7 +84,19 @@ html("../media/img/favicon.ico");
                                     window.location.href = './private.php'
                                 }
                             })
-                        }        
+                        }  
+                        
+                        if(window.location.href.indexOf('NECredits') > -1) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Not enough credits',
+                                text: 'You can wait untill next month to get new credits or you can buy exta credits'     
+                            }).then((result) => {
+                                if (result.isConfirmed || result.isDismissed === true) {
+                                    window.location.href = 'private.php'
+                                }
+                            })
+                        }
                     })
             </script>
                 <div class="checkbox2">

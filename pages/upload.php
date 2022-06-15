@@ -102,5 +102,5 @@ if($checkCredits >= 0 )
 }
 else
 {
-    echo '<script>alert("not enough credits")</script>';
+    echo "<script>window.location.href = './private.php?NECredits</script>";
 }
