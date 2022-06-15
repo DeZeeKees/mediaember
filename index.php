@@ -13,7 +13,7 @@ html("media/img/favicon.ico");
 <link rel="stylesheet" href="./style/index.css">
 </head>
 
-<body id="indexBody gameContainer" onload=onLoad() translate="no">
+<body id="indexBody" onload=onLoad() translate="no">
     <?php
     navbar("media/img/legitlogo.png", "pages/login.php", "index.php", "pages/private.php", "pages/logout.php", 'pages/public.php');
     ?>

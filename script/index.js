@@ -1,61 +1,12 @@
 // toms playground :D
 //general:
-if (window.location.href.indexOf('index.php?hypersonic') > 1) {
-var audio = new Audio("./media/sound/hyperGal.mp3");
-audio.play();
-$(".hyperimg").show();
+//onload
 
-const gameState = {}
-
-function preload() {
-    this.load.image('Player', './media/img/hypersonic gal transparent.png')
+function onloadHypersonic() {
+    var audio = new Audio("./media/sound/hyperGal.mp3");
+    audio.play();
 }
 
-function create() {
-    gameState.player = this.add.sprite('Player')
-    gameState.keys = this.input.keyboard.createCursorKeys()
-}
-
-function update() {
-    if (gameState.keys.left.isDown) {
-        gameState.player.x -=4
-    }
-    else if (gameState.keys.left.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x -=6
-    }
-    if (gameState.keys.right.isDown) {
-        gameState.player.x +=4
-    }
-    else if (gameState.keys.right.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x -=6
-    }
-    if (gameState.keys.up.isDown) {
-        gameState.player.y -=4
-    }
-    else if (gameState.keys.up.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x -=6
-    }
-    if (gameState.keys.down.isDown) {
-        gameState.player.y +=4
-    }
-    else if (gameState.keys.down.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x -=6
-    }
-}
-    const config = {
-        type: Phaser.AUTO,
-        width: 1400,
-        height: 1000,
-        parent: document.querySelector('#gameContainer'),
-        scene: {
-            preload,
-            create,
-            update
-        }   
-    }
-
-    const game = new Phaser.Game(config)
-}
 var file = document.getElementById("uploadInput");
 var illegalStr = '<?'
 var isFilterOpen = false;
