@@ -6,7 +6,8 @@ const config = {
     width: 1400,
     height: 1000,
     scene: {
-        c
+        create,
+        
     }
     
 }
