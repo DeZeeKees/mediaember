@@ -11,7 +11,7 @@ while ($row = $stmt1->fetch())
 }
 
 $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-$stmt = $dbh->prepare("SELECT * FROM `fileindex` WHERE deletionDate < NOW()");
+$stmt = $dbh->prepare("DELETE * FROM `fileindex` WHERE deletionDate < NOW()");
 $stmt->execute();
 
 
