@@ -19,7 +19,7 @@ const gameState = {}
 
 //loading all of the image data to be drawn in create
 function preload() {
-    this.load.image('Player', './media/img/hypersonic gal transparent.png')
+    this.load.image('Player', '../../mediaember-master/media/img/hypersonic gal transparent.png')
 }
 
 //actually drawing all of the data loaded in preload to the canvas
@@ -67,7 +67,6 @@ function update() {
         type: Phaser.AUTO,
         width: 1400,
         height: 1000,
-        parent: document.querySelector('#gameContainer'),
         scene: {
             preload,
             create,
@@ -77,5 +76,4 @@ function update() {
 
     //starting the game
 const game = new Phaser.Game(config)
-
 </script>
