@@ -199,23 +199,23 @@ $(".btnRegister").click(function(){
 
 //general garbage
 
-$('.btnRegister').click(function(){
-    var usernameInput = $(document).getElementById('registerUsername')
-    var emailInput = $(document).getElementById('registerEmail')
-    console.log(usernameInput, emailInput)
-    if ($('#registerUsername').indexOf('<?') > 1 || $('#registerEmail').indexOf('<?') > 1 || $('#registerUsername').includes(illegalStr) || $('#registerEmail').includes(illegalStr)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'illegal characters detected',
-            text: 'please remove any and all "<?" from your username and or email'
-        }).then((result) => {
-            if(result.isConfirmed || result.isDenied) {
-                e.preventDefault();
-                window.location.href = './register.php'
-            }
-        })
-    }
-})
+// $('.btnRegister').click(function(){
+//     var usernameInput = $(document).getElementById('registerUsername')
+//     var emailInput = $(document).getElementById('registerEmail')
+//     console.log(usernameInput, emailInput)
+//     if ($('#registerUsername').indexOf('<?') > 1 || $('#registerEmail').indexOf('<?') > 1 || $('#registerUsername').includes(illegalStr) || $('#registerEmail').includes(illegalStr)) {
+//         Swal.fire({
+//             icon: 'error',
+//             title: 'illegal characters detected',
+//             text: 'please remove any and all "<?" from your username and or email'
+//         }).then((result) => {
+//             if(result.isConfirmed || result.isDenied) {
+//                 e.preventDefault();
+//                 window.location.href = './register.php'
+//             }
+//         })
+//     }
+// })
 
 //efefefef
 
