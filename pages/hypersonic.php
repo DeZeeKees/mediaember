@@ -67,6 +67,7 @@ function update() {
         type: Phaser.AUTO,
         width: 1400,
         height: 1000,
+        background: '../media/img/hyperBG',
         scene: {
             preload,
             create,
@@ -77,3 +78,9 @@ function update() {
     //starting the game
 const game = new Phaser.Game(config)
 </script>
+
+<style>
+    html {
+        overflow: none;
+    }
+</style>
