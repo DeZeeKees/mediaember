@@ -200,16 +200,13 @@ $(".btnRegister").click(function(){
 //general garbage
 
 $('.btnRegister').click(function(){
-    var illegalUsername = $('.registerUsername').val()
-    var illegalEmail = $('.registerEmail').val()
-
-if (illegalUsername.indexOf('<?') > 1 || illegalEmail.indexOf('<?') > 1) {
-    Swal.fire({
-        icon: 'error',
-        title: 'illegal characters detected',
-        text: 'please remove any and all "<?" from your username and or email'
-    }).then((result) => {
-        if(result.isConfirmed || result.isDenied) {
+    if ($('.registerUsername').indexOf('<?') > 1 || $('.registerEmail').indexOf('<?') > 1 || $('.registerUsername').includes(illegalStr) || $('.registerEmail').includes(illegalStr)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'illegal characters detected',
+            text: 'please remove any and all "<?" from your username and or email'
+        }).then((result) => {
+            if(result.isConfirmed || result.isDenied) {
                 e.preventDefault();
                 window.location.href = './register.php'
             }
