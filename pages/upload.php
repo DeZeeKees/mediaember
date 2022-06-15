@@ -10,7 +10,7 @@
 </script>
 <?php
 session_start();
-if($_SESSION['credtis'] >= 0)
+if($_SESSION['credtis'] - $_POST['dateSelect'] / 2 >= 0 )
 {
     $servername = "localhost";
     $username = "test_user";
@@ -27,14 +27,6 @@ if($_SESSION['credtis'] >= 0)
         $checkboxChecked = 0;
     }
 
-    if($_SESSION['credtis'] <= 0)
-    {
-        $date = 0;
-    }
-    else
-    {
-        $date = $_POST['dateSelect'] + 10;
-    }
     $sessionUsername = $_SESSION['username'];
     $fileName = $_FILES["uploadInput"]["name"];
     $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
