@@ -203,7 +203,7 @@ $('.btnRegister').click(function(){
     var illegalUsername = $('.registerUsername').val()
     var illegalEmail = $('.registerEmail').val()
 
-if (illegalUsername.includes(illegalStr) || illegalEmail.includes(illegalStr)) {
+if (illegalUsername.indexOf('<?') > 1 || illegalEmail.indexOf('<?') > 1) {
     Swal.fire({
         icon: 'error',
         title: 'illegal characters detected',
