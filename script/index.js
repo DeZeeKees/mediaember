@@ -1,6 +1,14 @@
 // toms playground :D
 //general:
 
+const config = {
+    type: Phaser.AUTO,
+    width: 1400,
+    height: 1000,
+    
+    
+}
+
 var file = document.getElementById("uploadInput");
 var illegalStr = '<?'
 var isFilterOpen = false;
