@@ -449,20 +449,23 @@ function registerForm()
 
     function sharePage()
     {
-        $servername = "localhost";
-        $username = "test_user";
-        $password = "1234";
-        $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-        $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . decode64($_GET['file']));
-        while ($row = $stmt2->fetch()) 
+        if(isset($_GET['file']))
         {
-            ?>
-            <h1 class="infoText">File Information</h1>
-            <h2 id="textOverflow" class="infoText">Name: <?php echo $row['fileName'] ?></h2>
-            <p class="infoText">Size: <?php echo $row['fileSize'] ?> kb</p>
-            <p class="infoText">Upload Date: <?php echo $row['uploadDate'] ?></p>
-            <a href="<?php echo $row['filePath'] ?>" download><button download="" class="sharePageBtn">Download</button></a>
-            <?php
+            $servername = "localhost";
+            $username = "test_user";
+            $password = "1234";
+            $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
+            $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . decode64($_GET['file']));
+            while ($row = $stmt2->fetch()) 
+            {
+                ?>
+                <h1 class="infoText">File Information</h1>
+                <h2 id="textOverflow" class="infoText">Name: <?php echo $row['fileName'] ?></h2>
+                <p class="infoText">Size: <?php echo $row['fileSize'] ?> kb</p>
+                <p class="infoText">Upload Date: <?php echo $row['uploadDate'] ?></p>
+                <a href="<?php echo $row['filePath'] ?>" download><button download="" class="sharePageBtn">Download</button></a>
+                <?php
+            }
         }
     }
 
@@ -475,52 +478,55 @@ function registerForm()
         $stmt2 = $dbh->query("SELECT * FROM fileindex WHERE ID =" . decode64($_GET['file']));
         while ($row = $stmt2->fetch()) 
         {
-            if(str_contains($row['fileType'], 'image'))
+            if(isset($_GET['file']))
             {
-                ?>
-                <h1 class="infoText">Preview</h1>
-                <img class="previewImage" src="<?php echo $row['filePath'] ?>" alt="">
-                <?php
-            }
-
-            else if(str_contains($row['fileType'], 'video'))
-            {
-                ?>
-                <h1 class="infoText">Preview</h1>
-                <video width="400" controls>
-                    <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
-                    Your browser does not support the video tag.
-                </video>
-                <?php
-            }
-
-            else if(str_contains($row['fileType'], 'audio'))
-            {
-                ?>
-                 <h1 class="infoText">Preview</h1>
-                 <audio controls>
-                    <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
-                    Your browser does not support the audio element.
-                </audio> 
-                <?php
-            }
-
-            else if(str_contains($row['fileType'], 'text/plain'))
-            {
-                ?>
-                <h1 class="infoText">Preview</h1>
-                <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
-                    Not supported
-                </object>
-                <?php
-            }
-
-            else
-            {
-                ?>
-                <h1 class="infoText">Preview</h1>
-                <img class="errorSVG" src="../media/svg/error-file.svg" alt="">
-                <?php
+                if(str_contains($row['fileType'], 'image'))
+                {
+                    ?>
+                    <h1 class="infoText">Preview</h1>
+                    <img class="previewImage" src="<?php echo $row['filePath'] ?>" alt="">
+                    <?php
+                }
+    
+                else if(str_contains($row['fileType'], 'video'))
+                {
+                    ?>
+                    <h1 class="infoText">Preview</h1>
+                    <video width="400" controls>
+                        <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
+                        Your browser does not support the video tag.
+                    </video>
+                    <?php
+                }
+    
+                else if(str_contains($row['fileType'], 'audio'))
+                {
+                    ?>
+                     <h1 class="infoText">Preview</h1>
+                     <audio controls>
+                        <source src="<?php echo $row['filePath'] ?>" type="<?php echo $row['fileType'] ?>">
+                        Your browser does not support the audio element.
+                    </audio> 
+                    <?php
+                }
+    
+                else if(str_contains($row['fileType'], 'text/plain'))
+                {
+                    ?>
+                    <h1 class="infoText">Preview</h1>
+                    <object data="<?php echo $row['filePath'] ?>" width="400" height="300">
+                        Not supported
+                    </object>
+                    <?php
+                }
+    
+                else
+                {
+                    ?>
+                    <h1 class="infoText">Preview</h1>
+                    <img class="errorSVG" src="../media/svg/error-file.svg" alt="">
+                    <?php
+                }
             }
         }
     }
