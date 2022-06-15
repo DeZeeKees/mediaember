@@ -90,7 +90,7 @@ html("../media/img/favicon.ico");
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Not enough credits',
-                                text: 'You can wait untill next month to get new credits or you can buy exta credits'     
+                                text: 'You can wait untill next month to get new credits or you can buy extra credits'     
                             }).then((result) => {
                                 if (result.isConfirmed || result.isDismissed === true) {
                                     window.location.href = 'private.php'
