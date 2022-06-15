@@ -80,7 +80,7 @@ addGlobalEventListener('click', '.hypernewt', e => {
 */
 
 addGlobalEventListener('click', '.hypernewt', e => {
-    window.location.href = './index.php?hypersonic'
+    window.location.href = './pages/hypersonic.php'
 })
 // #endregion
 
