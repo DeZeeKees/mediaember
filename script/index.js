@@ -5,7 +5,9 @@ const config = {
     type: Phaser.AUTO,
     width: 1400,
     height: 1000,
-    
+    scene: {
+        c
+    }
     
 }
 
