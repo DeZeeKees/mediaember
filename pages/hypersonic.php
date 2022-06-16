@@ -19,7 +19,7 @@ const gameState = {}
 
 //loading all of the image data to be drawn in create
 function preload() {
-    this.load.image('Player', 'https://i.pinimg.com/originals/85/78/bf/8578bfd439ef6ee41e103ae82b561986.png')
+    this.load.image('Player', '../media/img/hypersonic gal transparent.png')
 }
 
 
