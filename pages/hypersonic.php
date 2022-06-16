@@ -8,7 +8,7 @@
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <title>Document</title>
 </head>
-<body id="gameContainer" onload=onloadHypersonic()>
+<body id="gameContainer" onload=onloadHypersonic() onload=onloadHypersonicTwo()>
     
 </body>
 </html>
@@ -22,22 +22,24 @@ function preload() {
     this.load.image('Player', '../media/img/hypersonic gal transparent.png')
 }
 
-
 //actually drawing all of the data loaded in preload to the canvas
 function create() {
     gameState.player = this.add.sprite(200, 200, 'Player')
     gameState.player.setDisplaySize(113.8, 150)
+
+    gameState.circle1 = this.add.circle(700, 200, 40, 0xFF0000)
 
     //creating keyboard keys to make the player move
     gameState.keys = this.input.keyboard.createCursorKeys()
 
     //setting the player as interactive so the sprite can actually move
     gameState.player.setInteractive()
+    gameState.circle1.setInteractive()
 }
 
 //function that updates the screen at 60 fps on default (its current setting)
 function update() {
-    //adding movement on arrow keys
+    //adding movement on arrow keys and in the case of shift you go faster so simulate running
     if (gameState.keys.left.isDown) {
         gameState.player.x -=4
     }
@@ -62,6 +64,10 @@ function update() {
     if(gameState.keys.down.isDown && gameState.keys.shift.isDown) {
         gameState.player.y +=6
     }
+
+    gameState.circle1.on('pointerup', function(){
+
+    });
 }
 
     //game config for the canvas
@@ -79,6 +85,39 @@ function update() {
 
     //starting the game
 const game = new Phaser.Game(config)
+
+
+function onloadHypersonicTwo() {
+    Swal.fire({
+        icon: 'warning',
+        title: 'Hypersonic Dragonewt',
+        text: 'thou has summoned the legendary Hypersonic Dragonewt to thou screen',
+        showCancelButton: true,
+        cancelButtonText: 'Fuck this',
+        confirmButtonText: 'Take me',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Enjoy your time',
+                confirmButtonText: "Let's go",
+                showCancelButton: false,
+            })
+        }
+        if (result.isDenied) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'thou shall perish for th mistake thou has made',
+                showCancelButton: false,
+                confirmButtonText: 'Perish'
+            }).then((result) => {
+                if (result.isConfirmed || result.isDenied) {
+                    window.location.href = './TheGreatVoid'
+                }
+            })
+        }
+    })
+}
 </script>
 
 <style>
