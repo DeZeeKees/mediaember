@@ -83,4 +83,8 @@ const game = new Phaser.Game(config)
     html {
         overflow: none;
     }
+    body {
+        padding: 0;
+        margin: 0;
+    }
 </style>
