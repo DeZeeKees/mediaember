@@ -20,7 +20,7 @@
     Swal.fire({
         icon: 'warning',
         title: 'Hypersonic Dragonewt',
-        text: 'thou has summoned the legendary Hypersonic Dragonewt to thou screen',
+        text: 'thou has summoned the legendary Hypersonic Dragonewt to thine screen',
         showCancelButton: true,
         cancelButtonText: 'Fuck this',
         confirmButtonText: 'Take me',
@@ -36,9 +36,10 @@
         if (result.isDenied) {
             Swal.fire({
                 icon: 'warning',
-                title: 'thou shall perish for th mistake thou has made',
+                title: 'thou shall perish for thine mistake',
                 showCancelButton: false,
-                confirmButtonText: 'Perish'
+                confirmButtonText: 'Perish',
+                confirmButtonColor: FF0000,
             }).then((result) => {
                 if (result.isConfirmed || result.isDenied) {
                     window.location.href = './TheGreatVoid'
