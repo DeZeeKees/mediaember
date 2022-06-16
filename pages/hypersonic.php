@@ -26,6 +26,8 @@ function preload() {
 function create() {
     gameState.player = this.add.sprite(this.scale.width / 2, this.scale.height / 2, 200, 200, 'Player')
 
+    this.scale.on('resize', resize, this)
+
     //creating keyboard keys to make the player move
     gameState.keys = this.input.keyboard.createCursorKeys()
 
