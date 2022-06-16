@@ -94,11 +94,15 @@ const game = new Phaser.Game(config)
 
 <style>
     html {
-        overflow: none;
+        overflow: hidden;
     }
     body {
         padding: 0;
         margin: 0;
-        scrollbar-width: 0;
+        overflow: -moz-scrollbars-none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
     }
 </style>
