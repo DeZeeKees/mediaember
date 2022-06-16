@@ -19,12 +19,12 @@ const gameState = {}
 
 //loading all of the image data to be drawn in create
 function preload() {
-    this.load.image('Player', '../media/img/hypersonic_gal_transparent_resized.png')
+    this.load.image('Player', '../media/img/hypersonic gal transparent.png')
 }
 
 //actually drawing all of the data loaded in preload to the canvas
 function create() {
-    gameState.player = this.add.sprite(200, 200, 'Player')
+    gameState.player = this.add.sprite(this.scale.width / 2, this.scale.height / 2, 200, 200, 'Player')
 
     //creating keyboard keys to make the player move
     gameState.keys = this.input.keyboard.createCursorKeys()
@@ -40,25 +40,25 @@ function update() {
         gameState.player.x -=4
     }
     if(gameState.keys.left.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x -=7
+        gameState.player.x -=6
     }
     if (gameState.keys.right.isDown) {
         gameState.player.x +=4
     }
     if(gameState.keys.right.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x +=7
+        gameState.player.x +=6
     }
     if (gameState.keys.up.isDown) {
         gameState.player.y -=4
     }
     if(gameState.keys.up.isDown && gameState.keys.shift.isDown) {
-        gameState.player.y -=7
+        gameState.player.y -=6
     }
     if (gameState.keys.down.isDown) {
         gameState.player.y +=4
     }
     if(gameState.keys.down.isDown && gameState.keys.shift.isDown) {
-        gameState.player.y +=7
+        gameState.player.y +=6
     }
 }
 
