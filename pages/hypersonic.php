@@ -7,7 +7,7 @@
     <script src="../script/index.js" defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    <title>Document</title>
+    <title>Hypersonic</title>
 </head>
 <body id="gameContainer" onload=onloadHypersonic() onload=onloadHypersonicTwo()>
     

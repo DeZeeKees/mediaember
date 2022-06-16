@@ -8,7 +8,7 @@ function onloadHypersonic() {
     audio.play();
 }
 
-function onloadHypersonicTwo() {
+if (window.location.href.indexOf('hypersonic.php') > -1) {
     Swal.fire({
         icon: 'warning',
         title: 'Hypersonic Dragonewt',
