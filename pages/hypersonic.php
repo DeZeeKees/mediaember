@@ -26,6 +26,7 @@ function preload() {
 //actually drawing all of the data loaded in preload to the canvas
 function create() {
     gameState.player = this.add.sprite(200, 200, 'Player')
+    gameState.player.setDisplaySize(113.8, 150)
 
     //creating keyboard keys to make the player move
     gameState.keys = this.input.keyboard.createCursorKeys()
