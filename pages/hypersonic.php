@@ -35,6 +35,17 @@ function create() {
     gameState.player.setInteractive()
 }
 
+function resize (gameSize, baseSize, displaySize, resolution)
+{
+    var width = gameSize.width;
+    var height = gameSize.height;
+
+    this.cameras.resize(width, height);
+
+    this.bg.setSize(width, height);
+    this.logo.setPosition(width / 2, height / 2);
+}
+
 //function that updates the screen at 60 fps on default (its current setting)
 function update() {
     //adding movement on arrow keys
@@ -88,5 +99,6 @@ const game = new Phaser.Game(config)
     body {
         padding: 0;
         margin: 0;
+        scrollbar-width: 0;
     }
 </style>

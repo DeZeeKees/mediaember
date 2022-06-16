@@ -33,7 +33,7 @@ html("../media/img/favicon.ico");
             <div class="aboutInfoDiv"><img src="../media/img/SolidReaimu.png" alt="Fin">
                 <div class="nameContainer">
                     <h1>Fin</h1>
-                    <p>Just a regular dude</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora molestias voluptatibus, perspiciatis asperiores dolore similique explicabo quas cum optio natus officiis error adipisci hic, itaque reiciendis ad consectetur ratione porro.</p>
                 </div>
             </div>
             <!-- TIJN -->
