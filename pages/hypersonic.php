@@ -65,8 +65,8 @@ function update() {
     //game config for the canvas
     const config = {
         type: Phaser.AUTO,
-        width: 1400,
-        height: 1000,
+        width: '100%',
+        height: '100vh',
         background: '../media/img/hyperBG',
         scene: {
             preload,
