@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/index.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <title>Document</title>
 </head>
@@ -13,7 +14,7 @@
 </body>
 </html>
 
-<script>
+<>
 //setting the gameState so we can update sprites
 const gameState = {}
 
@@ -85,40 +86,7 @@ function update() {
 
     //starting the game
 const game = new Phaser.Game(config)
-
-
-function onloadHypersonicTwo() {
-    Swal.fire({
-        icon: 'warning',
-        title: 'Hypersonic Dragonewt',
-        text: 'thou has summoned the legendary Hypersonic Dragonewt to thou screen',
-        showCancelButton: true,
-        cancelButtonText: 'Fuck this',
-        confirmButtonText: 'Take me',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Enjoy your time',
-                confirmButtonText: "Let's go",
-                showCancelButton: false,
-            })
-        }
-        if (result.isDenied) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'thou shall perish for th mistake thou has made',
-                showCancelButton: false,
-                confirmButtonText: 'Perish'
-            }).then((result) => {
-                if (result.isConfirmed || result.isDenied) {
-                    window.location.href = './TheGreatVoid'
-                }
-            })
-        }
-    })
-}
-</script>
+</>
 
 <style>
     html {

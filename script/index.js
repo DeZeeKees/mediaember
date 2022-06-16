@@ -8,6 +8,38 @@ function onloadHypersonic() {
     audio.play();
 }
 
+function onloadHypersonicTwo() {
+    Swal.fire({
+        icon: 'warning',
+        title: 'Hypersonic Dragonewt',
+        text: 'thou has summoned the legendary Hypersonic Dragonewt to thou screen',
+        showCancelButton: true,
+        cancelButtonText: 'Fuck this',
+        confirmButtonText: 'Take me',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Enjoy your time',
+                confirmButtonText: "Let's go",
+                showCancelButton: false,
+            })
+        }
+        if (result.isDenied) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'thou shall perish for th mistake thou has made',
+                showCancelButton: false,
+                confirmButtonText: 'Perish'
+            }).then((result) => {
+                if (result.isConfirmed || result.isDenied) {
+                    window.location.href = './TheGreatVoid'
+                }
+            })
+        }
+    })
+}
+
 //making variables that are used in functions
 var file = document.getElementById("uploadInput");
 var illegalStr = '<?'
