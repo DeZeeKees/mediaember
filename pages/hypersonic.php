@@ -14,7 +14,7 @@
 </body>
 </html>
 
-<>
+<script>
 //setting the gameState so we can update sprites
 const gameState = {}
 
@@ -86,7 +86,7 @@ function update() {
 
     //starting the game
 const game = new Phaser.Game(config)
-</>
+</script>
 
 <style>
     html {
