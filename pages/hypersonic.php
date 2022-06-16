@@ -19,31 +19,20 @@ const gameState = {}
 
 //loading all of the image data to be drawn in create
 function preload() {
-    this.load.image('Player', '../media/img/hypersonic gal transparent.png')
+    this.load.image('Player', 'https://i.pinimg.com/originals/85/78/bf/8578bfd439ef6ee41e103ae82b561986.png')
 }
+// '../media/img/hypersonic gal transparent.png'
 
 //actually drawing all of the data loaded in preload to the canvas
 function create() {
-    gameState.player = this.add.sprite(this.scale.width / 2, this.scale.height / 2, 200, 200, 'Player')
-
-    this.scale.on('resize', resize, this)
+    gameState.player = this.add.sprite(200, 200, 'Player')
+    player.setScale(.5)
 
     //creating keyboard keys to make the player move
     gameState.keys = this.input.keyboard.createCursorKeys()
 
     //setting the player as interactive so the sprite can actually move
     gameState.player.setInteractive()
-}
-
-function resize (gameSize, baseSize, displaySize, resolution)
-{
-    var width = gameSize.width;
-    var height = gameSize.height;
-
-    this.cameras.resize(width, height);
-
-    this.bg.setSize(width, height);
-    this.logo.setPosition(width / 2, height / 2);
 }
 
 //function that updates the screen at 60 fps on default (its current setting)
