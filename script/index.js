@@ -2,16 +2,19 @@
 //general:
 //onload
 
+//onload function to play an audio clio
 function onloadHypersonic() {
-    var audio = new Audio("./media/sound/hyperGal.mp3");
+    var audio = new Audio("../media/sound/hyperGal.mp3");
     audio.play();
 }
 
+//making variables that are used in functions
 var file = document.getElementById("uploadInput");
 var illegalStr = '<?'
 var isFilterOpen = false;
 var isUploadOpen = false;
 
+//preset for unsupported files
 const unsupportedFile = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -24,6 +27,7 @@ const unsupportedFile = Swal.mixin({
     }
 })
 
+//preset for squite a few errors that can happen on register/login
 const registerFail = Swal.mixin({
     icon: 'error',
     title: 'An issue has occured',
@@ -35,6 +39,9 @@ const registerFail = Swal.mixin({
   `
 })
 
+//functions
+
+//coppies link when you click on the share button
 function shareOnload() {
     var fileShareLink = window.location.href;
 
@@ -50,6 +57,23 @@ function shareOnload() {
     })
 }
 
+//before submitting checks if there is a file selected, if not: throw error
+$(document).on('submit', '#privateForm', function(e){
+    if (file.files.length === 0) {
+        e.preventDefault();
+        Swal.fire({
+            icon: 'error',
+            title: 'No file selected',
+            text: 'Please select a file before trying to upload air'
+        });
+    }
+    //if there is no error, let the file submit
+    else {
+        return;
+    }
+})
+
+//gives a notification after successfully uploading a file
 function fileUploaded() {
     if (window.location.href.indexOf("uploadedFile") > -1) {
         console.log('hi');
@@ -60,6 +84,7 @@ function fileUploaded() {
     } 
 }
 
+//onloads that hide certain elements
 function onLoad() {
     $(".hyperimg").hide();
 }
@@ -68,24 +93,23 @@ function privateAndPublicOnload() {
     $(".filterScreen").hide()
 }
 
-// #region index
 // index code
-
+//shows an element when you click on a secret place
 addGlobalEventListener('click', '.hypernewt', e => {
     window.location.href = './pages/hypersonic.php'
 })
-// #endregion
 
-// #region about
+//plays audio when clicking on the toaster logo in about
 addGlobalEventListener('click', '.Toasternewt', e => {
     var audio = new Audio("../media/sound/hyperGal.mp3");
     audio.play();
 
 })
-// #endregion
+
 
 // #region private/public files
-//display div on upload click
+
+//display element on upload click
 if (isFilterOpen === false) {
     $(".uploadButton").click(function () {
         isFilterOpen = true;
@@ -93,6 +117,7 @@ if (isFilterOpen === false) {
     });
 }
 
+//display element on filter click
 if (isUploadOpen === false) {
     $(".filterBtn").click(function () {
         isUploadOpen = true
@@ -104,20 +129,6 @@ $(".closeUploadScreen").click(function () {
     isUploadOpen = false;
     $(".uploadDiv").hide(1000)
 });
-
-$(document).on('submit', '#privateForm', function(e){
-    if (file.files.length === 0) {
-        e.preventDefault();
-        Swal.fire({
-            icon: 'error',
-            title: 'No file selected',
-            text: 'Please select a file before trying to upload air'
-        });
-    }
-    else {
-        return;
-    }
-})
 
 //excluding file extentions so they cany be uploaded
 var fileInput = document.getElementById("uploadInput");
@@ -173,6 +184,7 @@ fileInput.addEventListener("change", function () {
 
 // #endregion
 
+//checks if there is a password inside of the inputs on register
 $(".btnRegister").click(function(){
     pwStr = $('.passwordRequired1').val();
     pwStr2 = $(".passwordRequired2").val();
