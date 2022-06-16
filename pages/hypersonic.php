@@ -40,7 +40,7 @@ function update() {
         gameState.player.x -=4
     }
     if(gameState.keys.left.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x +=7
+        gameState.player.x -=7
     }
     if (gameState.keys.right.isDown) {
         gameState.player.x +=4
@@ -52,13 +52,13 @@ function update() {
         gameState.player.y -=4
     }
     if(gameState.keys.up.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x +=7
+        gameState.player.y -=7
     }
     if (gameState.keys.down.isDown) {
         gameState.player.y +=4
     }
     if(gameState.keys.down.isDown && gameState.keys.shift.isDown) {
-        gameState.player.x +=7
+        gameState.player.y +=7
     }
 }
 
