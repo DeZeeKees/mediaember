@@ -298,7 +298,7 @@ function registerForm()
                          {
                             ?> 
                             <div class="Twarning tooltip">
-                                <span class="tooltiptext">this file wil be deleted tommorow</span>
+                                <span class="tooltiptext anti-div">this file wil be deleted tommorow</span>
                                 <span class='material-symbols-outlined '>error</span>
                             </div>
                         <?php
