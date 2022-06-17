@@ -295,8 +295,9 @@ function registerForm()
                     <div class="publicItem">
                         <?php
                         if(date("Y-m-d") == strtotime($row["deleteDate"] . " - " . 1 . " days")){
-                        
+                        ?>
                            echo"<span class='material-symbols-outlined'>Warning</span>";
+                           <?php
                         }
                          ?>
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
