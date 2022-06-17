@@ -293,13 +293,13 @@ function registerForm()
                 while ($row = $stmt->fetch()) {
                 ?>
                     <div class="publicItem">
-                        <?php
+                        <!-- <?php
                         if(date("Y-m-d") != strtotime($row["deleteDate"] . " - " . 1 . " days")){
-                        ?>
-                            <span class='material-symbols-outlined'>Warning</span>
-                        <?php
+                        ?> -->
+                            <span class='material-symbols-outlined'>error</span>
+                        <!-- <?php
                         }
-                         ?>
+                         ?> -->
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
