@@ -659,7 +659,8 @@ display: flex;
 }
 .Twarning
 {
-  margin-left: 10px;
+position: absolute;
+left: 66%;
 }
 
 /*----------------About.php---------------------*/
