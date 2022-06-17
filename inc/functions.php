@@ -296,10 +296,11 @@ function registerForm()
                         <!-- <?php
                       //  if(date("Y-m-d") != strtotime($row["deleteDate"] . " - " . 1 . " days")){
                       //  ?> -->
-                            <a href="">weee<span class='material-symbols-outlined iconsize'>error</span></a>
+
                         <!-- <?php
                     //    }
                     //     ?> -->
+                                                <a href="">weee<span class='material-symbols-outlined iconsize'>error</span></a>
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
