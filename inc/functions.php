@@ -294,7 +294,7 @@ function registerForm()
                 ?>
                     <div class="publicItem">
                          <?php
-                         if(date("Y-m-d") ==date("Y-m-d", strtotime($row["deletionDate"], null ,"Y-m-d" . " - " . 1 . " days")))
+                         if(date("Y-m-d", strtotime($row["deletionDate"] ,"Y-m-d" . " - " . 1 . " days")) == date("Y-m-d"))
                          {
                             ?> 
                                 <p><span class='material-symbols-outlined iconsize'>error</span></p>
