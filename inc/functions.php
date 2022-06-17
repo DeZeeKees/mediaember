@@ -293,14 +293,14 @@ function registerForm()
                 while ($row = $stmt->fetch()) {
                 ?>
                     <div class="publicItem">
-                    <?php
-                         if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
-                         {
+                    <!-- <?php
+                  //       if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
+                  //       {
                             ?> 
                                 <span class='material-symbols-outlined Twarning'>error</span>
                         <?php
-                          }
-                        ?> 
+                  //        }
+                  //      ?>  -->
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p> 
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
@@ -319,14 +319,14 @@ function registerForm()
                 while ($row = $stmt->fetch()) {
                 ?>
                     <div class="publicItem">
-                    <?php
-                         if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
-                         {
-                            ?> 
-                                <span class='material-symbols-outlined Twarning'>error</span>
-                        <?php
-                          }
-                        ?> 
+                    <!-- <?php
+                  //       if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
+                    //       {
+                       ?> 
+                            <span class='material-symbols-outlined Twarning'>error</span>
+                       <?php
+                  //        }
+                //      ?>  -->
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
@@ -346,14 +346,14 @@ function registerForm()
             while ($row = $stmt->fetch()) {
             ?>
                 <div class="publicItem">
-                <?php
-                         if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
-                         {
-                            ?> 
-                                <span class='material-symbols-outlined Twarning'>error</span>
-                        <?php
-                          }
-                        ?> 
+                    <!-- <?php
+                  //       if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
+                  //       {
+              //      ?> 
+                        <span class='material-symbols-outlined Twarning'>error</span>
+                  <?php
+             //        }
+            //      ?>  -->
                     <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                     <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                     <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
