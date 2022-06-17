@@ -296,7 +296,7 @@ function registerForm()
                         <!-- <?php
                       //  if(date("Y-m-d") != strtotime($row["deleteDate"] . " - " . 1 . " days")){
                       //  ?> -->
-                            <a href=""><span class='material-symbols-outlined iconsize'>error</span></a>
+                            <a href="">weee<span class='material-symbols-outlined iconsize'>error</span></a>
                         <!-- <?php
                     //    }
                     //     ?> -->
