@@ -300,7 +300,7 @@ function registerForm()
                         <!-- <?php
                     //    }
                     //     ?> -->
-                                                <a href="">weee<span class='material-symbols-outlined iconsize'>error</span></a>
+                                                <p><span class='material-symbols-outlined iconsize'>error</span></p>
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
