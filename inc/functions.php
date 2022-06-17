@@ -297,7 +297,7 @@ function registerForm()
                          if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
                          {
                             ?> 
-                                <p><span class='material-symbols-outlined iconsize'>error</span></p>
+                                <p><span class='material-symbols-outlined'>error</span></p>
                         <?php
                           }
                         ?>                     
