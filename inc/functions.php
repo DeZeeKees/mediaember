@@ -294,14 +294,13 @@ function registerForm()
                 ?>
                     <div class="publicItem">
                          <?php
-                         if(date("Y-m-d") != strtotime($row["deleteDate"] . " - " . 1 . " days"))
+                         if(date("Y-m-d") ==date("Y-m-d", strtotime(date_format($row["deleteDate"],"Y-m-d") . " - " . 1 . " days")))
                          {
                             ?> 
                                 <p><span class='material-symbols-outlined iconsize'>error</span></p>
                         <?php
                           }
-                        ?> 
-                           <p>dog</p>                     
+                        ?>                     
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
