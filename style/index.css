@@ -652,6 +652,12 @@ display: flex;
   border: solid 1px var(--border-default);
 }
 
+.iconsize
+{
+  height: 48px;
+  width: auto;
+}
+
 /*----------------About.php---------------------*/
 #altBorder{
     border: solid #FFC0CB;
