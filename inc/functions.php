@@ -297,10 +297,7 @@ function registerForm()
                          if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
                          {
                             ?> 
-                            <div class="Twarning tooltip">
-                                <span class="tooltiptext anti-div">this file wil be deleted tommorow</span>
-                                <span class='material-symbols-outlined '>error</span>
-                            </div>
+                                <span class='material-symbols-outlined twarning'>error</span>
                         <?php
                           }
                         ?> 
@@ -322,6 +319,14 @@ function registerForm()
                 while ($row = $stmt->fetch()) {
                 ?>
                     <div class="publicItem">
+                    <?php
+                         if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
+                         {
+                            ?> 
+                                <span class='material-symbols-outlined twarning'>error</span>
+                        <?php
+                          }
+                        ?> 
                         <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                         <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                         <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
@@ -341,6 +346,14 @@ function registerForm()
             while ($row = $stmt->fetch()) {
             ?>
                 <div class="publicItem">
+                <?php
+                         if(date("Y-m-d", strtotime($row["deletionDate"] . " - " . 1 . " days")) == date("Y-m-d"))
+                         {
+                            ?> 
+                                <span class='material-symbols-outlined twarning'>error</span>
+                        <?php
+                          }
+                        ?> 
                     <p class="publicFileTitle large"><?php echo $row["fileName"] ?></p>
                     <p class="publicFileDate"><?php echo $row["uploadDate"] ?></p>
                     <p class="publicFileSize"><?php echo $row["fileSize"] ?>kb</p>
