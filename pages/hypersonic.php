@@ -15,40 +15,6 @@
 </html>
 
 <script>
-
-(() => {
-    Swal.fire({
-        icon: 'warning',
-        title: 'Hypersonic Dragonewt',
-        text: 'thou has summoned the legendary Hypersonic Dragonewt to thine screen',
-        showCancelButton: true,
-        cancelButtonText: 'Fuck this',
-        confirmButtonText: 'Take me',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Enjoy your time',
-                confirmButtonText: "Let's go",
-                showCancelButton: false,
-            })
-        }
-        if (result.isDenied) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'thou shall perish for thine mistake',
-                showCancelButton: false,
-                confirmButtonText: 'Perish',
-                confirmButtonColor: FF0000,
-            }).then((result) => {
-                if (result.isConfirmed || result.isDenied) {
-                    window.location.href = './TheGreatVoid'
-                }
-            })
-        }
-    })
-})()
-
 //setting the gameState so we can update sprites
 const gameState = {}
 
