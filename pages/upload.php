@@ -1,11 +1,11 @@
 <script>
     function goBack()
     {
-        //window.location.href = './private.php?uploadedFile';
+        window.location.href = './private.php?uploadedFile';
     }
     function Error()
     {
-        //window.location.href = './private.php?uploadFailed';
+        window.location.href = './private.php?uploadFailed';
     }
 </script>
 <?php
@@ -29,7 +29,6 @@ if($checkCredits >= 0 )
     }
 
     $date = $_POST['dateSelect'];
-    
     $sessionUsername = $_SESSION['username'];
     $fileName = $_FILES["uploadInput"]["name"];
     $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
