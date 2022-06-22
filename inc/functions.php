@@ -426,7 +426,7 @@ function registerForm()
         $username = "test_user";
         $password = "1234";
         $dbh = new PDO("mysql:host=$servername;dbname=mediaember", $username, $password);
-        $stmt2 = $dbh->query("SELECT DISTINCT fileType FROM fileindex");
+        $stmt2 = $dbh->query("SELECT DISTINCT fileType FROM fileindex WHERE username ='". $_SESSION['username'] . "'");
         while ($row = $stmt2->fetch()) 
         {
             ?>
