@@ -28,6 +28,8 @@ if($checkCredits >= 0 )
         $checkboxChecked = 0;
     }
 
+    $date = $_POST['dateSelect'];
+    
     $sessionUsername = $_SESSION['username'];
     $fileName = $_FILES["uploadInput"]["name"];
     $filePath = "../storage/" . $_SESSION['username'] . "/" . $_FILES["uploadInput"]["name"];
