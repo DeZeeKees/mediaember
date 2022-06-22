@@ -1,11 +1,11 @@
 <script>
     function goBack()
     {
-        window.location.href = './private.php?uploadedFile';
+        //window.location.href = './private.php?uploadedFile';
     }
     function Error()
     {
-        window.location.href = './private.php?uploadFailed';
+        //window.location.href = './private.php?uploadFailed';
     }
 </script>
 <?php
