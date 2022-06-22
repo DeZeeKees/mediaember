@@ -6,6 +6,8 @@
 <?php
 require './inc/functions.php';
 html("media/img/favicon.ico");
+resetCredits();
+deleteExpired();
 ?>
 <title>Media Ember</title>
 <script src="./inc/jquery-3.6.0.js"></script>
