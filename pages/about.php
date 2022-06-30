@@ -24,7 +24,7 @@ html("../media/img/favicon.ico");
             <div class="aboutInfoDiv" id="altBorder"><img id="image" class="imgAltBorder Jin" src="../media/img/jin pfp.png" alt="Tom">
                 <div class="nameContainer">
                     <h1 class="TomText">Tom</h1>
-                    <p class="TomText">The Empress of the Twilight Forest. Holder of Galaxy Collapse, Leader of BloodBound and enemy of the Trailblazers Calamity. Has gone to war multiple times together with second in command Twig_Kitten and strategist Cactusman. Has a seven headed hydra pet named Lillie and always searches for more power. (May or May not have power over the ZeeKees Kingdom.)</p>
+                    <p class="TomText">my name is Tom im 18 years old and a first year software developer who specializes in javascript/react, my favorite color is a light soft pink with a close second of crimson. currently trying to learn game development with unity and c#. I like to play modded games like minecraft eternal/Advent of Ascention</p>
                 </div>
             </div>
         </div>
