@@ -343,14 +343,14 @@ body
   color: white;
   position: absolute;
   z-index: 2;
-  left: 71%;
-  top: 17%;
+  left: calc(69% + 20px);
+  top: calc(17% - 10px);
 }
 
 .fileSize {
   position: absolute;
-  left: 76%;
-  top: 17%;
+  left: calc(76% + 18px);
+  top: calc(17% - 10px);
   color: white;
 }
 .uploadDiv{
