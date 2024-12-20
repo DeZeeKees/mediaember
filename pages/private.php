@@ -56,6 +56,7 @@ html("../media/img/favicon.ico");
 
                     $(document).ready(function(){
                         if (location.href.indexOf('uploadedFile') > -1) {
+                            // * yo
                             console.log('hi')
                             Swal.fire({
                                 icon: 'success',
